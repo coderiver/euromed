@@ -1,9 +1,30 @@
 // default layout
-.l
+.l-center
+	width: 940px
+	margin: 0 auto	
+.l-layout
+	position: relative
 	+clr
-	.l-col1
+	.l-column
 		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+		margin-left: 20px
+		&:first-child
+			margin: 0
+.l-layout_wave
+	padding-bottom: 40px
+	margin-bottom: 30px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 5px
+		background: url(../img/wave.png) repeat-x  
+.l-column_1
+	width: 300px
+.l-column_2
+	width: 460px
+.l-column_3
+	width: 620px 
+

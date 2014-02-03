@@ -8,15 +8,1018 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/cycle.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
+<div class="wrap">
+	<header class="header">
+		<div class="l-center">
+			<a class="logo" href="#">EuroMed</a>
+			<div class="logo-title">Медицинский портал о здоровье</div>
+			<ul class="header__links">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Консультации</a></li>
+				<li><a href="#">Обратная связь</a></li>
+			</ul>
+			<div class="search js-search"><!-- is-active для дропдауна -->
+				<div class="search__form">
+					<label>
+						<input type="text" placeholder="Поиск по сайту">
+						<i></i>
+					</label>
+				</div>
+				<ul class="search__drop">
+					<li><span>Ба</span>льзам “золотая звезда”</li>
+					<li><span>Ба</span>льзам “<span>Ба</span>ночка”</li>
+					<li><span>Ба</span>льзамический линимент </li>
+					<li><span>Ба</span>нгшил</li>
+					<li><span>Ба</span>неоцин</li>
+				</ul>
+				<div class="search__par"><!-- is-active для дропдауна -->
+					<div class="search__par-title">В разделеле</div>
+					<ul class="search__par-drop">
+						<li><span>432</span><strong>Психологические проблемы</strong></li>
+						<li><span>32</span><strong>Болезни уха, горла, носа</strong></li>
+						<li><span>2</span><strong>Детское здоровье</strong></li>
+						<li><span>32</span><strong>Стоматология</strong></li>
+						<li><span>432</span><strong>Болезни печени и желчных путей</strong></li>
+						<li><span>32</span><strong>Женское здоровье</strong></li>
+						<li><span>2</span><strong>Здоровье всей семьи</strong></li>
+						<li><span>42</span><strong>Аллергия</strong></li>
+						<li><span>432</span><strong>Сексуальное здоровье</strong></li>
+					</ul>
+				</div>
+				<button class="search__btn">Найти</button>
+			</div>
+			<ul class="header__login">
+				<li class="header__reg">
+					<a href="#">Регистрация</a>
+				</li>
+				<li class="header__enter">
+					<a href="#"><span>Вход</span><i></i></a>
+				</li>
+			</ul>
+			<div class="social">
+				<div class="social__title">Мы в соцсетях</div>
+				<ul class="social__list">
+					<li><a class="social__fb" href="#"><i></i></a></li>
+					<li><a class="social__vk" href="#"><i></i></a></li>
+					<li><a class="social__gp" href="#"><i></i></a></li>
+				</ul>
+			</div>
+			<div class="lang">
+				<div class="lang__title">Язык</div>
+				<div class="lang__list">
+					<div class="lang__list-current"><i class="lang__ru"></i><span>Русский</span></div>
+					<ul class="lang__list-in">
+						<li class="is-active"><a href="#"><i class="lang__ru"></i><span>Русский</span></a></li>
+						<li><a href="#"><i class="lang__eu"></i><span>English</span></a></li>
+						<li><a href="#"><i class="lang__de"></i><span>Deutsch</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="l-center">
+		<nav class="nav js-nav">
+			<ul class="nav__list">
+				<li class="is-sub">
+					<a href="#">Спецтемы</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Новости здоровья</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_slider">
+							<div class="slider js-slider">
+								<div class="title-wrap">
+									<div class="slider__nav">
+										<button class="slider__nav-prev"><i></i></button>
+										<button class="slider__nav-next"><i></i></button>
+									</div>
+									<a class="link-white" href="#">Все рубрики</a>
+									<div class="title">Последнее</div>
+								</div>
+								<div class="slider__list">
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Здоровье А-Я</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title">Для детей</li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title">После 40ка</li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li class="nav__sub-title">Родителям</li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_slider-bg">
+							<div class="slider js-slider">
+								<div class="title-wrap">
+									<div class="slider__nav">
+										<button class="slider__nav-prev"><i></i></button>
+										<button class="slider__nav-next"><i></i></button>
+									</div>
+									<a class="link-white" href="#">Все рубрики</a>
+									<div class="title">Последнее</div>
+								</div>
+								<div class="slider__list">
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__text">Профилактика заболеваний молочных зубов</div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Болезни и лечение</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title">Для детей</li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title">После 40ка</li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_bg">
+							<div class="nav__sub-col-in">
+								<div class="nav__sub-title">Последнее</div>
+								<div class="post post_column">
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__text">Профилактика заболеваний молочных зубов</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Справочники</a>
+					<div class="nav__sub nav__sub_bg" style="background-image: url(img/nav-bg-pic1.jpg)">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title">Для детей</li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title">После 40ка</li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li class="nav__sub-title">Родителям</li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li><a href="#">Консультации</a></li>
+				<li><a href="#">Питание и диеты</a></li>
+			</ul>
+		</nav>
+		<div class="l-layout l-layout_wave">
+			<div class="l-column l-column_3">
+				<div class="slider slider_bigger js-slider">
+					<div class="title-wrap">
+						<div class="slider__nav">
+							<button class="slider__nav-prev"><i></i></button>
+							<button class="slider__nav-next"><i></i></button>
+						</div>
+						<a class="link-white" href="#">Все рубрики</a>
+						<div class="title">Последние темы</div>
+					</div>
+					<div class="slider__list">
+						<div class="slider__item">
+							<div class="post js-sl-previews">
+								<ul id="template-pager-1" class="post__previews">
+							    <li><img src="http://placehold.it/54x54"></li>
+							    <li><img src="http://placehold.it/54x54"></li>
+							    <li><img src="http://placehold.it/54x54"></li>
+								</ul>
+								<div class="post__in cycle-slideshow" 
+							    data-cycle-fx="fade"
+							    data-cycle-timeout="0"
+							    data-cycle-pager="#template-pager-1"
+							    data-cycle-pager-template=""
+							  	data-cycle-slides=".post__item">
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как избавиться от навязчивых идей и мыслей</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как избавиться от мыслей</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как избавиться от навязчивых идей и мыслей</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="post js-sl-previews">
+								<ul id="template-pager-2" class="post__previews">
+							    <li><img src="http://placehold.it/54x54"></li>
+							    <li><img src="http://placehold.it/54x54"></li>
+							    <li><img src="http://placehold.it/54x54"></li>
+								</ul>
+								<div class="post__in cycle-slideshow" 
+							    data-cycle-fx="fade"
+							    data-cycle-timeout="0"
+							    data-cycle-pager="#template-pager-2"
+							    data-cycle-pager-template=""
+							  	data-cycle-slides=".post__item">
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как купить слона?</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как избавиться от навязчивых идей и мыслей</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#">
+												<span class="post__label">Для врачей</span>
+												<img src="http:placehold.it/300x240" alt="">
+											</a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title post__title_bigger">
+												<a href="#">Как избавиться от навязчивых идей и мыслей</a>
+											</div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+											<div class="post__text post__text_gray">Профилактика заболеваний молочных зубов</div>
+											<div class="post__more">
+												<a class="link-more" href="#"><span>Подробнее</span><i></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Популярные темы</div>
+				</div>
+				<div class="post post_column">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-layout l-layout_wave">
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Интересно</div>
+				</div>
+				<div class="post">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="slider js-slider">
+					<div class="title-wrap">
+						<div class="slider__nav">
+							<button class="slider__nav-prev"><i></i></button>
+							<button class="slider__nav-next"><i></i></button>
+						</div>
+						<a class="link-white" href="#">Все рубрики</a>
+						<div class="title">Спец рубрики</div>
+					</div>
+					<div class="slider__list">
+						<div class="slider__item">
+							<ul class="spec-cats">
+								<li><a href="#">Психологические проблемы</a></li>
+								<li><a href="#">Болезни уха, горла, носа</a><span class="label label_green">NEW</span></li>
+								<li><a href="#">Детское здоровье</a></li>
+								<li><a href="#">Стоматология</a><span class="label label_red">Hot</span></li>
+								<li><a href="#">Болезни печени и желчных путей</a></li>
+								<li><a href="#">Женское здоровье</a></li>
+								<li><a href="#">Здоровье всей семьи</a></li>
+								<li><a href="#">Аллергия</a></li>
+								<li><a href="#">Сексуальное здоровье</a></li>
+							</ul>
+						</div>
+						<div class="slider__item">
+							<ul class="spec-cats">
+								<li><a href="#">Болезни уха, горла, носа</a><span class="label label_green">NEW</span></li>
+								<li><a href="#">Детское здоровье</a></li>
+								<li><a href="#">Стоматология</a><span class="label label_red">Hot</span></li>
+								<li><a href="#">Болезни печени и желчных путей</a></li>
+								<li><a href="#">Женское здоровье</a></li>
+								<li><a href="#">Здоровье всей семьи</a></li>
+								<li><a href="#">Аллергия</a></li>
+								<li><a href="#">Сексуальное здоровье</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="banner">
+					<a href="#"><img src="img/banner_300x300.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="l-layout">
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Новости Здоровья</div>
+				</div>
+				<div class="post post_alone">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/300x240" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__title">
+								<a href="#">Тестостерон влияет на эффект прививки от гриппа</a>
+							</div>
+							<div class="post__text post__text_gray">Мужской иммунитет реагирует на вакцину от гриппа слабее, чем женский, из-за высокого уровня тестостерона.</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Здоровья А-Я</div>
+				</div>
+				<div class="post post_alone">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/300x240" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__title">
+								<a href="#">Тестостерон влияет на эффект прививки от гриппа</a>
+							</div>
+							<div class="post__text post__text_gray">Мужской иммунитет реагирует на вакцину от гриппа слабее, чем женский, из-за высокого уровня тестостерона.</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="slider js-slider">
+					<div class="title-wrap">
+						<div class="slider__nav">
+							<button class="slider__nav-prev"><i></i></button>
+							<button class="slider__nav-next"><i></i></button>
+						</div>
+						<a class="link-white" href="#">Все рубрики</a>
+						<div class="title">Последнее</div>
+					</div>
+					<div class="slider__list">
+						<div class="slider__item">
+							<div class="post">
+								<div class="post__item">
+									<div class="post__pic">
+										<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+									</div>
+									<div class="post__details">
+										<div class="post__category">
+											<a href="#">Стоматология</a>
+										</div>
+										<div class="post__text">Профилактика заболеваний молочных зубов</div>
+										<div class="post__meta">
+											<div class="post__date">27 декабря</div>
+											<a class="post__comm" href="#"><i></i><span>12</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="post__item">
+									<div class="post__pic">
+										<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+									</div>
+									<div class="post__details">
+										<div class="post__category">
+											<a href="#">Стоматология</a>
+										</div>
+										<div class="post__text">Профилактика заболеваний молочных зубов</div>
+										<div class="post__meta">
+											<div class="post__date">27 декабря</div>
+											<a class="post__comm" href="#"><i></i><span>12</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="post">
+								<div class="post__item">
+									<div class="post__pic">
+										<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+									</div>
+									<div class="post__details">
+										<div class="post__category">
+											<a href="#">Стоматология</a>
+										</div>
+										<div class="post__text">Профилактика заболеваний молочных зубов</div>
+										<div class="post__meta">
+											<div class="post__date">27 декабря</div>
+											<a class="post__comm" href="#"><i></i><span>12</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="post__item">
+									<div class="post__pic">
+										<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+									</div>
+									<div class="post__details">
+										<div class="post__category">
+											<a href="#">Стоматология</a>
+										</div>
+										<div class="post__text">Профилактика заболеваний молочных зубов</div>
+										<div class="post__meta">
+											<div class="post__date">27 декабря</div>
+											<a class="post__comm" href="#"><i></i><span>12</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="banner">
+					<a href="#"><img src="img/banner_300x100.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
 
-<!-- BEGIN  out-->
-<div class="out">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>	
 
+		<div class="l-layout l-layout_wave">
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Статьи о здоровье</div>
+				</div>
+				<div class="post">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="title-wrap">
+					<a class="link-white" href="#">Все рубрики</a>
+					<div class="title">Новости</div>
+				</div>
+				<div class="post">
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="post__item">
+						<div class="post__pic">
+							<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+						</div>
+						<div class="post__details">
+							<div class="post__category">
+								<a href="#">Стоматология</a>
+							</div>
+							<div class="post__text">Профилактика заболеваний молочных зубов</div>
+							<div class="post__meta">
+								<div class="post__date">27 декабря</div>
+								<a class="post__comm" href="#"><i></i><span>12</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="l-column l-column_1">
+				<div class="banner">
+					<a href="#"><img src="img/banner_300x300.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap__push"></div>
 </div>
-<!-- END out-->
-
+<footer class="footer">
+	<div class="l-center">
+		
+	</div>
+</footer>
 </body>
 </html>

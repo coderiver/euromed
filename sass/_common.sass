@@ -40,10 +40,613 @@
 // =book
 // 	font-family: "book",arial,sans-serif 
 	
+
+$font: #404343
+$gr: #38a8a2
+$grd: #2c928d
+
 body
 	font-size: 12px 
 	font-family: Arial, sans-serif 
 	line-height: 1.4
+	color: $font
+	-webkit-font-smoothing: antialiased
 
+input, button
+	font-family: Arial, sans-serif 
+
+a
+	text-decoration: none
+	color: $gr 
 
 // common blocks
+.wrap
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -197px
+.wrap__push
+	height: 197px
+	clear: both
+	
+
+.header
+	position: relative
+	background: url(../img/header-bg.png) no-repeat 100% 0 #EAF0F0 
+	.l-center
+		position: relative
+		height: 160px
+	.social
+		position: absolute
+		top: 74px
+		right: 0 
+.logo
+	position: absolute
+	top: 24px
+	left: 0
+	+s(logo)
+	+hidetext
+.logo-title
+	position: absolute
+	top: 75px
+	left: 160px
+	width: 140px
+	font-size: 15px
+	color: #4B5252 
+	line-height: .8
+.header__links
+	position: absolute
+	top: 25px
+	left: 160px
+	li
+		float: left
+		padding-left: 20px
+		margin-left: 20px
+		border-left: #C7CCCC 1px solid 
+		line-height: 1
+		&:first-child
+			margin: 0
+			padding: 0
+			border: none
+	a
+		color: $font 
+.header__login	
+	position: absolute
+	top: 24px 
+	right: 0
+	font-size: 0
+	li
+		display: inline-block
+		width: 52px
+		vertical-align: middle
+		font-size: 12px
+		&:first-child
+			width: 87px
+.header__enter
+	a
+		display: block
+		height: 19px 
+		background: $grd 
+		border-radius: 3px
+		line-height: 19px
+		font-weight: bold
+		text-align: center
+		color: #fff 
+	span, i
+		display: inline-block
+		vertical-align: middle
+	span
+		margin-right: 5px 
+	i
+		+s(enter-arr)
+.lang
+	position: absolute
+	top: 24px
+	right: 160px
+	z-index: 20 
+.lang__title, .lang__list
+	display: inline-block
+	vertical-align: middle
+.lang__title
+	margin-right: 10px
+	font-size: 13px
+	color: #babebe
+.lang__list
+	position: relative
+	width: 95px
+	font-size: 0
+	color: #2F3737 
+	i, span
+		display: inline-block
+		vertical-align: top 
+		line-height: 1
+	i
+		margin-right: 5px
+	span
+		padding-top: 1px
+		font-size: 12px
+	&:hover
+		.lang__list-in
+			display: block
+.lang__list-current
+	position: relative
+	padding: 3px 5px
+	border-radius: 3px
+	background-color: #fff
+	box-shadow: 0 1px 2px rgba(0,0,0,.11)
+	&:after
+		content: ""
+		position: absolute
+		top: 8px
+		right: 9px
+		+arr(5,3,#2f3737,b)
+.lang__list-in
+	display: none
+	position: absolute
+	top: -5px
+	left: 0
+	right: 0
+	border-radius: 3px
+	background-color: #fff
+	box-shadow: 8px 14px 29px rgba(0,0,0,.4)
+	overflow: hidden
+	li
+		&.is-active
+			a
+				position: relative
+				background: none 
+				cursor: default
+				&:after
+					content: ""
+					position: absolute
+					top: 10px
+					right: 8px
+					+s(check) 
+	a
+		display: block
+		padding: 8px 5px
+		color: #2F3737 
+		&:hover
+			background: #eaf0f0 
+.lang__ru
+	+s(lang-ru)
+.lang__eu
+	+s(lang-eu)
+.lang__de
+	+s(lang-de)
+.social
+	font-size: 0
+.social__title, .social__list
+	display: inline-block
+	vertical-align: middle
+.social__title
+	width: 60px
+	font-size: 11px
+	color: #767676 
+	line-height: 1
+.social__list
+	li
+		display: inline-block
+		margin-left: 2px
+		vertical-align: top
+		&:first-child
+			margin: 0
+	a
+		display: table-cell
+		width: 25px
+		height: 25px
+		text-align: center
+		border-radius: 50%
+		vertical-align: middle
+	i
+		display: inline-block
+.social__fb
+	background: #114DA6
+	i
+		+s(social-fb)
+.social__vk
+	background: #0f6a8c
+	i
+		+s(social-vk)
+.social__gp
+	background: #cd0000
+	i
+		+s(social-gp)
+.search
+	position: absolute
+	top: 68px
+	left: 320px
+	border: 1px solid #dfe2e2
+	border-radius: 3px
+	background-color: #fff
+	box-shadow: inset 1px 1px 7px rgba(0,0,0,.06) 
+	z-index: 20 
+	&.is-active
+		border-color: #82d2cf
+		border-radius: 3px 3px 3px 0
+		box-shadow: 0 0 5px rgba(56,168,162,.15)
+		.search__drop
+			display: block
+.search__form
+	width: 460px
+	height: 37px
+	> label
+		position: relative
+		display: block
+		z-index: 2 
+		input
+			width: 460px
+			padding: 0 200px 0 38px 
+			height: 37px
+			border-radius: 3px
+			+box
+			font-size: 15px
+			color: #000  
+		i
+			position: absolute
+			top: 9px
+			left: 9px
+			+s(search)
+	&.is-no-empty
+		> label
+			i
+				display: none
+			input
+				padding: 0 200px 0 19px 
+.search__btn
+	position: absolute
+	top: 4px
+	right: 4px
+	width: 60px
+	height: 29px
+	border-radius: 3px
+	background-color: #81c7f3
+	font-size: 11px
+	font-weight: bold
+	text-transform: uppercase
+	color: #FFF 
+	z-index: 4 
+.search__drop
+	display: none
+	position: absolute
+	top: 37px
+	left: -1px
+	right: 0
+	width: 274px - 18px
+	padding: 0 9px 9px
+	border: 1px solid #82d2cf
+	border-width: 0 1px 1px
+	background: #fff
+	box-shadow: 8px 14px 29px rgba(0,0,0,.4), 0 0 5px rgba(56,168,162,.15)
+	border-radius: 0 0 3px 3px 
+	li
+		height: 25px
+		padding: 0 10px
+		border-radius: 3px
+		overflow: hidden 
+		line-height: 25px
+		white-space: nowrap
+		text-overflow: ellipsis
+		font-size: 15px
+		cursor: pointer
+		color: $gr
+		span
+			color: #337773
+		&:hover
+			background: #eaf0f0 
+			color: #000
+			span
+				color: #000 
+.search__par
+	position: absolute
+	top: 0
+	left: 274px
+	width: 122px
+	z-index: 6  
+	&.is-active
+		top: -3px
+		border-radius: 3px
+		border-top: 3px solid $gr 
+		.search__par-title
+			background: #FFF
+			box-shadow: 8px 14px 29px rgba(0,0,0,.4)
+			&:before
+				display: none
+		.search__par-drop
+			display: block
+			box-shadow: 8px 14px 29px rgba(0,0,0,.4)
+			border-radius: 0 3px 3px 3px
+.search__par-title
+	position: relative
+	height: 20px
+	padding: 8px 27px 9px 20px
+	line-height: 20px
+	white-space: nowrap
+	text-overflow: ellipsis
+	cursor: pointer
+	overflow: hidden
+	+nosel
+	&:before
+		content: ""
+		position: absolute
+		top: 8px
+		left: 0
+		width: 1px
+		height: 20px
+		background: #e5e5e5 
+	&:after
+		content: ""
+		position: absolute
+		top: 16px
+		right: 14px
+		+arr(5,3,#000,b)
+.search__par-drop
+	display: none
+	position: absolute
+	top: 33px
+	left: 0
+	width: 249px
+	padding: 7px 20px
+	background: #fff  
+	border-bottom: 3px solid $gr 
+	&:before
+		content: ""
+		position: absolute
+		top: -6px
+		left: 0
+		width: 122px
+		height: 6px
+		background: #fff  
+	li
+		padding: 5px 0
+		border-top: #ccc 1px dotted 
+		font-size: 13px
+		color: #A3A3A3
+		cursor: pointer
+		+clr
+		&:first-child
+			border: none
+		span
+			float: right
+		strong
+			font-weight: normal
+
+
+
+.nav
+	position: relative
+	display: table
+	width: 100%
+	margin: -25px 0 20px
+	z-index: 10 
+.nav__list
+	display: table-row
+	> li
+		display: table-cell
+		height: 50px
+		border-left: #60B9B5 1px solid 
+		&:first-child
+			border: none
+			a
+				border-radius: 3px 0 0 3px
+		&:last-child
+			a
+				border-radius: 0 3px 3px 0
+		&.is-sub
+			> a
+				&:after
+					content: ""
+					position: absolute
+					left: 20px
+					bottom: 0
+					+arr(7,4,$gr,b)
+		&:hover
+			> a
+				background: #2c928d 
+			&.is-sub
+				.nav__sub
+					visibility: visible
+				> a
+					background: #FFF
+					border-radius: 3px 3px 0 0
+					color: #2f3737  
+					&:before	
+						content: ""
+						position: absolute
+						top: -3px
+						left: 0
+						right: 0
+						height: 4px
+						border-radius: 3px 3px 0 0
+						background: $gr 
+		> a
+			position: relative
+			display: block
+			height: 50px
+			background: $gr 
+			line-height: 50px
+			text-align: center
+			font-size: 11px
+			text-transform: uppercase
+			font-weight: bold
+			color: #FFF 
+			z-index: 4 
+.nav__sub
+	position: absolute
+	top: 50px
+	background: #FFF
+	border-bottom: 4px solid $gr 
+	border-radius: 3px
+	box-shadow: 8px 14px 29px rgba(0,0,0,.4)
+	overflow: hidden
+	visibility: hidden
+	z-index: 2
+.nav__sub_bg
+	min-height: 315px
+	padding-right: 265px
+	background-repeat: no-repeat
+	background-position: 100% 100%
+.nav__sub-col
+	position: relative
+	float: left
+	padding: 12px 18px
+.nav__sub-col
+	position: relative
+	.slider, .slider__item
+		width: 290px
+.nav__sub-col_bg
+	&:before	
+		content: ""
+		position: absolute
+		top: -500px
+		left: 0
+		right: 0
+		bottom: -500px
+		background: #f0f4f4 
+		z-index: 2 
+.nav__sub-col-in
+	position: relative
+	z-index: 4
+	> .title
+		margin-bottom: 15px
+.nav__sub-col_slider
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 18px
+		bottom: 18px
+		border-left: #E5E5E5 1px solid 
+.nav__sub-list
+	+clr
+	ul
+		float: left
+		width: 140px
+		margin-left: 20px
+		&:first-child
+			margin: 0
+	li
+		border-top: 1px dotted #ccc 
+		&:first-child
+			border: none
+		&.nav__sub-title
+			border: none  
+			font-size: 15px
+			font-weight: bold
+			color: #030303
+			& + li
+				border: none
+			a
+				font-size: 15px
+				font-weight: bold
+				color: #030303
+		&:hover
+			border-color: transparent
+			& + li
+				border-color: transparent
+			a
+				background: #eaf0f0
+				color: #000
+				&:before, &:after
+					content: ""
+					position: absolute
+					top: 0
+					bottom: 0
+					width: 9px
+					background: #EAF0F0
+				&:before
+					left: -9px
+					border-radius: 3px 0 0 3px
+				&:after
+					right: -9px
+					border-radius: 0 3px 3px 0	
+
+	a
+		position: relative
+		display: block
+		padding: 5px 0
+		font-size: 13px
+.nav__sub-title
+	margin-bottom: 15px
+	font-size: 15px
+	font-weight: bold
+	color: #000 
+.nav__sub-all
+	padding-top: 7px
+	
+
+
+.link-white
+	display: inline-block
+	padding: 2px 7px
+	border-radius: 3px
+	border: 1px solid #eaeaea 
+	font-size: 11px
+	color: #b8b8b8 
+.link-more
+	display: inline-block
+	padding: 3px 8px
+	border: 1px solid $gr
+	border-radius: 3px 
+	span, i
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-left: 7px 
+		+s(more-arr)
+
+
+
+.title-wrap
+	margin-bottom: 18px
+	+clr
+	.link-white
+		float: right
+	.title
+		display: table
+.title
+	font-size: 20px
+	font-weight: bold
+	line-height: 1
+	color: #2F3737 
+
+
+
+.slider
+	position: relative
+	overflow: hidden
+	z-index: 4 
+	& + .banner
+		padding-top: 30px
+.slider_bigger
+	.slider__item
+		width: 620px
+.slider__item
+	width: 300px
+.slider__nav
+	float: right
+	margin-left: 10px 
+	button
+		float: left
+		width: 21px
+		height: 21px
+		background: $gr
+		border-radius: 3px 
+		font-size: 0
+	i
+		display: inline-block
+		vertical-align: middle
+.slider__nav-prev
+	padding: 0 8px 0 6px
+	i
+		+s(prev)
+.slider__nav-next
+	margin-left: 3px
+	padding: 0 6px 0 8px
+	i
+		+s(next)
+
+
+
+
+
