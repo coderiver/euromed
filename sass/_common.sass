@@ -46,7 +46,7 @@ $gr: #38a8a2
 $grd: #2c928d
 
 body
-	font-size: 12px 
+	font-size: 13px 
 	font-family: Arial, sans-serif 
 	line-height: 1.4
 	color: $font
@@ -64,9 +64,9 @@ a
 	min-height: 100%
 	height: auto !important
 	height: 100%
-	margin: 0 auto -197px
+	margin: 0 auto -290px
 .wrap__push
-	height: 197px
+	height: 290px
 	clear: both
 	
 
@@ -149,7 +149,6 @@ a
 	vertical-align: middle
 .lang__title
 	margin-right: 10px
-	font-size: 13px
 	color: #babebe
 .lang__list
 	position: relative
@@ -400,7 +399,6 @@ a
 	li
 		padding: 5px 0
 		border-top: #ccc 1px dotted 
-		font-size: 13px
 		color: #A3A3A3
 		cursor: pointer
 		+clr
@@ -492,7 +490,7 @@ a
 	padding: 12px 18px
 .nav__sub-col
 	position: relative
-	.slider, .slider__item
+	.slider
 		width: 290px
 .nav__sub-col_bg
 	&:before	
@@ -565,7 +563,6 @@ a
 		position: relative
 		display: block
 		padding: 5px 0
-		font-size: 13px
 .nav__sub-title
 	margin-bottom: 15px
 	font-size: 15px
@@ -574,6 +571,79 @@ a
 .nav__sub-all
 	padding-top: 7px
 	
+
+
+.footer
+	height: 290px
+	background: url(../img/footer-bg.png) no-repeat 100% 100% #2F3737 
+	.l-center
+		position: relative
+		padding-top: 35px
+.footer__nav
+	ul
+		float: left
+		width: 140px 
+		&:first-child
+			margin-right: 20px
+			a
+				color: #ACAEAE 
+	li
+		padding: 5px 0
+		border-top: #444B4B 1px solid
+		&:first-child
+			padding: 0 0 5px
+			border: none
+	a
+		color: #fff 
+.footer__about 
+	min-height: 150px
+	margin-bottom: 20px 
+	color: #ACAEAE 
+.footer__search
+	position: relative
+	margin-bottom: 25px
+	input
+		width: 258px
+		height: 27px
+		padding: 0 30px 0 10px
+		border: 1px solid #505757
+		border-radius: 3px
+		background: none
+		color: #fff
+		font-size: 13px 
+	button
+		position: absolute
+		top: 0
+		right: 0
+		height: 29px
+		width: 30px
+		background: none
+		font-size: 0
+		i
+			display: inline-block
+			+s(search-white)
+.footer__social
+	+clr
+	.social
+		float: right
+.footer__links
+	float: left
+	width: 140px
+	li
+		padding: 5px 0
+		border-top: #444B4B 1px solid
+		&:first-child
+			padding: 0 0 5px
+			border: none
+	a
+		color: #fff 
+.copyright
+	font-style: italic
+	color: #fff
+	font-size: 11px
+	
+
+
 
 
 .link-white
@@ -604,7 +674,9 @@ a
 		float: right
 	.title
 		display: table
+		margin: 0
 .title
+	margin-bottom: 18px
 	font-size: 20px
 	font-weight: bold
 	line-height: 1
@@ -618,11 +690,6 @@ a
 	z-index: 4 
 	& + .banner
 		padding-top: 30px
-.slider_bigger
-	.slider__item
-		width: 620px
-.slider__item
-	width: 300px
 .slider__nav
 	float: right
 	margin-left: 10px 
