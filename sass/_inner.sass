@@ -1,4 +1,262 @@
 //styles for inner pages
+.breadcrumbs
+	padding-bottom: 12px
+	margin-bottom: 22px
+	border-bottom: #e5e5e5 1px solid  
+	font-size: 0
+	li
+		display: inline
+	a
+		font-size: 12px
+		color: #A3A3A3
+	i
+		display: inline-block
+		margin: 0 14px
+		+s(bc-arr)
+
+
+
+
+
+
+
+
+
+.post
+	+clr
+.post_column
+	.post__item
+		float: left
+		width: 140px
+		margin: 0 0 0 20px 
+		&:first-child
+			margin: 0
+	.post__pic
+		float: none
+	.post__details
+		padding: 14px 0 0 0 
+.post_alone
+	.post__pic
+		float: none
+		margin: 0
+	.post__details
+		padding: 14px 0 0 0 
+.post__item
+	margin-top: 20px 
+	+clr
+	&:first-child
+		margin-top: 0
+.post__pic
+	position: relative
+	float: left
+	img
+		display: block
+		border-radius: 2px
+.post__label
+	position: absolute
+	top: 20px
+	left: 0
+	padding: 5px 8px
+	background: #81c7f3 
+	border-radius: 0 3px 3px 0
+	font-size: 8px 
+	font-weight: bold
+	text-transform: uppercase
+	color: #fff 
+.post__details
+	padding-left: 20px
+	overflow: hidden
+.post__category, .post__text, .post__title
+	margin-bottom: 5px 
+.post__title
+	a
+		display: block
+		color: #000 
+.post__title_bigger
+	margin-bottom: 10px
+	font-size: 30px
+	line-height: 1
+.post__title_middle
+	font-size: 18px
+	line-height: 1.2
+.post__meta
+	margin-bottom: 5px
+	+clr
+	.post__category
+		display: inline-block
+		margin-right: 14px
+		padding-right: 14px
+		border-right: #E5E5E5 1px solid 
+.post__text
+	color: #a3a3a3 
+.post__date, .post__comm
+	display: inline-block
+	font-size: 11px
+	color: #B8B8B8
+	font-style: italic
+.post__date
+	margin-right: 12px
+.post__comm
+	position: relative
+	padding-left: 22px 
+	i
+		position: absolute
+		top: 1px
+		left: 0
+		+s(comm)
+.post__previews
+	float: right
+	margin-left: 20px
+	li
+		position: relative
+		margin-bottom: 5px
+		cursor: pointer
+		&:hover
+			img
+				border-color: $grl
+		&.cycle-pager-active
+			cursor: default
+			&:after
+				content: ""
+				position: absolute
+				top: 27px
+				left: -4px
+				+arr(4,7,$gr,l)
+			img
+				border-color: $gr
+	img
+		display: block
+		border-radius: 3px
+		border: 3px solid transparent
+.post__in
+	overflow: hidden
+	.post__item
+		width: 540px
+		margin: 0
+.post__more
+	padding-top: 10px
+
+
+
+.post__share
+	margin-bottom: 20px
+
+
+
+
+.content
+	font-size: 15px
+	color: #A3A3A3
+	img
+		border-radius: 3px
+		&.is-left
+			float: left
+			margin: 20px 20px 20px 0
+		&.is-right
+			float: right
+			margin: 20px 0 20px 20px 
+	p, h1, ul
+		margin-bottom: 20px
+		& + blockquote
+			margin-top: 35px
+	h1
+		font-weight: normal
+		color: #000
+		font-size: 18px 
+	blockquote
+		position: relative
+		margin-bottom: 20px
+		padding: 15px 20px
+		border-radius: 5px
+		background: #eaf0f0
+		font-size: 13px
+		color: #999   
+		font-style: italic
+		&:before
+			content: ""
+			position: absolute
+			top: -15px
+			left: 15px
+			+s(blockquote)
+	ul
+		padding-left: 20px
+		li
+			position: relative
+			margin-bottom: 20px
+			padding-left: 40px
+			&:before
+				content: ""
+				position: absolute
+				top: 10px
+				left: 0
+				width: 20px
+				height: 1px
+				background: $gr 
+
+
+
+.hr
+	height: 5px
+	margin-bottom: 20px 
+	background: url(../img/wave.png) repeat-x 
+	border: none
+
+
+.block
+	margin-bottom: 30px
+
+
+.gallery
+	position: relative
+	margin-bottom: 20px
+	img
+		border-radius: 3px
+.gallery__prev, .gallery__next
+	position: absolute
+	top: 190px
+	width: 40px
+	height: 40px
+	background: #FFF
+	border-radius: 50% 
+	z-index: 200
+	font-size: 0
+	i
+		display: inline-block
+.gallery__prev
+	left: -20px
+	i
+		+s(gallery-prev)
+.gallery__next
+	right: -20px
+	i
+		+s(gallery-next)
+.gallery__list
+	margin-bottom: 20px
+.gallery__pager
+	margin-bottom: 20px
+	text-align: center
+	font-size: 0
+	span
+		display: inline-block
+		width: 10px
+		height: 10px
+		margin: 0 5px
+		background: #CDD3D3
+		border-radius: 50% 
+		vertical-align: middle
+		cursor: pointer
+		&.cycle-pager-active
+			background: $gr 
+.gallery__desc
+	margin: 0 60px
+	font-style: italic
+	color: #999 
+	overflow: hidden
+
+
+
+
+
 .doctor__in
 	position: relative
 	padding: 10px
@@ -176,3 +434,183 @@
 		margin-left: 2px
 		&:first-child
 			margin: 0
+			
+
+
+.field
+	margin-bottom: 15px
+.field, .field__label, .field__el
+	display: block
+.field__label
+	margin-bottom: 6px
+	color: #000
+	span
+		margin-left: 5px
+		color: $gr  
+.field__el
+	input, textarea
+		display: block
+		width: 100%
+		border: 1px solid #dfe2e2
+		border-radius: 3px
+		background-color: #fff
+		box-shadow: inset 1px 1px 7px rgba(0,0,0,.06)
+		font-size: 15px
+		+box
+	input
+		height: 39px
+		padding: 0 10px
+	textarea
+		height: 100px
+		resize: vertical
+		padding: 7px 10px
+
+
+
+
+.comm
+	padding-top: 20px
+	border-top: 1px solid #000 
+.comm__head
+	margin-bottom: 20px	
+	+clr
+	.comm__title
+		margin: 0
+.comm__write-link
+	float: right
+	margin-top: 5px
+	line-height: 1
+	span, i
+		display: inline-block
+		vertical-align: middle
+	span
+		border-bottom: 1px dotted
+	i
+		margin-left: 10px
+		+s(comm-arr)
+.comm__title
+	margin-bottom: 20px
+	font-size: 20px
+	font-weight: bold
+	color: $font 
+	span
+		color: $gr 
+	i
+		display: inline-block
+		margin-left: 10px
+		+s(comm)
+.comm__list
+	margin-bottom: 25px
+.comm__item
+	position: relative
+	padding-top: 20px
+	margin-top: 20px
+	border-top: #E5E5E5 1px solid 
+	+clr
+.comm__item_reply
+	padding-left: 30px
+	&:before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 0px
+		+s(comm-reply)
+.comm__ava
+	float: left
+	margin-right: 20px
+	img
+		display: block
+		border-radius: 3px
+.comm__man
+	float: left
+	width: 150px
+	margin-right: 20px 
+.comm__name
+	color: #000
+	a
+		color: #000 
+.comm__date
+	margin-bottom: 5px
+	font-size: 11px
+	font-style: italic
+	color: #999 
+.comm__text
+	display: table
+	color: #999 
+.comm__form
+	.fieldset
+		+clr
+		.field
+			float: left
+			width: 220px
+			margin-right: 20px
+		.social
+			float: right
+			margin-top: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

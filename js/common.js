@@ -81,4 +81,40 @@ function slider () {
 }
 slider();
 
+
+//gallery
+function gallery () {
+	var el = $('.js-gallery');
+	if (el.length > 0) {
+		el.each(function(){
+			el_next = $(this).find('.gallery__next');
+			el_prev = $(this).find('.gallery__prev');
+			el_item = $(this).find('.gallery__item');
+			el_pager = $(this).find('.gallery__pager')
+			el_in = $(this).find('.gallery__list');
+			el_in.cycle({
+				fx: 'fade',
+			  timeout: 0,
+			  prev: el_prev,
+			  next: el_next,
+			  slides: el_item,
+			  pager: el_pager
+			});
+			el_desc = $(this).find('.gallery__desc');
+			el_desc_item = $(this).find('.gallery__desc-item');
+			el_desc.cycle({
+				fx: 'fade',
+				timeout: 0,
+				prev: el_prev,
+				next: el_next,
+				slides: el_desc_item,
+				pager: el_pager,
+				pagerTemplate: "",
+				autoHeight: "container"
+			})
+		});
+	};	
+}
+gallery();
+
 });
