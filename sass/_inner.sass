@@ -22,9 +22,14 @@
 	width: 100%
 	a
 		display: table-row
+		text-decoration: none
 		&:first-child
 			span
 				border: none
+		&:hover
+			span
+				color: #000
+				text-decoration: underline 
 	span
 		display: table-cell
 		padding: 6px 0
@@ -101,12 +106,13 @@
 	border-radius: 0 0 3px 3px
 	background-color: #f5f7f7
 	box-shadow: 0 5px 5px rgba(0,0,0,.05) inset
+	table-layout: fixed 
 .doctor__days-row
 	display: table-row
 .doctor__days-item
 	position: relative
 	display: table-cell
-	padding: 7px 10px
+	padding: 7px
 	border-left: #E5E6E6 1px solid
 	&:first-child
 		border: none
@@ -136,6 +142,7 @@
 		
 
 .btn
+	position: relative
 	height: 40px
 	padding: 0 20px
 	border-radius: 3px
@@ -143,10 +150,24 @@
 	text-transform: uppercase
 	color: #FFF
 	font-weight: bold 
+	&:hover
+		top: -2px
+	&:active
+		top: 0
 .btn_blue
-	background: #81c7f3 
+	background: $bl
+	&:hover
+		background: $bll 
+		box-shadow: 0 2px 0 $bld 
+	&:active
+		box-shadow: none
 .btn_green
-	background: #38a8a2 
+	background: $gr
+	&:hover
+		background: $grl
+		box-shadow: 0 2px 0 $grd
+	&:active
+		box-shadow: none
 
 
 .rating

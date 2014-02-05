@@ -44,13 +44,17 @@
 $font: #404343
 $gr: #38a8a2
 $grd: #2c928d
+$grl: #4fc5bf
+$bl: #81c7f3
+$bll: #9cd2f4
+$bld: #6fb1db
 
 body
 	font-size: 13px 
 	font-family: Arial, sans-serif 
 	line-height: 1.4
 	color: $font
-	-webkit-font-smoothing: antialiased
+	//-webkit-font-smoothing: antialiased
 
 input, button
 	font-family: Arial, sans-serif 
@@ -58,6 +62,42 @@ input, button
 a
 	text-decoration: none
 	color: $gr 
+	&:hover
+		text-decoration: underline
+	&.link-white
+		display: inline-block
+		padding: 2px 7px
+		border-radius: 3px
+		border: 1px solid #eaeaea 
+		font-size: 11px
+		color: #b8b8b8 
+		text-decoration: none
+		&:hover
+			border-color: $gr
+			color: #000 
+	&.link-more
+		position: relative
+		display: inline-block
+		padding: 3px 8px
+		border: 1px solid $gr
+		border-radius: 3px 
+		span, i
+			display: inline-block
+			vertical-align: middle
+		i
+			margin-left: 7px 
+			+s(more-arr)
+		&:hover
+			top: -1px
+			background: $grl
+			box-shadow: 0 1px 0 $grd
+			border-color: $grl
+			color: #FFF
+			i
+				+s(more-arr-h)
+		&:active
+			top: 0
+			box-shadow: none
 
 // common blocks
 .wrap
@@ -110,6 +150,7 @@ a
 			border: none
 	a
 		color: $font 
+		font-size: 12px
 .header__login	
 	position: absolute
 	top: 24px 
@@ -124,6 +165,7 @@ a
 			width: 87px
 .header__enter
 	a
+		position: relative
 		display: block
 		height: 19px 
 		background: $grd 
@@ -132,6 +174,14 @@ a
 		font-weight: bold
 		text-align: center
 		color: #fff 
+		font-size: 12px
+		&:hover
+			top: -1px
+			background: $grl 
+			box-shadow: 0 1px 0 $grd
+		&:active
+			top: 0
+			box-shadow: none
 	span, i
 		display: inline-block
 		vertical-align: middle
@@ -231,26 +281,38 @@ a
 		&:first-child
 			margin: 0
 	a
+		position: relative
 		display: table-cell
 		width: 25px
 		height: 25px
 		text-align: center
 		border-radius: 50%
 		vertical-align: middle
+		&:hover
+			top: -1px
+		&:active
+			top: 0
+			box-shadow: none
 	i
 		display: inline-block
 .social__fb
 	background: #114DA6
 	i
 		+s(social-fb)
+	&:hover
+		box-shadow: 0 1px 0 #225094
 .social__vk
 	background: #0f6a8c
 	i
 		+s(social-vk)
+	&:hover
+		box-shadow: 0 1px 0 #0f536d
 .social__gp
 	background: #cd0000
 	i
 		+s(social-gp)
+	&:hover
+		box-shadow: 0 1px 0 #9a1313
 .search
 	position: absolute
 	top: 68px
@@ -279,7 +341,7 @@ a
 			height: 37px
 			border-radius: 3px
 			+box
-			font-size: 15px
+			font-size: 13px
 			color: #000  
 		i
 			position: absolute
@@ -299,12 +361,19 @@ a
 	width: 60px
 	height: 29px
 	border-radius: 3px
-	background-color: #81c7f3
+	background: $bl
 	font-size: 11px
 	font-weight: bold
 	text-transform: uppercase
 	color: #FFF 
 	z-index: 4 
+	&:hover
+		top: 2px
+		background: $bll 
+		box-shadow: 0 2px 0 $bld 
+	&:active
+		top: 4px
+		box-shadow: none
 .search__drop
 	display: none
 	position: absolute
@@ -341,6 +410,7 @@ a
 	top: 0
 	left: 274px
 	width: 122px
+	font-size: 12px
 	z-index: 6  
 	&.is-active
 		top: -3px
@@ -408,6 +478,10 @@ a
 			float: right
 		strong
 			font-weight: normal
+		&:hover
+			strong
+				color: #000 
+				text-decoration: underline
 
 
 
@@ -467,6 +541,7 @@ a
 			font-size: 11px
 			text-transform: uppercase
 			font-weight: bold
+			text-decoration: none
 			color: #FFF 
 			z-index: 4 
 .nav__sub
@@ -527,17 +602,6 @@ a
 		border-top: 1px dotted #ccc 
 		&:first-child
 			border: none
-		&.nav__sub-title
-			border: none  
-			font-size: 15px
-			font-weight: bold
-			color: #030303
-			& + li
-				border: none
-			a
-				font-size: 15px
-				font-weight: bold
-				color: #030303
 		&:hover
 			border-color: transparent
 			& + li
@@ -557,17 +621,38 @@ a
 					border-radius: 3px 0 0 3px
 				&:after
 					right: -9px
-					border-radius: 0 3px 3px 0	
-
+					border-radius: 0 3px 3px 0
+		&.nav__sub-title
+			margin-bottom: 5px
+			padding: 0
+			border: none  
+			font-size: 15px
+			font-weight: bold
+			color: #030303
+			& + li
+				border: none
+			a
+				background: none 
+				font-size: 15px
+				font-weight: bold
+				color: #030303
+				&:before, &:after
+					display: none
+				&:hover
+					text-decoration: underline
 	a
 		position: relative
 		display: block
 		padding: 5px 0
+		text-decoration: none
 .nav__sub-title
+	padding-top: 5px
 	margin-bottom: 15px
 	font-size: 15px
 	font-weight: bold
 	color: #000 
+	a
+		color: #000 
 .nav__sub-all
 	padding-top: 7px
 	
@@ -587,6 +672,8 @@ a
 			margin-right: 20px
 			a
 				color: #ACAEAE 
+				&:hover
+					color: #fff 
 	li
 		padding: 5px 0
 		border-top: #444B4B 1px solid
@@ -641,29 +728,7 @@ a
 	font-style: italic
 	color: #fff
 	font-size: 11px
-	
 
-
-
-
-.link-white
-	display: inline-block
-	padding: 2px 7px
-	border-radius: 3px
-	border: 1px solid #eaeaea 
-	font-size: 11px
-	color: #b8b8b8 
-.link-more
-	display: inline-block
-	padding: 3px 8px
-	border: 1px solid $gr
-	border-radius: 3px 
-	span, i
-		display: inline-block
-		vertical-align: middle
-	i
-		margin-left: 7px 
-		+s(more-arr)
 
 
 
@@ -681,25 +746,38 @@ a
 	font-weight: bold
 	line-height: 1
 	color: #2F3737 
+	a
+		color: #2F3737
+		&:hover
+			color: $gr 
 
 
 
 .slider
 	position: relative
-	overflow: hidden
 	z-index: 4 
 	& + .banner
 		padding-top: 30px
+.slider__item
+	width: 100%
 .slider__nav
 	float: right
 	margin-left: 10px 
 	button
+		position: relative
 		float: left
 		width: 21px
 		height: 21px
 		background: $gr
 		border-radius: 3px 
 		font-size: 0
+		&:hover
+			top: -1px
+			background: $grl 
+			box-shadow: 0 1px 0 $grd
+		&:active
+			top: 0
+			box-shadow: none 
 	i
 		display: inline-block
 		vertical-align: middle

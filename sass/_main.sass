@@ -43,23 +43,24 @@
 .post__details
 	padding-left: 20px
 	overflow: hidden
-.post__category, .post__text
+.post__category, .post__text, .post__title
 	margin-bottom: 5px 
 .post__title
-	margin-bottom: 10px
 	a
-		font-size: 18px
+		font-size: 13px
 		color: #000 
 		line-height: 1
 .post__title_bigger
+	margin-bottom: 10px
 	a
 		font-size: 30px
-.post__text
-	color: #000
+.post__title_middle
+	a
+		font-size: 18px
 .post__meta
 	margin-bottom: 5px
 	+clr
-.post__text_gray
+.post__text
 	color: #a3a3a3 
 .post__date, .post__comm
 	float: left
@@ -83,7 +84,11 @@
 		position: relative
 		margin-bottom: 5px
 		cursor: pointer
+		&:hover
+			img
+				border-color: $grl
 		&.cycle-pager-active
+			cursor: default
 			&:after
 				content: ""
 				position: absolute
@@ -107,12 +112,23 @@
 
 
 .spec-cats
+	width: 100%
 	li
 		padding: 5px 0
 		border-top: 1px dotted #ccc 
+		+clr
 		&:first-child
 			padding: 0 0 5px
 			border: none
+	strong
+		float: right
+		margin: 2px 0 0 20px
+		font-weight: normal
+		font-size: 11px
+		color: #BED1D0 
+	a
+		&:hover
+			color: #000 
 
 
 .label
@@ -166,6 +182,8 @@
 		border-radius: 3px
 		font-size: 11px
 		color: #8a9494 
+		&:hover
+			color: #000 
 .m-catalog__list
 	+clr
 	ul
@@ -178,6 +196,9 @@
 		border-top: 1px dotted #b2b2b2 
 		&:first-child
 			border: none
+		a
+			&:hover
+				color: #000 
 
 
 
@@ -229,6 +250,8 @@
 		vertical-align: top
 		+hidetext
 		+s(do-ask)
+		&:hover
+			+s(do-ask-h)
 
 
 
