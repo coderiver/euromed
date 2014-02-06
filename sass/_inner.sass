@@ -24,6 +24,23 @@
 
 .post
 	+clr
+.post_aside, .post_aside-pic
+	margin-bottom: 30px
+	.post__details
+		padding: 0
+.post_aside
+	.post__item	
+		margin-top: 10px
+		padding-top: 15px
+		border-top: 1px dotted #ccc 
+		&:first-child
+			margin: 0
+			padding: 0
+			border: none
+.post_aside-pic
+	.post__pic
+		float: none
+		margin-bottom: 10px
 .post_column
 	.post__item
 		float: left
@@ -211,11 +228,14 @@
 	margin-bottom: 20px
 	img
 		border-radius: 3px
+.gallery__in
+	position: relative
 .gallery__prev, .gallery__next
 	position: absolute
-	top: 190px
+	top: 50%
 	width: 40px
 	height: 40px
+	margin-top: -20px
 	background: #FFF
 	border-radius: 50% 
 	z-index: 200
@@ -464,13 +484,55 @@
 		height: 100px
 		resize: vertical
 		padding: 7px 10px
+		
 
 
+
+.radio
+	display: block
+	position: relative
+	padding-left: 25px
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0 
+		&:checked + span
+			&:after
+				content: ""
+				position: absolute
+				top: 4px
+				left: 4px
+				width: 7px
+				height: 7px
+				background: $gr
+				border-radius: 50%
+			&:before
+				border-color: $gr
+	span
+		display: block
+		font-size: 12px
+		color: #999 
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 13px
+			height: 13px
+			border: 1px solid #afb4b4
+			border-radius: 50%
 
 
 .comm
 	padding-top: 20px
 	border-top: 1px solid #000 
+.comm_small
+	.comm__form
+		.fieldset
+			.field
+				width: 140px
+				margin-right: 20px
 .comm__head
 	margin-bottom: 20px	
 	+clr
@@ -547,16 +609,94 @@
 		.social
 			float: right
 			margin-top: 30px
+	> .btn
+		width: 140px
+
+
+.poll
+	position: relative
+	margin-bottom: 40px
+	padding-top: 12px
+.poll__ico
+	position: absolute
+	top: 0
+	left: 9px
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	border: 2px solid $gr 
+	background: #fff
+	i
+		position: absolute
+		top: 4px
+		left: 5px
+		+s(question)
+.poll__in 
+	padding: 20px 10px 10px
+	background: #eaf0f0
+	border-radius: 3px 
+	.btn
+		width: 100%
+.poll__title
+	margin-bottom: 15px
+	font-size: 15px
+	font-weight: bold
+	color: #000
+	line-height: 1.2 
+.poll__variants
+	margin-bottom: 20px
+	.radio
+		margin-bottom: 10px
 
 
 
-
-
-
-
-
-
-
+.pagination
+	margin-top: 20px
+	padding-top: 20px
+	border-top: 1px solid #e5e5e5 
+	font-size: 0
+	text-align: center
+	a
+		display: inline-block
+		width: 35px
+		height: 35px
+		border: 2px solid transparent
+		border-radius: 50%
+		line-height: 35px
+		vertical-align: top
+		font-size: 20px
+		color: #000
+		text-decoration: none
+		&.is-active
+			border-color: $gr
+		&.pagination__prev,
+		&.pagination__next
+			width: auto
+			border: none
+			i, span
+				display: inline-block
+			span
+				margin: 0 15px
+				font-size: 12px
+				color: $gr
+			&.is-disabled
+				cursor: default
+				span
+					color: #ccc 
+				&.pagination__prev
+					i
+						+s(pagin-prev-d)
+				&.pagination__next
+					i
+						+s(pagin-next-d)
+		&.pagination__prev
+			float: left
+			i
+				+s(pagin-prev)
+		&.pagination__next
+			float: right
+			i
+				+s(pagin-next)
 
 
 
