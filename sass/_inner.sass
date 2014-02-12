@@ -9,6 +9,8 @@
 	a
 		font-size: 12px
 		color: #A3A3A3
+		&:hover
+			color: $gr 
 	i
 		display: inline-block
 		margin: 0 14px
@@ -174,13 +176,15 @@
 			margin: 20px 0 20px 20px 
 	p, h1, ul
 		margin-bottom: 20px
-		& + blockquote
+		& + blockquote, q
 			margin-top: 35px
 	h1
 		font-weight: normal
 		color: #000
 		font-size: 18px 
-	blockquote
+	strong
+		color: #000 
+	blockquote, q
 		position: relative
 		margin-bottom: 20px
 		padding: 15px 20px
@@ -195,7 +199,11 @@
 			top: -15px
 			left: 15px
 			+s(blockquote)
-	ul
+		&.is-right
+			float: right
+			width: 260px
+			margin: 20px 0 20px 20px
+	ul, ol
 		padding-left: 20px
 		li
 			position: relative
@@ -204,11 +212,24 @@
 			&:before
 				content: ""
 				position: absolute
-				top: 10px
 				left: 0
+	ul
+		li
+			&:before
+				top: 10px
 				width: 20px
 				height: 1px
 				background: $gr 
+	ol
+		counter-reset: list
+		li
+			counter-increment: list
+			&:before
+				top: 0
+				content: counter(list) "."
+				font-weight: bold 
+				color: $gr 
+				
 
 
 
@@ -250,12 +271,11 @@
 	right: -20px
 	i
 		+s(gallery-next)
-.gallery__list
-	margin-bottom: 20px
 .gallery__pager
-	margin-bottom: 20px
+	margin: 20px 0
 	text-align: center
 	font-size: 0
+	+clr
 	span
 		display: inline-block
 		width: 10px
@@ -267,6 +287,34 @@
 		cursor: pointer
 		&.cycle-pager-active
 			background: $gr 
+.gallery__pager_thumbs
+	margin: 10px -3px 12px 
+	text-align: left
+.gallery__pager-item
+	position: relative
+	display: inline-block
+	padding: 0
+	margin: 0 2px 2px 0
+	border: 3px solid transparent
+	vertical-align: top
+	border-radius: 3px
+	cursor: pointer
+	&:hover
+		border-color: $gr
+		img
+			border-radius: 0
+	&.cycle-pager-active
+		border-color: $grd
+		&:before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 50%
+			margin-left: -4px
+			+arr(8,4,$grd,t)
+		img
+			border-radius: 0
+			
 .gallery__desc
 	margin: 0 60px
 	font-style: italic
@@ -700,17 +748,114 @@
 
 
 
+.player
+	padding: 10px
+	margin-bottom: 30px
+	border-radius: 2px
+	background: #EAF0F0 
+	overflow: hidden
+.player__btn, .player__vol
+	width: 21px
+	height: 21px
+	font-size: 0
+.player__btn
+	float: left
+	margin-right: 10px 
+	background: $grd
+	border-radius: 2px
+	i
+		display: inline-block
+		margin-left: 2px
+		+s(player-play)
+	&.is-pause
+		i
+			margin: 0
+			+s(player-pause)
+.player__vol
+	float: right
+	margin-left: 10px
+	background: none 
+	i
+		display: inline-block
+		+s(player-vol-on)
+	&.is-off
+		i
+			+s(player-vol-off)
+.player__data
+	margin-bottom: 6px
+	font-size: 11px
+	color: #999
+	line-height: 1 
+	overflow: hidden
+.player__in
+	overflow: hidden
+.player__time
+	float: right
+	margin-left: 10px
+.player__title
+	overflow: hidden
+	text-overflow: ellipsis 
+	white-space: nowrap
+.player__line
+	position: relative
+	height: 4px
+	border-radius: 2px
+	background: #FFF
+	i
+		position: absolute
+		top: 0
+		left: 0
+		height: 4px
+		background: $grd
+		border-radius: 2px 
 
 
 
+.tabs
+	margin-bottom: 30px
 
-
-
-
-
-
-
-
+.tabs__nav
+	margin-bottom: 25px
+	padding: 0 5px 
+	border-bottom: 1px solid #4e4e4e 
+	font-size: 0
+	li
+		position: relative
+		display: inline-block
+		margin-right: -1px
+		vertical-align: bottom
+		border: 1px solid #e1e1e1
+		border-width: 1px 1px 0
+		border-radius: 3px 3px 0 0
+		text-align: center
+		&.is-active
+			top: 1px
+			padding-top: 4px
+			background: #fff 
+			border-color: #4e4e4e
+			z-index: 2 
+			&:after
+				content: ""
+				position: absolute
+				bottom: -7px
+				left: 50%
+				margin-left: -4px
+				+arr(8,4,$gr,b)
+			a
+				color: $gr 
+				text-decoration: none
+				cursor: default
+	a
+		display: table-cell
+		width: 110px
+		height: 48px
+		padding: 0 20px
+		vertical-align: middle
+		font-size: 13px
+		color: #707171 
+		line-height: 1.1
+		&:hover
+			color: #000 
 
 
 
