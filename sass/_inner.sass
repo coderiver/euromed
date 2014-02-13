@@ -494,6 +494,8 @@
 		box-shadow: 0 2px 0 $grd
 	&:active
 		box-shadow: none
+.btn_small
+	height: 30px
 
 
 .rating
@@ -506,7 +508,16 @@
 
 
 .field
+	position: relative
 	margin-bottom: 15px
+	&.is-error
+		.field__error
+			display: block
+		.field__el
+			input, textarea
+				border-color: #fe9c9c
+				background-color: #fff9f9
+				box-shadow: 0 0 5px rgba(255,120,120,.15), inset 1px 1px 7px rgba(0,0,0,.06)
 .field, .field__label, .field__el
 	display: block
 .field__label
@@ -523,8 +534,11 @@
 		border-radius: 3px
 		background-color: #fff
 		box-shadow: inset 1px 1px 7px rgba(0,0,0,.06)
-		font-size: 15px
+		font-size: 12px
 		+box
+		&:focus
+			border-color: $grd
+			box-shadow: 0 0 5px rgba(56,168,162,.15), inset 1px 1px 7px rgba(0,0,0,.06)
 	input
 		height: 39px
 		padding: 0 10px
@@ -532,7 +546,32 @@
 		height: 100px
 		resize: vertical
 		padding: 7px 10px
-		
+.field_small
+	.field__el
+		input
+			height: 30px
+.field__error
+	display: none
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	padding-top: 10px 
+.field__message
+	position: relative
+	display: block
+	background: #fe9c9c
+	border-radius: 3px
+	padding: 10px
+	font-style: italic
+	color: #fff 
+	line-height: 1.2
+	&:before
+		content: ""
+		position: absolute
+		top: -6px
+		left: 15px
+		+arr(12,6,#fe9c9c,t)
 
 
 
@@ -540,6 +579,7 @@
 	display: block
 	position: relative
 	padding-left: 25px
+	cursor: pointer
 	input
 		position: absolute
 		top: 0
@@ -663,8 +703,29 @@
 
 .poll
 	position: relative
-	margin-bottom: 40px
+	margin-bottom: 30px
 	padding-top: 12px
+.poll_wide, .poll_aside
+	.poll__in
+		padding: 20px 
+.poll_wide 
+	.poll__variants
+		float: left
+		width: 80%
+		margin: 0
+		.radio
+			float: left
+			width: 30%
+			margin: 0 0 0 3%
+			+box
+			&:first-child
+				margin: 0
+	.poll__in
+		.btn
+			float: right
+			width: 20%
+			padding: 0
+		
 .poll__ico
 	position: absolute
 	top: 0
@@ -682,7 +743,8 @@
 .poll__in 
 	padding: 20px 10px 10px
 	background: #eaf0f0
-	border-radius: 3px 
+	border-radius: 3px
+	+clr
 	.btn
 		width: 100%
 .poll__title
@@ -695,6 +757,9 @@
 	margin-bottom: 20px
 	.radio
 		margin-bottom: 10px
+		&:hover
+			span
+				color: $gr 
 
 
 
@@ -861,20 +926,149 @@
 
 
 
+.subscribe
+	padding: 10px
+	margin-bottom: 30px
+	background: #eaf0f0
+	border-radius: 3px
+	+clr
+	.field__label
+		font-weight: bold
+		color: #000 
+		line-height: 1
+.subscribe_small
+	.field__label
+		margin-bottom: 10px
+	.btn
+		width: 100%
+		padding: 0
+.subscribe_wide
+	+clr
+	.subscribe__ico, .field__label
+		float: left
+	.subscribe__ico
+		margin-right: 10px
+	.field
+		margin: 0
+		overflow: hidden
+	.field__label
+		max-width: 90px
+		margin-right: 10px
+	.field__el
+		overflow: hidden
+	.btn
+		float: right
+		margin-left: 10px
+.subscribe_middle
+	.subscribe__ico
+		float: left
+	.subscribe__ico
+		margin: 0 10px 0 0
+	.field
+		margin: 0
+	.field__label
+		margin: 0 0 10px
+		overflow: hidden
+	.field__el
+		float: left
+		width: 230px
+	.btn
+		float: right
+		padding: 0
+		width: 40px
+.subscribe__ico
+	display: inline-block
+	margin-bottom: 10px
+	vertical-align: top
+	+s(subscribe)
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+.review
+	margin-bottom: 30px
+.review_wide
+	+clr
+	.review__head, .review__details
+		float: left
+	.review__in
+		display: table
+	.review__head
+		margin: 0 20px 0 0
+	.review__text
+		display: table-cell
+		height: 90px
+		margin: 0 0 0 20px 
+		padding: 0 0 0 20px 
+		border-width: 0 0 0 1px
+		vertical-align: middle
+		&:before, &:after
+			top: 50%
+			margin-top: -8px
+		&:before
+			left: 0
+			border-width: 8px 8px 8px 0
+			border-color: transparent #38a8a2 transparent transparent
+		&:after
+			left: 1px
+			border-width: 8px 8px 8px 0
+			border-color: transparent #fff transparent transparent
+	.review__details
+		width: 140px
+.review_middle
+	.review__head
+		float: left
+		margin-right: 20px
+	.review__details
+		overflow: hidden
+	.review__text
+		margin-top: 25px
+		clear: both
+.review__head
+	margin-bottom: 20px
+	+clr
+.review__ico, .review__pic
+	float: left
+.review__ico
+	margin-right: 10px
+	+s(mr_scoba)
+.review__pic
+	img
+		display: block
+		border-radius: 50%
+.review__man
+	margin-bottom: 8px
+	font-size: 15px
+	font-weight: bold
+	color: #000
+	line-height: 1.2
+	a
+		color: #000 
+.review__position
+	color: $gr 
+	line-height: 1.2
+.review__text
+	position: relative
+	margin-top: 15px
+	padding-top: 15px
+	border: 1px solid $gr
+	border-width: 1px 0 0 0
+	font-size: 13px
+	color: #999
+	font-style: italic 
+	&:before, &:after
+		content: ""
+		position: absolute
+		left: 50%
+		margin-left: -8px
+		+arr(16,8,$gr,t)
+	&:before
+		top: -8px
+	&:after
+		top: -7px
+		border-color: transparent transparent #fff transparent
 
 
 
