@@ -1,4 +1,4 @@
-//styles for inner pages
+//styles for inner page
 .breadcrumbs
 	padding-bottom: 12px
 	margin-bottom: 22px
@@ -15,13 +15,7 @@
 	i
 		display: inline-block
 		margin: 0 14px
-		+s(bc-arr)
-
-
-
-
-
-
+		+s(flip(bc-arr, bc-arr-rtl))
 
 
 
@@ -46,9 +40,9 @@
 		margin-bottom: 10px
 .post_column
 	.post__item
-		float: left
+		float: flip(left, right)
 		width: 140px
-		margin: 0 0 0 20px 
+		margin: flip(0 0 0 20px, 0 20px 0 0) 
 		&:first-child
 			margin: 0
 	.post__pic
@@ -68,14 +62,14 @@
 		margin-top: 0
 .post__pic
 	position: relative
-	float: left
+	float: flip(left, right)
 	img
 		display: block
 		border-radius: 2px
 .post__label
 	position: absolute
 	top: 20px
-	left: 0
+	#{$left}: 0
 	padding: 5px 8px
 	background: #81c7f3 
 	border-radius: 0 3px 3px 0
@@ -84,7 +78,7 @@
 	text-transform: uppercase
 	color: #fff 
 .post__details
-	padding-left: 20px
+	#{$padding-left}: 20px
 	overflow: hidden
 .post__category, .post__text, .post__title
 	margin-bottom: 5px 
@@ -104,9 +98,9 @@
 	+clr
 	.post__category
 		display: inline-block
-		margin-right: 14px
-		padding-right: 14px
-		border-right: #E5E5E5 1px solid 
+		#{$margin-right}: 14px
+		#{$padding-right}: 14px
+		#{$border-right}: #E5E5E5 1px solid 
 .post__text
 	color: #a3a3a3 
 .post__date, .post__comm
@@ -115,18 +109,18 @@
 	color: #B8B8B8
 	font-style: italic
 .post__date
-	margin-right: 12px
+	#{$margin-right}: 12px
 .post__comm
 	position: relative
-	padding-left: 22px 
+	#{$padding-left}: 22px 
 	i
 		position: absolute
 		top: 1px
-		left: 0
+		#{$left}: 0
 		+s(comm)
 .post__previews
-	float: right
-	margin-left: 20px
+	float: flip(right, left)
+	#{$margin-left}: 20px
 	li
 		position: relative
 		margin-bottom: 5px
@@ -140,8 +134,12 @@
 				content: ""
 				position: absolute
 				top: 27px
-				left: -4px
-				+arr(4,7,$gr,l)
+				#{$left}: -4px
+				width: 0px
+				height: 0px
+				border-style: solid
+				border-width: flip(3.5px 4px 3.5px 0, 3.5px 0 3.5px 4px)
+				border-color: flip(transparent #38a8a2 transparent transparent, transparent transparent transparent #38a8a2)
 			img
 				border-color: $gr
 	img
@@ -170,11 +168,11 @@
 	img
 		border-radius: 3px
 		&.is-left
-			float: left
-			margin: 20px 20px 20px 0
+			float: flip(left, right)
+			margin: flip(20px 20px 20px 0, 20px 0 20px 20px)
 		&.is-right
-			float: right
-			margin: 20px 0 20px 20px 
+			float: flip(right, left)
+			margin: flip(20px 0 20px 20px, 20px 20px 20px 0)
 	p, h1, ul
 		margin-bottom: 20px
 		& + blockquote, q
@@ -198,22 +196,22 @@
 			content: ""
 			position: absolute
 			top: -15px
-			left: 15px
+			#{$left}: 15px
 			+s(blockquote)
 		&.is-right
-			float: right
+			float: flip(right, left)
 			width: 260px
-			margin: 20px 0 20px 20px
+			margin: flip(20px 0 20px 20px, 20px 20px 20px 0)
 	ul, ol
-		padding-left: 20px
+		#{$padding-left}: 20px
 		li
 			position: relative
 			margin-bottom: 20px
-			padding-left: 40px
+			#{$padding-left}: 40px
 			&:before
 				content: ""
 				position: absolute
-				left: 0
+				#{$left}: 0
 	ul
 		li
 			&:before
@@ -295,7 +293,7 @@
 	position: relative
 	display: inline-block
 	padding: 0
-	margin: 0 2px 2px 0
+	margin: flip(0 2px 2px 0, 0 0 2px 2px)
 	border: 3px solid transparent
 	vertical-align: top
 	border-radius: 3px
@@ -310,8 +308,8 @@
 			content: ""
 			position: absolute
 			top: -7px
-			left: 50%
-			margin-left: -4px
+			#{$left}: 50%
+			#{$margin-left}: -4px
 			+arr(8,4,$grd,t)
 		img
 			border-radius: 0
@@ -333,9 +331,9 @@
 	background: #FFF 
 	+clr
 .doctor__left
-	float: left
+	float: flip(left, right)
 	width: 100px
-	margin-right: 20px
+	#{$margin-right}: 20px
 .doctor__right
 	padding-bottom: 55px
 	overflow: hidden
@@ -365,7 +363,7 @@
 		font-size: 11px
 		color: #A3A3A3 
 		&:first-child
-			padding-right: 5px
+			#{$padding-right}: 5px
 			text-align: center
 	i
 		display: inline-block
@@ -379,11 +377,11 @@
 .doctor__head
 	position: relative
 	margin-bottom: 10px
-	padding-right: 100px
+	#{$padding-right}: 100px
 	.rating
 		position: absolute
 		top: 10px
-		right: 10px
+		#{$right}: 10px
 .doctor__title
 	margin-bottom: 5px
 	a
@@ -400,10 +398,10 @@
 	margin-bottom: 15px
 	+clr
 .doctor__address, .doctor__hospital
-	float: left
+	float: flip(left, right)
 	width: 155px
 .doctor__address
-	margin-right: 10px
+	#{$margin-right}: 10px
 	li
 		font-size: 12px
 		color: #a3a3a3 
@@ -418,7 +416,7 @@
 		font-weight: bold
 .doctor__do
 	position: absolute
-	right: 10px
+	#{$right}: 10px
 	bottom: 10px
 	width: 320px
 	font-size: 0
@@ -426,7 +424,7 @@
 		width: 155px
 		vertical-align: top
 		&:first-child
-			margin-right: 10px
+			#{$margin-right}: 10px
 .doctor__days
 	display: table
 	width: 100%
@@ -458,7 +456,7 @@
 			content: ""
 			position: absolute
 			top: 9px
-			right: 8px
+			#{$right}: 8px
 			+s(check)
 	&.is-free
 		strong
@@ -502,7 +500,7 @@
 .rating
 	font-size: 0
 	img
-		margin-left: 2px
+		#{$margin-left}: 2px
 		&:first-child
 			margin: 0
 			
@@ -525,7 +523,7 @@
 	margin-bottom: 6px
 	color: #000
 	span
-		margin-left: 5px
+		#{$margin-left}: 5px
 		color: $gr  
 .field__el
 	input, textarea
@@ -571,7 +569,7 @@
 		content: ""
 		position: absolute
 		top: -6px
-		left: 15px
+		#{$left}: 15px
 		+arr(12,6,#fe9c9c,t)
 
 
@@ -579,19 +577,19 @@
 .radio
 	display: block
 	position: relative
-	padding-left: 25px
+	#{$padding-left}: 25px
 	cursor: pointer
 	input
 		position: absolute
 		top: 0
-		left: 0
+		#{$left}: 0
 		opacity: 0 
 		&:checked + span
 			&:after
 				content: ""
 				position: absolute
 				top: 4px
-				left: 4px
+				#{$left}: 4px
 				width: 7px
 				height: 7px
 				background: $gr
@@ -606,7 +604,7 @@
 			content: ""
 			position: absolute
 			top: 0
-			left: 0
+			#{$left}: 0
 			width: 13px
 			height: 13px
 			border: 1px solid #afb4b4
@@ -621,14 +619,14 @@
 		.fieldset
 			.field
 				width: 140px
-				margin-right: 20px
+				#{$margin-right}: 20px
 .comm__head
 	margin-bottom: 20px	
 	+clr
 	.comm__title
 		margin: 0
 .comm__write-link
-	float: right
+	float: flip(right, left)
 	margin-top: 5px
 	line-height: 1
 	span, i
@@ -637,7 +635,7 @@
 	span
 		border-bottom: 1px dotted
 	i
-		margin-left: 10px
+		#{$margin-left}: 10px
 		+s(comm-arr)
 .comm__title
 	margin-bottom: 20px
@@ -648,7 +646,7 @@
 		color: $gr 
 	i
 		display: inline-block
-		margin-left: 10px
+		#{$margin-left}: 10px
 		+s(comm)
 .comm__list
 	margin-bottom: 25px
@@ -659,23 +657,23 @@
 	border-top: #E5E5E5 1px solid 
 	+clr
 .comm__item_reply
-	padding-left: 30px
+	#{$padding-left}: 30px
 	&:before
 		content: ""
 		position: absolute
 		top: 20px
-		left: 0px
+		#{$left}: 0px
 		+s(comm-reply)
 .comm__ava
 	float: left
-	margin-right: 20px
+	#{$margin-right}: 20px
 	img
 		display: block
 		border-radius: 3px
 .comm__man
 	float: left
 	width: 150px
-	margin-right: 20px 
+	#{$margin-right}: 20px 
 .comm__name
 	color: #000
 	a
@@ -692,9 +690,9 @@
 	.fieldset
 		+clr
 		.field
-			float: left
+			float: flip(left, right)
 			width: 220px
-			margin-right: 20px
+			#{$margin-right}: 20px
 		.social
 			float: right
 			margin-top: 30px
@@ -711,26 +709,26 @@
 		padding: 20px 
 .poll_wide 
 	.poll__variants
-		float: left
+		float: flip(left, right)
 		width: 80%
 		margin: 0
 		.radio
-			float: left
+			float: flip(left, right)
 			width: 30%
-			margin: 0 0 0 3%
+			margin: flip(0 0 0 3%, 0 3% 0 0)
 			+box
 			&:first-child
 				margin: 0
 	.poll__in
 		.btn
-			float: right
+			float: flip(right, left)
 			width: 20%
 			padding: 0
 		
 .poll__ico
 	position: absolute
 	top: 0
-	left: 9px
+	#{$left}: 9px
 	width: 20px
 	height: 20px
 	border-radius: 50%
@@ -739,7 +737,7 @@
 	i
 		position: absolute
 		top: 4px
-		left: 5px
+		left: 6px
 		+s(question)
 .poll__in 
 	padding: 20px 10px 10px
@@ -799,18 +797,18 @@
 					color: #ccc 
 				&.pagination__prev
 					i
-						+s(pagin-prev-d)
+						+s(flip(pagin-prev-d, pagin-next-d))
 				&.pagination__next
 					i
-						+s(pagin-next-d)
+						+s(flip(pagin-next-d, pagin-prev-d))
 		&.pagination__prev
-			float: left
+			float: flip(left, right)
 			i
-				+s(pagin-prev)
+				+s(flip(pagin-prev, pagin-next))
 		&.pagination__next
-			float: right
+			float: flip(right, left)
 			i
-				+s(pagin-next)
+				+s(flip(pagin-next, pagin-prev))
 
 
 
@@ -825,8 +823,8 @@
 	height: 21px
 	font-size: 0
 .player__btn
-	float: left
-	margin-right: 10px 
+	float: flip(left, right)            
+	#{$margin-right}: 10px 
 	background: $grd
 	border-radius: 2px
 	i
@@ -838,8 +836,8 @@
 			margin: 0
 			+s(player-pause)
 .player__vol
-	float: right
-	margin-left: 10px
+	float: flip(right, left)
+	#{$margin-left}: 10px
 	background: none 
 	i
 		display: inline-block
@@ -856,7 +854,7 @@
 .player__in
 	overflow: hidden
 .player__time
-	float: right
+	float: flip(right, left)
 	margin-left: 10px
 .player__title
 	overflow: hidden
@@ -870,7 +868,7 @@
 	i
 		position: absolute
 		top: 0
-		left: 0
+		#{$left}: 0
 		height: 4px
 		background: $grd
 		border-radius: 2px 
@@ -888,7 +886,7 @@
 	li
 		position: relative
 		display: inline-block
-		margin-right: -1px
+		#{$margin-right}: -1px
 		vertical-align: bottom
 		border: 1px solid #e1e1e1
 		border-width: 1px 1px 0
@@ -904,8 +902,8 @@
 				content: ""
 				position: absolute
 				bottom: -7px
-				left: 50%
-				margin-left: -4px
+				#{$left}: 50%
+				#{$margin-left}: -4px
 				+arr(8,4,$gr,b)
 			a
 				color: $gr 
@@ -946,35 +944,35 @@
 .subscribe_wide
 	+clr
 	.subscribe__ico, .field__label
-		float: left
+		float: flip(left, right)
 	.subscribe__ico
-		margin-right: 10px
+		#{$margin-right}: 10px
 	.field
 		margin: 0
 		overflow: hidden
 	.field__label
 		max-width: 90px
-		margin-right: 10px
+		#{$margin-right}: 10px
 	.field__el
 		overflow: hidden
 	.btn
-		float: right
-		margin-left: 10px
+		float: flip(right, left)
+		#{$margin-left}: 10px
 .subscribe_middle
 	.subscribe__ico
-		float: left
+		float: flip(left, right)
 	.subscribe__ico
-		margin: 0 10px 0 0
+		#{$margin-right}: 10px
 	.field
 		margin: 0
 	.field__label
 		margin: 0 0 10px
 		overflow: hidden
 	.field__el
-		float: left
+		float: flip(left, right)
 		width: 230px
 	.btn
-		float: right
+		float: flip(right, left)
 		padding: 0
 		width: 40px
 .subscribe__ico
@@ -993,35 +991,35 @@
 .review_wide
 	+clr
 	.review__head, .review__details
-		float: left
+		float: flip(left, right)
 	.review__in
 		display: table
 	.review__head
-		margin: 0 20px 0 0
+		#{$margin-right}: 20px
 	.review__text
 		display: table-cell
 		height: 90px
-		margin: 0 0 0 20px 
-		padding: 0 0 0 20px 
-		border-width: 0 0 0 1px
+		margin: flip(0 0 0 20px, 0 20px 0 0) 
+		padding: flip(0 0 0 20px, 0 20px 0 0) 
+		border-width: flip(0 0 0 1px, 0 1px 0 0)
 		vertical-align: middle
 		&:before, &:after
 			top: 50%
 			margin-top: -8px
 		&:before
-			left: 0
-			border-width: 8px 8px 8px 0
-			border-color: transparent #38a8a2 transparent transparent
+			#{$left}: 0
+			border-width: flip(8px 8px 8px 0, 8px 0 8px 8px)
+			border-color: flip(transparent #38a8a2 transparent transparent, transparent transparent transparent #38a8a2)
 		&:after
-			left: 1px
-			border-width: 8px 8px 8px 0
-			border-color: transparent #fff transparent transparent
+			#{$left}: 1px
+			border-width: flip(8px 8px 8px 0, 8px 0 8px 8px)
+			border-color: flip(transparent #fff transparent transparent, transparent transparent transparent #fff)
 	.review__details
 		width: 140px
 .review_middle
 	.review__head
-		float: left
-		margin-right: 20px
+		float: flip(left, right)
+		#{$margin-right}: 20px
 	.review__details
 		overflow: hidden
 	.review__text
@@ -1031,9 +1029,9 @@
 	margin-bottom: 20px
 	+clr
 .review__ico, .review__pic
-	float: left
+	float: flip(left, right)
 .review__ico
-	margin-right: 10px
+	#{$margin-right}: 10px
 	+s(mr_scoba)
 .review__pic
 	img
@@ -1062,8 +1060,8 @@
 	&:before, &:after
 		content: ""
 		position: absolute
-		left: 50%
-		margin-left: -8px
+		#{$left}: 50%
+		#{$margin-left}: -8px
 		+arr(16,8,$gr,t)
 	&:before
 		top: -8px

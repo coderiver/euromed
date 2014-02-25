@@ -39,7 +39,7 @@
 // +font(book, cytiapro-black-webfont)  
 // =book
 // 	font-family: "book",arial,sans-serif 
-	
+
 
 $font: #404343
 $gr: #38a8a2
@@ -107,8 +107,8 @@ a
 			display: inline-block
 			vertical-align: middle
 		i
-			margin-left: 7px 
-			+s(more-arr)
+			#{$margin-left}: 7px 
+			+s(flip(more-arr, more-arr-rtl))
 		&:hover
 			top: -1px
 			background: $grl
@@ -116,7 +116,7 @@ a
 			border-color: $grl
 			color: #FFF
 			i
-				+s(more-arr-h)
+				+s(flip(more-arr-h, more-arr-rtl-h))
 		&:active
 			top: 0
 			box-shadow: none
@@ -141,17 +141,17 @@ a
 	.social
 		position: absolute
 		top: 74px
-		right: 0 
+		#{$right}: 0 
 .logo
 	position: absolute
 	top: 24px
-	left: 0
+	#{$left}: 0
 	+s(logo)
 	+hidetext
 .logo-title
 	position: absolute
 	top: 75px
-	left: 160px
+	#{$left}: 160px
 	width: 140px
 	font-size: 15px
 	color: #4B5252 
@@ -159,12 +159,12 @@ a
 .header__links
 	position: absolute
 	top: 25px
-	left: 160px
+	#{$left}: 160px
 	li
-		float: left
-		padding-left: 20px
-		margin-left: 20px
-		border-left: #C7CCCC 1px solid 
+		float: flip(left, right)
+		#{$padding-left}: 20px
+		#{$margin-left}: 20px
+		#{$border-left}: #C7CCCC 1px solid 
 		line-height: 1
 		&:first-child
 			margin: 0
@@ -176,7 +176,7 @@ a
 .header__login	
 	position: absolute
 	top: 24px 
-	right: 0
+	#{$right}: 0
 	font-size: 0
 	li
 		display: inline-block
@@ -185,7 +185,8 @@ a
 		a
 			padding: 0 5px
 		&:first-child
-			margin-right: 15px
+			#{$margin-right}: 15px
+			#{$margin-left}: 15px
 			a
 				padding: 0
 .header__enter
@@ -211,19 +212,19 @@ a
 		display: inline-block
 		vertical-align: middle
 	span
-		margin-right: 5px 
+		#{$margin-right}: 5px
 	i
-		+s(enter-arr)
+		+s(flip(enter-arr, enter-arr-rtl))
 .lang
 	position: absolute
 	top: 24px
-	right: 160px
+	#{$right}: 160px
 	z-index: 20 
 .lang__title, .lang__list
 	display: inline-block
 	vertical-align: middle
 .lang__title
-	margin-right: 10px
+	#{$margin-left}: 10px
 	color: #babebe
 .lang__list
 	position: relative
@@ -235,7 +236,7 @@ a
 		vertical-align: middle
 		line-height: 1
 	i
-		margin-right: 5px
+		#{$margin-right}: 5px
 	span
 		font-size: 12px
 	&:hover
@@ -251,7 +252,7 @@ a
 		content: ""
 		position: absolute
 		top: 8px
-		right: 9px
+		#{$right}: 9px
 		+arr(5,3,#2f3737,b)
 .lang__list-in
 	display: none
@@ -273,7 +274,7 @@ a
 					content: ""
 					position: absolute
 					top: 10px
-					right: 8px
+					#{$right}: 8px
 					+s(check) 
 	a
 		display: block
@@ -316,7 +317,7 @@ a
 .social__list
 	li
 		display: inline-block
-		margin-left: 2px
+		#{$margin-left}: 2px
 		vertical-align: top
 		&:first-child
 			margin: 0
@@ -356,7 +357,7 @@ a
 .search
 	position: absolute
 	top: 68px
-	left: 320px
+	#{$left}: 320px
 	border: 1px solid #dfe2e2
 	border-radius: 3px
 	background-color: #fff
@@ -364,7 +365,7 @@ a
 	z-index: 20 
 	&.is-active
 		border-color: #82d2cf
-		border-radius: 3px 3px 3px 0
+		border-radius: flip(3px 3px 3px 0, 3px 0 3px 3px)
 		box-shadow: 0 0 5px rgba(56,168,162,.15)
 		.search__drop
 			display: block
@@ -377,7 +378,7 @@ a
 		z-index: 2 
 		input
 			width: 460px
-			padding: 0 200px 0 38px 
+			padding: flip(0 200px 0 38px, 0 38px 0 200px)
 			height: 37px
 			border-radius: 3px
 			+box
@@ -386,18 +387,18 @@ a
 		i
 			position: absolute
 			top: 9px
-			left: 9px
+			#{$left}: 9px
 			+s(search)
 	&.is-no-empty
 		> label
 			i
 				display: none
 			input
-				padding: 0 200px 0 19px 
+				padding: flip(0 200px 0 19px, 0 19px 0 200px)
 .search__btn
 	position: absolute
 	top: 4px
-	right: 4px
+	#{$right}: 4px
 	width: 60px
 	height: 29px
 	border-radius: 3px
@@ -418,14 +419,14 @@ a
 	display: none
 	position: absolute
 	top: 37px
-	left: -1px
-	right: 0
+	#{$left}: -1px
+	#{$right}: 0
 	width: 274px - 18px
 	padding: 0 9px 9px
 	border: 1px solid #82d2cf
 	border-width: 0 1px 1px
 	background: #fff
-	box-shadow: 8px 14px 29px rgba(0,0,0,.4), 0 0 5px rgba(56,168,162,.15)
+	box-shadow: flip((8px 14px 29px rgba(0,0,0,.4), 0 0 5px rgba(56,168,162,.15)), (-8px 14px 29px rgba(0,0,0,.4), 0 0 5px rgba(56,168,162,.15)))
 	border-radius: 0 0 3px 3px 
 	li
 		height: 25px
@@ -448,7 +449,7 @@ a
 .search__par
 	position: absolute
 	top: 0
-	left: 274px
+	#{$left}: 274px
 	width: 122px
 	font-size: 12px
 	z-index: 6  
@@ -468,7 +469,7 @@ a
 .search__par-title
 	position: relative
 	height: 20px
-	padding: 8px 27px 9px 20px
+	padding: flip(8px 27px 9px 20px, 8px 27px 9px 20px)
 	line-height: 20px
 	white-space: nowrap
 	text-overflow: ellipsis
@@ -479,7 +480,7 @@ a
 		content: ""
 		position: absolute
 		top: 8px
-		left: 0
+		#{$left}: 0
 		width: 1px
 		height: 20px
 		background: #e5e5e5 
@@ -487,13 +488,13 @@ a
 		content: ""
 		position: absolute
 		top: 16px
-		right: 14px
+		#{$right}: 14px
 		+arr(5,3,#000,b)
 .search__par-drop
 	display: none
 	position: absolute
 	top: 33px
-	left: 0
+	#{$left}: 0
 	width: 249px
 	padding: 7px 20px
 	background: #fff  
@@ -502,7 +503,7 @@ a
 		content: ""
 		position: absolute
 		top: -6px
-		left: 0
+		#{$left}: 0
 		width: 122px
 		height: 6px
 		background: #fff  
@@ -515,7 +516,7 @@ a
 		&:first-child
 			border: none
 		span
-			float: right
+			float: flip(right, left)
 		strong
 			font-weight: normal
 		&:hover
@@ -536,20 +537,20 @@ a
 	> li
 		display: table-cell
 		height: 50px
-		border-left: #60B9B5 1px solid 
+		#{$border-left}: #60B9B5 1px solid 
 		&:first-child
 			border: none
 			a
-				border-radius: 3px 0 0 3px
+				border-radius: flip(3px 0 0 3px, 0 3px 3px 0)
 		&:last-child
 			a
-				border-radius: 0 3px 3px 0
+				border-radius: flip(0 3px 3px 0, 3px 0 0 3px)
 		&.is-sub
 			> a
 				&:after
 					content: ""
 					position: absolute
-					left: 20px
+					#{$left}: 20px
 					bottom: 0
 					+arr(7,4,$gr,b)
 		&:hover
@@ -595,13 +596,14 @@ a
 	visibility: hidden
 	z-index: 2
 .nav__sub_bg
+	width: 336px
 	min-height: 315px
-	padding-right: 265px
+	#{$padding-right}: 265px
 	background-repeat: no-repeat
-	background-position: 100% 100%
+	background-position: flip(100% 100%, 0 100%)
 .nav__sub-col
 	position: relative
-	float: left
+	float: flip(left, right)
 	padding: 12px 18px
 .nav__sub-col
 	position: relative
@@ -626,16 +628,16 @@ a
 	&:before
 		content: ""
 		position: absolute
-		left: 0
+		#{$left}: 0
 		top: 18px
 		bottom: 18px
-		border-left: #E5E5E5 1px solid 
+		#{$border-left}: #E5E5E5 1px solid 
 .nav__sub-list
 	+clr
 	ul
-		float: left
+		float: flip(left, right)
 		width: 140px
-		margin-left: 20px
+		#{$margin-left}: 20px
 		&:first-child
 			margin: 0
 	li
@@ -657,11 +659,11 @@ a
 					width: 9px
 					background: #EAF0F0
 				&:before
-					left: -9px
-					border-radius: 3px 0 0 3px
+					#{$left}: -9px
+					border-radius: flip(3px 0 0 3px, 0 3px 3px 0)
 				&:after
-					right: -9px
-					border-radius: 0 3px 3px 0
+					#{$right}: -9px
+					border-radius: flip(0 3px 3px 0, 3px 0 0 3px)
 		&.nav__sub-title
 			margin-bottom: 5px
 			padding: 0
@@ -706,10 +708,10 @@ a
 		padding-top: 35px
 .footer__nav
 	ul
-		float: left
+		float: flip(left, right)
 		width: 140px 
 		&:first-child
-			margin-right: 20px
+			#{$margin-right}: 20px
 			a
 				color: #ACAEAE 
 				&:hover
@@ -732,7 +734,7 @@ a
 	input
 		width: 100%
 		height: 29px
-		padding: 0 30px 0 10px
+		padding: flip(0 30px 0 10px, 0 10px 0 30px)
 		border: 1px solid #505757
 		border-radius: 3px
 		background: none
@@ -742,7 +744,7 @@ a
 	button
 		position: absolute
 		top: 0
-		right: 0
+		#{$right}: 0
 		height: 29px
 		width: 30px
 		background: none
@@ -753,9 +755,9 @@ a
 .footer__social
 	+clr
 	.social
-		float: right
+		float: flip(right, left)
 .footer__links
-	float: left
+	float: flip(left, right)
 	width: 140px
 	li
 		padding: 5px 0
@@ -777,7 +779,7 @@ a
 	margin-bottom: 18px
 	+clr
 	.link-white
-		float: right
+		float: flip(right, left)
 	.title
 		display: table
 		margin: 0
@@ -802,8 +804,8 @@ a
 .slider__item
 	width: 100%
 .slider__nav
-	float: right
-	margin-left: 10px 
+	float: flip(right, left)
+	#{$margin-left}: 10px 
 	button
 		position: relative
 		float: left

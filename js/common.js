@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+//rtl switch
+$('.js-rtl').on('click', function(){
+	var body = $('body');
+	var atr = body.attr('dir');
+	var css = $('#main-css-file');
+	if (atr == 'rtl') {
+		body.attr('dir', 'ltr');
+		css.attr('href', 'css/screen.css');
+	}
+	else{
+		body.attr('dir', 'rtl');
+		css.attr('href', 'css/screen-rtl.css');
+	}
+});
+
 //search
 function search () {
 	var el = $('.js-search');
@@ -49,14 +64,23 @@ function nav () {
 	item.hover(function(){
 	  var sub = $(this).find('.nav__sub');
 	  var width = sub.outerWidth();
-	  var left = $(this).position().left;
-	  if (el_width < (left + width)) {
-	  	sub.css('right', 0);
-	  };
+	  var body = $('body');
+	  var atr = body.attr('dir');
+	  var item_width = $(this).width();
+	  if (atr == 'rtl') {
+	  	var left = $(this).position().left;
+		  if (width > (left + item_width)) {
+		  	sub.css({'left': 0, 'right': 'auto'});
+		  };
+	  }
+	  else{
+	  	var left = $(this).position().left;
+		  if (el_width < (left + width)) {
+		  	sub.css({'right': 0, 'left': 'auto'});
+		  };
+	  }
 	},
-	function(){
-
-	});
+	function(){});
 }
 nav();
 

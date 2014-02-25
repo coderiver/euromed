@@ -9,8 +9,8 @@
 			padding: 0 0 5px
 			border: none
 	strong
-		float: right
-		margin: 2px 0 0 20px
+		float: flip(right, left)
+		margin: flip(2px 0 0 20px, 2px 20px 0 0)
 		font-weight: normal
 		font-size: 11px
 		color: #BED1D0 
@@ -22,7 +22,7 @@
 .label
 	display: inline-block
 	padding: 2px 4px
-	margin-left: 14px
+	#{$margin-left}: 14px
 	border-radius: 3px
 	vertical-align: middle 
 	color: #FFF 
@@ -75,10 +75,10 @@
 .m-catalog__list
 	+clr
 	ul
-		float: left
+		float: flip(left, right)
 		width: 140px
 		&:first-child
-			margin-right: 20px
+			#{$margin-right}: 20px
 	li
 		padding: 5px 0
 		border-top: 1px dotted #b2b2b2 
@@ -106,7 +106,7 @@
 		height: 0
 	li
 		display: inline-block
-		margin-left: 5px
+		#{$margin-left}: 5px
 		vertical-align: middle
 		&:first-child
 			margin: 0
@@ -128,7 +128,7 @@
 			content: ""
 			position: absolute
 			top: 0
-			left: 0
+			#{$left}: 0
 			+arr(20,10,#fff,b)
 .m-doctor__ask
 	padding-top: 30px
