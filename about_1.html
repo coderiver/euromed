@@ -1,0 +1,609 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link id="main-css-file" rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/cycle.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body class="inner-page with-logo-background" dir="ltr">
+<button class="js-rtl" style="position: fixed; top: 0; right: 0; z-index: 99999; font-size: 40px">SWITCH RTL</button>
+<div class="wrap">
+	<header class="header">
+		<div class="l-center">
+			<a class="logo" href="#">EuroMed</a>
+			<div class="logo-title">Медицинский портал о здоровье</div>
+			<ul class="header__links">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Консультации</a></li>
+				<li><a href="#">Обратная связь</a></li>
+			</ul>
+			<div class="search js-search"><!-- is-active для дропдауна -->
+				<div class="search__form">
+					<label>
+						<input type="text" placeholder="Поиск по сайту">
+						<i></i>
+					</label>
+				</div>
+				<ul class="search__drop">
+					<li><span>Ба</span>льзам “золотая звезда”</li>
+					<li><span>Ба</span>льзам “<span>Ба</span>ночка”</li>
+					<li><span>Ба</span>льзамический линимент </li>
+					<li><span>Ба</span>нгшил</li>
+					<li><span>Ба</span>неоцин</li>
+				</ul>
+				<div class="search__par"><!-- is-active для дропдауна -->
+					<div class="search__par-title">В разделеле</div>
+					<ul class="search__par-drop">
+						<li><span>432</span><strong>Психологические проблемы</strong></li>
+						<li><span>32</span><strong>Болезни уха, горла, носа</strong></li>
+						<li><span>2</span><strong>Детское здоровье</strong></li>
+						<li><span>32</span><strong>Стоматология</strong></li>
+						<li><span>432</span><strong>Болезни печени и желчных путей</strong></li>
+						<li><span>32</span><strong>Женское здоровье</strong></li>
+						<li><span>2</span><strong>Здоровье всей семьи</strong></li>
+						<li><span>42</span><strong>Аллергия</strong></li>
+						<li><span>432</span><strong>Сексуальное здоровье</strong></li>
+					</ul>
+				</div>
+				<button class="search__btn">Найти</button>
+			</div>
+			<ul class="header__login">
+				<li class="header__reg">
+					<a href="#">Регистрация</a>
+				</li>
+				<li class="header__enter">
+					<a href="#"><span>Вход</span><i></i></a>
+				</li>
+			</ul>
+			<div class="social">
+				<div class="social__title">Мы в соцсетях</div>
+				<ul class="social__list">
+					<li><a class="social__fb" href="#"><i></i></a></li>
+					<li><a class="social__vk" href="#"><i></i></a></li>
+					<li><a class="social__gp" href="#"><i></i></a></li>
+				</ul>
+			</div>
+			<div class="lang">
+				<div class="lang__title">Язык</div>
+				<div class="lang__list">
+					<div class="lang__list-current"><i class="lang__ru"></i><span>Русский</span></div>
+					<ul class="lang__list-in">
+						<li class="is-active"><a href="#"><i class="lang__ru"></i><span>Русский</span></a></li>
+						<li><a href="#"><i class="lang__eu"></i><span>English</span></a></li>
+						<li><a href="#"><i class="lang__de"></i><span>Deutsch</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="l-center">
+		<nav class="nav js-nav">
+			<ul class="nav__list">
+				<li class="is-sub">
+					<a href="#">Спецтемы</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Новости здоровья</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_slider">
+							<div class="slider js-slider">
+								<div class="title-wrap">
+									<div class="slider__nav">
+										<button class="slider__nav-prev"><i></i></button>
+										<button class="slider__nav-next"><i></i></button>
+									</div>
+									<a class="link-white" href="#">Все рубрики</a>
+									<div class="title"><a href="#">Последнее</a></div>
+								</div>
+								<div class="slider__list">
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/60x60" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Здоровье А-Я</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title"><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title"><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li class="nav__sub-title"><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_slider-bg">
+							<div class="slider js-slider">
+								<div class="title-wrap">
+									<div class="slider__nav">
+										<button class="slider__nav-prev"><i></i></button>
+										<button class="slider__nav-next"><i></i></button>
+									</div>
+									<a class="link-white" href="#">Все рубрики</a>
+									<div class="title"><a href="#">Последнее</a></div>
+								</div>
+								<div class="slider__list">
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="post">
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="post__item">
+												<div class="post__pic">
+													<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+												</div>
+												<div class="post__details">
+													<div class="post__category">
+														<a href="#">Стоматология</a>
+													</div>
+													<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+													<div class="post__meta">
+														<div class="post__date">27 декабря</div>
+														<a class="post__comm" href="#"><i></i><span>12</span></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Болезни и лечение</a>
+					<div class="nav__sub">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title"><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title">После 40ка</li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+						<div class="nav__sub-col nav__sub-col_bg">
+							<div class="nav__sub-col-in">
+								<div class="nav__sub-title"><a href="#">Последнее</a></div>
+								<div class="post post_column">
+									<div class="post__item">
+										<div class="post__pic">
+											<a href="#"><img src="http:placehold.it/140x110" alt=""></a>
+										</div>
+										<div class="post__details">
+											<div class="post__category">
+												<a href="#">Стоматология</a>
+											</div>
+											<div class="post__title"><a href="#">Профилактика заболеваний молочных зубов</a></div>
+											<div class="post__meta">
+												<div class="post__date">27 декабря</div>
+												<a class="post__comm" href="#"><i></i><span>12</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="is-sub">
+					<a href="#">Справочники</a>
+					<div class="nav__sub nav__sub_bg" style="background-image: url(img/nav-bg-pic1.jpg)">
+						<div class="nav__sub-col">
+							<div class="nav__sub-list">
+								<ul>
+									<li class="nav__sub-title"><a href="#">Для детей</a></li>
+									<li><a href="#">О проекте</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li class="nav__sub-title"><a href="#">После 40ка</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Аллергия</a></li>
+								</ul>
+								<ul>
+									<li class="nav__sub-title"><a href="#">Родителям</a></li>
+									<li><a href="#">Здоровье всей семьи</a></li>
+									<li><a href="#">Аллергия</a></li>
+									<li><a href="#">Обратная связь</a></li>
+									<li><a href="#">Для клиник</a></li>
+									<li><a href="#">Реклама на сайте</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="nav__sub-all">
+								<a class="link-white" href="#">Все рубрики</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li><a href="#">Консультации</a></li>
+				<li><a href="#">Питание и диеты</a></li>
+			</ul>
+		</nav>
+
+		<ul class="breadcrumbs">
+			<li><a href="#">Главная</a><i></i></li>
+			<li><a href="#">Текстовая страница</a></li>
+		</ul>
+
+		<!-- content -->
+		<div class="title-bigger">О проекте</div>
+		<div class="content content_margin-bottom">
+			<p>EEURO.MD – портал о здоровье, где каждый интернет-пользователь может почерпнуть для себя много ценной информации. Медицинские материалы, размещенные на портале, существенно обогатят ваши знания, вооружившись которыми вы сможете помочь себе и своим близким.</p>
+			<p>Мы предлагает своим читателям только объективную информацию, опирающуюся на факты доказательной медицины. Здесь вы можете ознакомиться с мнением квалифицированных врачей и авторитетных посетителей, которые делятся своим опытом со всеми читателями.</p>
+			<p>Нашей главной задачей является информирование читателя, которое направлено на поиск оптимального решения проблем со здоровьем. При этом медицинский портал не является руководством по самолечению! EEURO.MD – это «площадка», где у интернет-пользователя есть уникальная возможность ознакомиться с экспертным мнением высокопрофессионального врача, и руководствуясь советом специалиста принять соответствующее решение.</p>
+		</div>
+
+		<div class="title"><a href="#">Журналисты</a></div>
+
+		<!-- people -->
+		<div class="people">
+			<div class="people__in">
+				<div class="people__item">
+					<div class="people__pic">
+						<a href="#">
+							<img src="http://placehold.it/140x170" alt="">
+						</a>
+					</div>
+					<div class="people__name">
+						<a href="#">Анна Преображенская</a>
+					</div>
+					<div class="people__profession">
+						<a href="#">Главный редактор</a>
+					</div>
+					<ul class="people__social">
+						<li><a class="people__social-fb" href="#"></a></li>
+						<li><a class="people__social-vk" href="#"></a></li>
+						<li><a class="people__social-gp" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="people__item">
+					<div class="people__pic">
+						<a href="#">
+							<img src="http://placehold.it/140x170" alt="">
+						</a>
+					</div>
+					<div class="people__name">
+						<a href="#">Анна Преображенская</a>
+					</div>
+					<div class="people__profession">
+						<a href="#">Главный редактор</a>
+					</div>
+					<ul class="people__social">
+						<li><a class="people__social-fb" href="#"></a></li>
+						<li><a class="people__social-vk" href="#"></a></li>
+						<li><a class="people__social-gp" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="people__item">
+					<div class="people__pic">
+						<a href="#">
+							<img src="http://placehold.it/140x170" alt="">
+						</a>
+					</div>
+					<div class="people__name">
+						<a href="#">Анна Преображенская</a>
+					</div>
+					<div class="people__profession">
+						<a href="#">Главный редактор</a>
+					</div>
+					<ul class="people__social">
+						<li><a class="people__social-fb" href="#"></a></li>
+						<li><a class="people__social-vk" href="#"></a></li>
+						<li><a class="people__social-gp" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="people__item">
+					<div class="people__pic">
+						<a href="#">
+							<img src="http://placehold.it/140x170" alt="">
+						</a>
+					</div>
+					<div class="people__name">
+						<a href="#">Анна Преображенская</a>
+					</div>
+					<div class="people__profession">
+						<a href="#">Главный редактор</a>
+					</div>
+					<ul class="people__social">
+						<li><a class="people__social-fb" href="#"></a></li>
+						<li><a class="people__social-vk" href="#"></a></li>
+						<li><a class="people__social-gp" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="people__item">
+					<div class="people__pic">
+						<a href="#">
+							<img src="http://placehold.it/140x170" alt="">
+						</a>
+					</div>
+					<div class="people__name">
+						<a href="#">Анна Преображенская</a>
+					</div>
+					<div class="people__profession">
+						<a href="#">Главный редактор</a>
+					</div>
+					<ul class="people__social">
+						<li><a class="people__social-fb" href="#"></a></li>
+						<li><a class="people__social-vk" href="#"></a></li>
+						<li><a class="people__social-gp" href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<hr class="hr">
+
+		<div class="title">Контакты</div>
+		<div class="l-layout l-layout_margin-bottom">
+			<div class="l-column l-column_2">
+				<div class="content">
+					<p>По вопросам сотрудничества и размещения рекламы, вопросам работоспособности сайта и технической поддержки, вы мождете обратится по следующим контактам:</p>
+				</div>
+			</div>
+			<div class="l-column l-column_2">
+				
+				<!-- contacts -->
+				<div class="contacts">
+					<ul class="contacts__mails">
+						<li>
+							<span>Редакция сайта:</span>
+							<a href="mailto:editor@euromd.com">editor@euromd.com</a>
+						</li>
+						<li>
+							<span>Редакция сайта:</span>
+							<a href="mailto:editor@euromd.com">editor@euromd.com</a>
+						</li>
+						<li>
+							<span>Редакция сайта:</span>
+							<a href="mailto:editor@euromd.com">editor@euromd.com</a>
+						</li>
+					</ul>
+					<div class="contacts__address"><span>Адрес:</span>04071 Украина, Киев, ул. Нижний Вал 37/20</div>
+				</div>
+
+			</div>
+		</div>
+						
+	</div>
+	<div class="wrap__push"></div>
+</div>
+<footer class="footer">
+	<div class="l-center l-layout">
+		<div class="l-column l-column_1">
+			<div class="copyright">
+				<p>© 2014 EuroMD, Медицинский портал. </p>
+				<p>Все права защищены.</p>
+			</div>
+		</div>
+		<div class="l-column l-column_1">
+			<nav class="footer__nav">
+				<ul>
+					<li><a href="#">О проекте</a></li>
+					<li><a href="#">Обратная связь</a></li>
+					<li><a href="#">Для клиник</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Реклама на сайте</a></li>
+					<li><a href="#">Карта сайта</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="l-column l-column_1">
+			<div class="footer__search">
+				<input type="text" placeholder="Поиск по сайту">
+				<button><i></i></button>
+			</div>
+			<div class="footer__social">
+				<div class="social">
+					<ul class="social__list">
+						<li><a class="social__fb" href="#"><i></i></a></li>
+						<li><a class="social__vk" href="#"><i></i></a></li>
+						<li><a class="social__gp" href="#"><i></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
