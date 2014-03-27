@@ -15,6 +15,77 @@ $('.js-rtl').on('click', function(){
 	}
 });
 
+// datepicker
+var dp = $('.js-dp');
+$.datepicker.regional['ru'] = { 
+	closeText: 'Закрыть', 
+	prevText: '&#x3c;Пред', 
+	nextText: 'След&#x3e;', 
+	currentText: 'Сегодня', 
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
+	'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
+	'Июл','Авг','Сен','Окт','Ноя','Дек'], 
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
+	dayNamesMin: ['вс','пн','вт','ср','чт','пт','сб'], 
+	dateFormat: 'dd.mm.yy', 
+	firstDay: 1, 
+	isRTL: false 
+}; 
+$.datepicker.setDefaults($.datepicker.regional['ru']); 
+if (dp.length) {
+	dp.datepicker({
+		showOtherMonths: true,
+		showMonthAfterYear: false
+	});
+};
+
+//search result
+function search_result () {
+	var el = $('.js-search-result');
+	var item = el.find('.result__item');
+	item.on('click', function(){
+		$(this).toggleClass('is-active');
+		$(this).next().toggle();
+	});
+}
+search_result();
+
+//select
+function select() {
+  var el = $('.js-select');
+  el.find('.select__head').bind('click', function(){    
+    if ($(this).parent().hasClass('is-open')) {
+      $(this).parent().removeClass('is-open');
+      $(this).next().hide();
+    }
+    else {
+      el.removeClass('is-open');
+      el.find('.select__list').hide();
+      $(this).parent().addClass('is-open');
+      $(this).next().show();
+    }
+  })
+  el.find('.select__list li').bind('click', function(){
+    var val = $(this).text();
+    $(this).parents('.select__list').prev().html(val);
+    $(this).parents('.select__list').next().val(val);
+    $(this).parents('.select__list').hide();
+    $(this).parents('.js-select').removeClass('is-open');
+    $(this).parents('.js-select').addClass('is-chosen');
+    return false;
+  })
+  el.click(function(event){
+    event.stopPropagation();
+  });
+  $(document).click(function() {
+    el.find('.select__list').hide();
+    el.removeClass('is-open');
+  });
+}
+select();
+
 //search
 function search () {
 	var el = $('.js-search');

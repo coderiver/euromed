@@ -80,7 +80,7 @@ body
 h1, h2, h3, h4, h5, h6
 	font-weight: normal
 
-input, button
+input, button, textarea
 	font-family: Arial, sans-serif 
 
 a
@@ -634,7 +634,7 @@ a
 		top: 18px
 		bottom: 18px
 		#{$border-left}: #E5E5E5 1px solid 
-.nav__sub-list
+.nav__sub-list, .select__list 
 	+clr
 	ul
 		float: flip(left, right)
@@ -689,6 +689,9 @@ a
 		display: block
 		padding: 5px 0
 		text-decoration: none
+.select__list 
+	ul
+		width: 200px
 .nav__sub-title
 	padding-top: 5px
 	margin-bottom: 15px

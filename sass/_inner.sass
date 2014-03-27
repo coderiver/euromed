@@ -21,6 +21,10 @@
 
 .post
 	+clr
+.post_center
+	padding: 0 80px
+	.title-bigger
+		text-align: center
 .post_margin-bottom
 	margin-bottom: 40px
 .post_aside, .post_aside-pic
@@ -238,6 +242,8 @@
 	h1, p, ul, ol, blockquote
 		display: inline-block
 		vertical-align: top		
+	p + blockquote, h1 + blockquote, ul + blockquote
+		margin-top: 0 
 .content_margin-bottom
 	margin-bottom: 40px
 
@@ -529,6 +535,14 @@
 				box-shadow: 0 0 5px rgba(255,120,120,.15), inset 1px 1px 7px rgba(0,0,0,.06)
 .field, .field__label, .field__el
 	display: block
+.field_dp
+	.field__el
+		position: relative
+	.ico-dp
+		position: absolute
+		top: 13px
+		#{$right}: 15px
+		+s(calendar)
 .field__label
 	margin-bottom: 6px
 	color: #000
@@ -554,7 +568,7 @@
 	textarea
 		height: 100px
 		resize: vertical
-		padding: 7px 10px
+		padding: 10px
 .field_small
 	.field__el
 		input
@@ -581,6 +595,53 @@
 		top: -6px
 		#{$left}: 15px
 		+arr(12,6,#fe9c9c,t)
+
+
+.select
+	position: relative
+	cursor: pointer
+	&.is-open
+		z-index: 100 
+		.select__head
+			border-color: $grd
+			box-shadow: 0 0 5px rgba(56,168,162,.15), inset 1px 1px 7px rgba(0,0,0,.06)
+			&:after
+				border-color: $grd transparent transparent transparent
+	&.is-chosen
+		.select__head
+			color: #000
+.select__head
+	position: relative
+	width: 100%
+	height: 39px
+	padding: 0 30px 0 10px 
+	border: 1px solid #dfe2e2
+	border-radius: 3px
+	background-color: #fff
+	box-shadow: inset 1px 1px 7px rgba(0,0,0,.06)
+	white-space: nowrap
+	text-overflow: ellipsis
+	font-size: 12px
+	line-height: 39px
+	overflow: hidden
+	+box
+	&:after	
+		content: ""
+		position: absolute
+		top: 17px
+		right: 14px
+		+arr(7,4,#000,b)
+.select__list
+	display: none
+	position: absolute
+	top: 100%
+	#{$left}: 0
+	width: 440px
+	padding: 10px 20px
+	box-shadow: 3px 4px 14px rgba(0,0,0,.14)
+	border-radius: 3px
+	background: #FFF 
+
 
 
 
@@ -1145,6 +1206,20 @@
 	span
 		#{$margin-right}: 20px
 		color: #000 
+.contacts__form
+	margin-top: 29px
+	padding: 20px
+	border-radius: 2px 
+	background: #EAF0F0 
+	.fieldset
+		.field
+			float: left
+			width: 200px 
+			+clr
+			&:first-child
+				margin-right: 20px
+	.btn
+		width: 140px
 
 
 .workers
@@ -1207,19 +1282,191 @@
 
 
 
+.nav-inner
+	margin-bottom: 30px
+	li
+		padding: 5px 0
+		border-top: 1px dotted #cccccc
+		&:first-child
+			padding: 0 0 5px 
+			border: none
+
+
+.result
+	margin-bottom: 25px
+.result__form
+	margin-bottom: 30px
+	+clr
+	.field
+		float: flip(left, right)
+		width: 160px
+		margin: flip(0 0 0 20px, 0 20px 0 0)
+		&:first-child
+			margin: 0
+	.btn
+		margin: flip(24px 0 0 20px, 24px 20px 0 0)
+		width: 80px
+.result__item
+	position: relative
+	padding: 0 20px
+	background: #EAF0F0
+	cursor: pointer
+	+nosel
+	&:first-child
+		border-radius: 3px 3px 0 0
+	&.is-active
+		background: #E0E9E9 
+		&:after
+			content: ""
+			position: absolute
+			top: 100%
+			#{$left}: 20px
+			+arr(20,10,#e0e9e9,b)
+		.result__head
+			border: none
+		.result__arr
+			+s(result-list-ico-a)
+		.result__counter
+			span
+				color: #828B8B
+			strong
+				color: #000 
+		.result__category
+			font-weight: bold
+			color: #000 
+.result__head
+	padding: 5px 0
+	border-bottom: #C7CCCC 1px dotted 
+	+clr
+.result__arr, .result__counter
+	float: flip(right, left)
+.result__arr
+	margin: flip(7px 0 0 12px, 7px 12px 0 0)
+	+s(result-list-ico)
+.result__counter
+	padding-top: 1px
+	color: #A3B0B0
+	span, strong
+		display: inline-block
+		vertical-align: middle
+	span
+		padding: 4px 10px 0 0
+		font-size: 11px
+		font-style: italic
+	strong
+		font-size: 20px
+.result__category
+	display: table
+	padding: 4px 0 
+	font-size: 15px
+	color: $gr 
+.result__more
+	height: 28px
+	background: #EAF0F0
+	border-radius: 0 0 3px 3px
+	padding-top: 15px
+	text-align: center
+	a
+		display: inline-block
+		vertical-align: top
+		text-decoration: none
+.result__more-text
+	position: relative
+	display: block
+	font-size: 11px
+	color: #A8B4B4 
+	z-index: 4 
+.result__more-ico
+	position: relative
+	top: -7px
+	display: inline-block
+	width: 42px
+	height: 42px
+	vertical-align: top
+	border-radius: 50%
+	background: #EAF0F0
+	z-index: 2 
+	i
+		position: absolute
+		top: 15px
+		left: 15px
+		+s(result-more)
+.result__data
+	display: none
+	padding: 23px 0
+	.post
+		margin-bottom: 20px
 
 
 
 
 
-
-
-
-
-
-
-
-
+.ui-datepicker
+	padding: 3px
+	border-radius: 3px
+	background-color: #fff
+	box-shadow: 3px 4px 14px rgba(0,0,0,.14)
+	z-index: 1000 !important
+.ui-datepicker-calendar
+	th
+		border-bottom: 1px solid #000 
+		font-size: 11px
+		span
+			display: block
+			height: 22px
+			line-height: 22px
+			font-weight: normal 
+	tr
+		&:last-child
+			td
+				border-bottom: 0
+	td
+		border: 1px solid #f2f2f2
+		&:first-child
+			border-left: 0
+		&:last-child
+			border-right: 0  
+		&.ui-datepicker-other-month
+			span
+				color: #d3d3d3 
+		span, a
+			display: block
+			width: 34px
+			height: 34px
+			text-align: center
+			line-height: 34px
+			font-size: 15px
+		a
+			color: #888 
+			text-decoration: none 
+			&.ui-state-active
+				background: $gr
+				color: #fff  
+			&:hover
+				background: #EAF0F0
+				color: #000  
+.ui-datepicker-header
+	position: relative
+	padding-top: 4px
+.ui-datepicker-title
+	height: 30px
+	line-height: 30px
+	font-weight: bold
+	text-align: center
+.ui-datepicker-next, .ui-datepicker-prev
+	position: absolute
+	top: 10px
+	cursor: pointer
+	span
+		display: none
+.ui-datepicker-next
+	right: 7px
+	+s(dp-next)
+.ui-datepicker-prev
+	left: 7px
+	+s(dp-prev)
+.ui-datepicker-year
+	//display: none
 
 
 
