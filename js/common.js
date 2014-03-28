@@ -17,24 +17,24 @@ $('.js-rtl').on('click', function(){
 
 // datepicker
 var dp = $('.js-dp');
-$.datepicker.regional['ru'] = { 
-	closeText: 'Закрыть', 
-	prevText: '&#x3c;Пред', 
-	nextText: 'След&#x3e;', 
-	currentText: 'Сегодня', 
-	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
-	'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
-	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
-	'Июл','Авг','Сен','Окт','Ноя','Дек'], 
-	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
-	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
-	dayNamesMin: ['вс','пн','вт','ср','чт','пт','сб'], 
-	dateFormat: 'dd.mm.yy', 
-	firstDay: 1, 
-	isRTL: false 
-}; 
-$.datepicker.setDefaults($.datepicker.regional['ru']); 
 if (dp.length) {
+	$.datepicker.regional['ru'] = { 
+		closeText: 'Закрыть', 
+		prevText: '&#x3c;Пред', 
+		nextText: 'След&#x3e;', 
+		currentText: 'Сегодня', 
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
+		'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
+		'Июл','Авг','Сен','Окт','Ноя','Дек'], 
+		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
+		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
+		dayNamesMin: ['вс','пн','вт','ср','чт','пт','сб'], 
+		dateFormat: 'dd.mm.yy', 
+		firstDay: 1, 
+		isRTL: false 
+	}; 
+	$.datepicker.setDefaults($.datepicker.regional['ru']); 
 	dp.datepicker({
 		showOtherMonths: true,
 		showMonthAfterYear: false
@@ -265,5 +265,29 @@ function tabs() {
   });
 }
 tabs();
+
+//select2
+var select2_tags = $('.js-select2-tags');
+if (select2_tags.length) {
+	select2_tags.select2({
+		tags: true
+	});
+};
+
+//popup
+function popup () {
+	var btn = $('.js-popup-btn');
+	btn.on('click', function(){
+		var popup = $(this).attr('data-popup');
+		$('.'+popup).fadeIn();
+		return false;
+	});
+	var el = $('.js-popup-el'),
+			el_close = el.find('.popup__close, .popup__overlay');
+	el_close.on('click', function(){
+		el.fadeOut();
+	});
+}
+popup();
 
 });
