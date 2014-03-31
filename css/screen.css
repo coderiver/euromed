@@ -89,10 +89,10 @@ a.link-more:active { top: 0; box-shadow: none; }
 .lang__list-current { position: relative; padding: 3px 20px 3px 5px; border-radius: 3px; background-color: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.11); }
 .lang__list-current:after { content: ""; position: absolute; top: 9px; right: 9px; width: 0px; height: 0px; border-style: solid; border-width: 3px 2.5px 0 2.5px; border-color: #2f3737 transparent transparent transparent; }
 
-.lang__list-in { display: none; position: absolute; top: -5px; left: 0; right: 0; border-radius: 3px; background-color: white; box-shadow: 8px 14px 29px rgba(0, 0, 0, 0.4); overflow: hidden; }
+.lang__list-in { display: none; position: absolute; top: -5px; left: 0; min-width: 100%; border-radius: 3px; background-color: white; box-shadow: 8px 14px 29px rgba(0, 0, 0, 0.4); overflow: hidden; }
 .lang__list-in li.is-active a { position: relative; background: none; cursor: default; }
 .lang__list-in li.is-active a:after { content: ""; position: absolute; top: 12px; right: 8px; background: url('../img/icons-s19fa5a5bca.png') 0 -937px no-repeat; width: 9px; height: 7px; }
-.lang__list-in a { display: block; padding: 8px 5px; color: #2f3737; }
+.lang__list-in a { display: block; padding: 8px 5px; white-space: nowrap; color: #2f3737; }
 .lang__list-in a:hover { background: #eaf0f0; }
 
 .lang__ru { background: url('../img/icons-s19fa5a5bca.png') 0 -1259px no-repeat; width: 16px; height: 16px; }
