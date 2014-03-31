@@ -538,6 +538,7 @@ a
 	> li
 		display: table-cell
 		height: 50px
+		vertical-align: top
 		#{$border-left}: #60B9B5 1px solid 
 		&:first-child
 			border: none
@@ -579,7 +580,6 @@ a
 			height: 50px
 			padding: 0 10px
 			background: $gr 
-			line-height: 50px
 			text-align: center
 			font-size: 11px
 			text-transform: uppercase
@@ -587,6 +587,10 @@ a
 			text-decoration: none
 			color: #FFF 
 			z-index: 4 
+			span
+				display: table-cell
+				height: 50px
+				vertical-align: middle
 .nav__sub
 	position: absolute
 	top: 50px
