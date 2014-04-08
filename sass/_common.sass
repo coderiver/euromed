@@ -140,10 +140,10 @@ a
 	.l-center
 		position: relative
 		height: 160px
-	.social
-		position: absolute
-		top: 74px
-		#{$right}: 0 
+		>.social
+			position: absolute
+			top: 74px
+			#{$right}: 0 
 .logo
 	position: absolute
 	top: 24px
@@ -180,19 +180,19 @@ a
 	top: 24px 
 	#{$right}: 0
 	font-size: 0
-	li
-		display: inline-block
-		vertical-align: middle
-		font-size: 12px
-		a
-			padding: 0 5px
-		&:first-child
-			#{$margin-right}: 15px
-			#{$margin-left}: 15px
-			a
-				padding: 0
+.header__enter, .header__reg
+	display: inline-block
+	vertical-align: middle
+	font-size: 12px
+	>a
+		padding: 0 5px
+	&:first-child
+		#{$margin-right}: 15px
+		#{$margin-left}: 15px
+		>a
+			padding: 0
 .header__enter
-	a
+	>a
 		position: relative
 		display: block
 		height: 19px 
@@ -210,13 +210,13 @@ a
 		&:active
 			top: 0
 			box-shadow: none
-	span, i
-		display: inline-block
-		vertical-align: middle
-	span
-		#{$margin-right}: 5px
-	i
-		+s(flip(enter-arr, enter-arr-rtl))
+		span, i
+			display: inline-block
+			vertical-align: middle
+		span
+			#{$margin-right}: 5px
+		i
+			+s(flip(enter-arr, enter-arr-rtl))
 .lang
 	position: absolute
 	top: 24px
