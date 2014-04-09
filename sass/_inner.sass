@@ -27,6 +27,8 @@
 		text-align: center
 .post_margin-bottom
 	margin-bottom: 40px
+.post_series
+	margin-bottom: 15px
 .post_aside, .post_aside-pic
 	margin-bottom: 30px
 	.post__details
@@ -95,7 +97,7 @@
 .post__title_bigger
 	margin-bottom: 10px
 	font-size: 30px
-	line-height: 1
+	line-height: 1.1
 .post__title_middle
 	font-size: 18px
 	line-height: 1.2
@@ -1796,10 +1798,136 @@
 		display: block
 		border-radius: 3px
 
-
-
-
-
-
-
-
+.series
+	position: relative
+	padding: 20px
+	border-radius: 2px
+	background: #EAF0F0 
+.series__pic
+	position: absolute
+	top: -40px
+	#{$right}: 20px
+	img
+		border-radius: 4px
+.series__head
+	margin-bottom: 15px
+	+clr
+.series__head-pager, .series__nav
+	float: flip(left, right)
+.series__head-pager
+	font-size: 18px
+	color: #828282
+	line-height: 21px
+	span
+		color: $gr  
+.series__nav
+	#{$margin-left}: 20px 
+	a
+		position: relative
+		float: left
+		width: 21px
+		height: 21px
+		background: $gr
+		border-radius: 3px 
+		font-size: 0
+		+box
+		&:hover
+			top: -1px
+			background: $grl 
+			box-shadow: 0 1px 0 $grd
+		&:active
+			top: 0
+			box-shadow: none 
+	i
+		display: block
+.series__nav-prev
+	padding: 4px 8px 0 6px
+	i
+		+s(prev)
+.series__nav-next
+	margin-left: 3px
+	padding: 5px 6px 0 8px
+	i
+		+s(next)
+.series__list
+.series__item
+	border-top: 1px dotted #a3a8a8 
+	&:first-child
+		border: none
+.series__item_list
+	position: relative
+	&.is-active 
+		.series__parent
+			i
+				&:before
+					content: ""
+					position: absolute
+					top: 13px
+					left: 6px
+					width: 1px
+					height: 200px
+					background: #91CCC9 
+		.series__item	
+			position: relative
+			i
+				&:before, &:after
+					content: ""
+					position: absolute
+				&:before
+					top: 6px
+					left: -19px
+					height: 1px
+					width: 19px
+					background: #91CCC9
+				&:after
+					left: -19px
+					bottom: 6px
+					width: 1px
+					height: 200px
+					background: #91CCC9 
+.series__parent
+	position: relative
+	padding: 10px 22px 
+	cursor: pointer
+	i
+		position: absolute
+		top: 11px
+		left: 0
+		+s(series-plus)
+	&:hover
+		margin: -1px 0
+		padding: 11px 22px
+		background: $gr
+		span
+			border-bottom: 1px solid rgba(255,255,255,.5) 
+			color: #FFF
+		i
+			+s(series-plus-h)
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 10px
+			background: $gr 
+		&:before
+			left: -10px
+			border-radius: 4px 0 0 4px
+		&:after
+			right: -10px
+			border-radius: 0 4px 4px 0
+.series__article
+	position: relative
+	display: block
+	padding: 10px 22px 
+	color: #818484
+	i
+		position: absolute
+		top: 11px
+		left: 0
+		+s(series-article) 
+	&:hover
+		color: $gr 
+.series__childs
+	padding-left: 25px
+	overflow: hidden
