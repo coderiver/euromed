@@ -1737,7 +1737,7 @@
 	padding: 15px 30px
 	background: #EAF0F0
 	border-radius: 0 0 3px 3px
-.popup_login
+.popup_login, .popup_password
 	.popup__container
 		width: 360px 
 .popup_reg, .popup_photo
@@ -1791,6 +1791,14 @@
 		font-size: 11px
 		color: #999 
 
+.password
+	.btn
+		width: 100%
+.password__text
+	padding-top: 20px
+	font-size: 13px
+	font-style: italic
+	color: #a3a3a3 
 
 .add-file__photo
 	margin-bottom: 25px
@@ -1799,20 +1807,45 @@
 		border-radius: 3px
 
 .series
+	margin-bottom: 30px
+	+box
+	&.is-hide
+		.series__list
+			display: none
+.series_fixed
+	.series__in
+		width: 620px
+		&.is-fixed
+			position: fixed
+			top: 0
+			z-index: 1000 
+			.series__pic
+				top: 10px
+				#{$right}: 10px
+				width: 40px
+				height: 40px
+.series__in	
 	position: relative
 	padding: 20px
 	border-radius: 2px
 	background: #EAF0F0 
+	+box
 .series__pic
 	position: absolute
 	top: -40px
 	#{$right}: 20px
+	width: 80px
+	height: 80px
 	img
+		width: 100%
 		border-radius: 4px
 .series__head
-	margin-bottom: 15px
 	+clr
-.series__head-pager, .series__nav
+	.link-white
+		#{$margin-left}: 20px
+		border-color: #d2d8d8
+		color: #999 
+.series__head-pager, .series__nav, .link-white
 	float: flip(left, right)
 .series__head-pager
 	font-size: 18px
@@ -1850,23 +1883,44 @@
 	i
 		+s(next)
 .series__list
+	margin: flip(15px 0 0 -10px, 15px -10px 0 0)
+	padding: flip(0 20px 0 10px, 0 10px 0 20px)
+	overflow: auto
+	&::-webkit-scrollbar
+		width: 4px
+	&::-webkit-scrollbar-thumb
+		background: $gr
+		border-radius: 2px
+	&::-webkit-scrollbar-track-piece
+		background: #d6e1e1
+		border-radius: 2px
 .series__item
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
 		border: none
 .series__item_list
 	position: relative
+	.series__childs
+		display: none
+	.series__parent
+		+nosel
 	&.is-active 
+		.series__childs
+			display: block
 		.series__parent
 			i
+				+s(series-minus)
 				&:before
 					content: ""
 					position: absolute
 					top: 13px
-					left: 6px
+					#{$left}: 6px
 					width: 1px
 					height: 200px
 					background: #91CCC9 
+			&:hover
+				i
+					+s(series-minus-h)
 		.series__item	
 			position: relative
 			i
@@ -1875,12 +1929,12 @@
 					position: absolute
 				&:before
 					top: 6px
-					left: -19px
+					#{$left}: -19px
 					height: 1px
 					width: 19px
 					background: #91CCC9
 				&:after
-					left: -19px
+					#{$left}: -19px
 					bottom: 6px
 					width: 1px
 					height: 200px
@@ -1892,7 +1946,7 @@
 	i
 		position: absolute
 		top: 11px
-		left: 0
+		#{$left}: 0
 		+s(series-plus)
 	&:hover
 		margin: -1px 0
@@ -1911,11 +1965,11 @@
 			width: 10px
 			background: $gr 
 		&:before
-			left: -10px
-			border-radius: 4px 0 0 4px
+			#{$left}: -10px
+			border-radius: flip(4px 0 0 4px, 0 4px 4px 0)
 		&:after
-			right: -10px
-			border-radius: 0 4px 4px 0
+			#{$right}: -10px
+			border-radius: flip(0 4px 4px 0, 4px 0 0 4px)
 .series__article
 	position: relative
 	display: block
@@ -1924,10 +1978,10 @@
 	i
 		position: absolute
 		top: 11px
-		left: 0
+		#{$left}: 0
 		+s(series-article) 
 	&:hover
 		color: $gr 
 .series__childs
-	padding-left: 25px
+	#{$padding-left}: 25px
 	overflow: hidden

@@ -77,7 +77,7 @@
 										</span>
 									</label>
 									<div class="login__pass">
-										<a href="#">Забыли пароль?</a>
+										<a class="js-popup-btn" href="#" data-popup="popup_password">Забыли пароль?</a>
 										<label class="checkbox"><input type="checkbox" checked=""><span>Запомнить меня</span></label>
 									</div>
 									<button class="btn btn_green">Войти на сайт</button>
@@ -95,6 +95,26 @@
 										</div>
 										<div class="login__social-title">Войти через аккаунт</div>
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__overlay"></div>
+					</div>
+					<!-- popup -->
+					<div class="popup popup_password js-popup-el">
+						<div class="popup__container">
+							<div class="popup__in">
+								<button class="popup__close"></button>
+								<div class="title">Напомнить пароль</div>
+								<div class="password">
+									<label class="field">
+										<span class="field__label">Логин или email</span>
+										<span class="field__el">
+											<input type="text">
+										</span>
+									</label>
+									<button class="btn btn_green">Напомнить пароль</button>
+									<div class="password__text">Вам на почту будет высланно письмо с новым паролем и инструкциями</div>
 								</div>
 							</div>
 						</div>
@@ -173,6 +193,83 @@
 						</div>
 						<div class="popup__overlay"></div>
 					</div>
+				</li>
+			</ul>
+			<div class="social">
+				<div class="social__title">Мы в соцсетях</div>
+				<ul class="social__list">
+					<li><a class="social__fb" href="#"><i></i></a></li>
+					<li><a class="social__vk" href="#"><i></i></a></li>
+					<li><a class="social__gp" href="#"><i></i></a></li>
+				</ul>
+			</div>
+			<div class="lang">
+				<div class="lang__title">Язык</div>
+				<div class="lang__list">
+					<div class="lang__list-current"><i class="lang__ru"></i><span>Русский</span></div>
+					<ul class="lang__list-in">
+						<li><a href="#"><i class="lang__en"></i><span>Не ну очень длинный язык</span></a></li>
+						<li><a href="#"><i class="lang__en"></i><span>English</span></a></li>
+						<li><a href="#"><i class="lang__es"></i><span>Испания</span></a></li>
+						<li><a href="#"><i class="lang__de"></i><span>Германия</span></a></li>
+						<li><a href="#"><i class="lang__fr"></i><span>Франция</span></a></li>
+						<li><a href="#"><i class="lang__it"></i><span>Италия</span></a></li>
+						<li><a href="#"><i class="lang__lt"></i><span>Литва</span></a></li>
+						<li><a href="#"><i class="lang__uk"></i><span>Украина</span></a></li>
+						<li class="is-active"><a href="#"><i class="lang__ru"></i><span>Россия</span></a></li>
+						<li><a href="#"><i class="lang__lv"></i><span>Латвия</span></a></li>
+						<li><a href="#"><i class="lang__il"></i><span>Израиль</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<header class="header">
+		<div class="l-center">
+			<a class="logo" href="#">EuroMed</a>
+			<div class="logo-title">Медицинский портал о здоровье</div>
+			<ul class="header__links">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Консультации</a></li>
+				<li><a href="#">Обратная связь</a></li>
+			</ul>
+			<div class="search js-search"><!-- is-active для дропдауна -->
+				<div class="search__form">
+					<label>
+						<input type="text" placeholder="Поиск по сайту">
+						<i></i>
+					</label>
+				</div>
+				<ul class="search__drop">
+					<li><span>Ба</span>льзам “золотая звезда”</li>
+					<li><span>Ба</span>льзам “<span>Ба</span>ночка”</li>
+					<li><span>Ба</span>льзамический линимент </li>
+					<li><span>Ба</span>нгшил</li>
+					<li><span>Ба</span>неоцин</li>
+				</ul>
+				<div class="search__par"><!-- is-active для дропдауна -->
+					<div class="search__par-title">В разделеле</div>
+					<ul class="search__par-drop">
+						<li><span>432</span><strong>Психологические проблемы</strong></li>
+						<li><span>32</span><strong>Болезни уха, горла, носа</strong></li>
+						<li><span>2</span><strong>Детское здоровье</strong></li>
+						<li><span>32</span><strong>Стоматология</strong></li>
+						<li><span>432</span><strong>Болезни печени и желчных путей</strong></li>
+						<li><span>32</span><strong>Женское здоровье</strong></li>
+						<li><span>2</span><strong>Здоровье всей семьи</strong></li>
+						<li><span>42</span><strong>Аллергия</strong></li>
+						<li><span>432</span><strong>Сексуальное здоровье</strong></li>
+					</ul>
+				</div>
+				<button class="search__btn">Найти</button>
+			</div>
+			<ul class="header__login">
+				<li class="header__user">
+					<a href="#"><span>Александра_52</span><i></i></a>
+				</li>
+				<li class="header__user">
+					<a href="#"><span>Александра_52sdferfewferferfr</span><i></i></a>
 				</li>
 			</ul>
 			<div class="social">

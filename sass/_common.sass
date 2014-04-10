@@ -180,6 +180,20 @@ a
 	top: 24px 
 	#{$right}: 0
 	font-size: 0
+.header__user
+	text-align: right
+	white-space: nowrap
+	span, i 
+		display: inline-block
+		vertical-align: middle
+	span
+		width: 110px
+		text-overflow: ellipsis
+		overflow: hidden
+		font-size: 12px
+	i
+		margin-left: 10px
+		+s(header-user)
 .header__enter, .header__reg
 	display: inline-block
 	vertical-align: middle
