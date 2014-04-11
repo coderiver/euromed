@@ -280,13 +280,13 @@ var el = $('.js-series'),
 //series
 function series() {
 	var list = el.find('.series__list'),
-			item = el.find('.series__item_list .series__parent i'),
+			item = el.find('.series__toggle'),
 			el_toggle = el.find('.series__head .link-white'),
 			texto = el_toggle.data('texto'),
 			texth = el_toggle.data('texth'),
 			link = el.find('a');
 	item.on('click', function(){
-		$(this).parents('.series__item_list').toggleClass('is-active');
+		$(this).parent().parent().toggleClass('is-active');
 	});
 	el_toggle.on('click', function(){
 		if (el.hasClass('is-hide')) {
@@ -301,12 +301,16 @@ function series() {
 	});
 	//esc
 	$(document).keyup(function() {
-	  el.addClass('is-hide');
-	  el_toggle.text(texth);
+		if (el.hasClass('series_fixed')) {
+			el.addClass('is-hide');
+			el_toggle.text(texth);
+		}
 	});
 	$(document).on('click', function() {
-	  el.addClass('is-hide');
-	  el_toggle.text(texth);
+	  if (el.hasClass('series_fixed')) {
+			el.addClass('is-hide');
+			el_toggle.text(texth);
+		}
 	});
 	el.on('click', function(e){
 		e.stopPropagation();

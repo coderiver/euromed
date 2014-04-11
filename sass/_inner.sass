@@ -1898,16 +1898,31 @@
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
 		border: none
-.series__item_list
+		
+.series__parent
 	position: relative
-	.series__childs
-		display: none
 	.series__parent
-		+nosel
+		>.series__parent-item
+			.series__toggle
+				&:before, &:after
+					content: ""
+					position: absolute
+				&:before
+					top: 6px
+					#{$left}: -19px
+					height: 1px
+					width: 19px
+					background: #91CCC9
+				&:after
+					#{$left}: -19px
+					bottom: 6px
+					width: 1px
+					height: 2000px
+					background: #91CCC9 
 	&.is-active 
-		.series__childs
+		>.series__childs
 			display: block
-		.series__parent
+		>.series__parent-item
 			margin: -1px 0
 			padding: 11px 22px
 			background: $gr
@@ -1924,11 +1939,12 @@
 			.series__hl, .series__hr
 				display: block
 			.series__toggle
+				top: 12px
 				+s(series-minus-h)
 			&:hover
 				.series__toggle
 					+s(series-minus-h)
-		.series__item	
+		.series__item
 			position: relative
 			i
 				&:before, &:after
@@ -1944,11 +1960,23 @@
 					#{$left}: -19px
 					bottom: 6px
 					width: 1px
-					height: 200px
+					height: 2000px
 					background: #91CCC9 
-.series__parent
+					
+.series__parent-item
 	position: relative
 	padding: 10px 22px 
+	&:hover
+		margin: -1px 0
+		padding: 11px 22px
+		background: $gr
+		a
+			color: #FFF
+		.series__hl, .series__hr
+			display: block
+		.series__toggle
+			top: 12px
+			+s(series-plus-h)
 	a
 		color: #000 
 		&:hover
@@ -1960,16 +1988,6 @@
 		#{$left}: 0
 		+s(series-plus)
 		cursor: pointer
-	&:hover
-		margin: -1px 0
-		padding: 11px 22px
-		background: $gr
-		a
-			color: #FFF
-		.series__hl, .series__hr
-			display: block
-		.series__toggle
-			+s(series-plus-h)
 	.series__hl, .series__hr
 		display: none 
 		position: absolute
@@ -1996,7 +2014,10 @@
 	&:hover
 		color: $gr 
 .series__childs
+	display: none
 	#{$padding-left}: 25px
+	#{$padding-right}: 10px
+	#{$margin-right}: -10px
 	overflow: hidden
 
 .go-top
