@@ -286,12 +286,13 @@ function series() {
 			texth = el_toggle.data('texth'),
 			link = el.find('a');
 	item.on('click', function(){
-		$(this).parent().parent().toggleClass('is-active');
+		$(this).parent().next().toggle();
+		$(this).parent().toggleClass('is-open');
 	});
 	el_toggle.on('click', function(){
 		if (el.hasClass('is-hide')) {
 			el.removeClass('is-hide');
-			$(this).text(texto);
+			$(this).text(texth);
 		}
 		else{
 			el.addClass('is-hide');
@@ -300,16 +301,18 @@ function series() {
 		return false;
 	});
 	//esc
-	$(document).keyup(function() {
-		if (el.hasClass('series_fixed')) {
-			el.addClass('is-hide');
-			el_toggle.text(texth);
-		}
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			if (el.hasClass('series_fixed')) {
+				el.addClass('is-hide');
+				el_toggle.text(texto);
+			};
+		};
 	});
 	$(document).on('click', function() {
 	  if (el.hasClass('series_fixed')) {
 			el.addClass('is-hide');
-			el_toggle.text(texth);
+			el_toggle.text(texto);
 		}
 	});
 	el.on('click', function(e){
@@ -362,7 +365,7 @@ function series_scroll() {
 };
 	
 $(window).resize(function(){
-	series_size()
+	series_size();
 	series_scroll();
 });
 $(window).scroll(function(){

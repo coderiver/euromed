@@ -1898,6 +1898,9 @@
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
 		border: none
+	&.is-active
+		a
+			color: $gr 
 		
 .series__parent
 	position: relative
@@ -1926,16 +1929,11 @@
 			margin: -1px 0
 			padding: 11px 22px
 			background: $gr
-			&:before
-				content: ""
-				position: absolute
-				top: 24px
-				#{$left}: 6px
-				bottom: 0
-				width: 1px
-				background: #91CCC9 
 			a
 				color: #FFF
+				&:hover
+					border-bottom: 1px solid rgba(255,255,255,.5) 
+					text-decoration: none
 			.series__hl, .series__hr
 				display: block
 			.series__toggle
@@ -1965,29 +1963,38 @@
 					
 .series__parent-item
 	position: relative
-	padding: 10px 22px 
-	&:hover
-		margin: -1px 0
-		padding: 11px 22px
-		background: $gr
-		a
-			color: #FFF
-		.series__hl, .series__hr
-			display: block
-		.series__toggle
-			top: 12px
-			+s(series-plus-h)
+	padding: 10px 22px
+	&.is-open 
+		&:before
+			content: ""
+			position: absolute
+			top: 24px
+			#{$left}: 6px
+			bottom: 0
+			width: 1px
+			background: #91CCC9
+	//&:hover
+	//	margin: -1px 0
+	//	padding: 11px 22px
+	//	background: $gr
+	//	a
+	//		color: #FFF
+	//	.series__hl, .series__hr
+	//		display: block
+	//	.series__toggle
+	//		top: 12px
+	//		+s(series-plus-h)
 	a
 		color: #000 
 		&:hover
-			border-bottom: 1px solid rgba(255,255,255,.5) 
-			text-decoration: none
+			text-decoration: underline
 	.series__toggle
 		position: absolute
 		top: 11px
 		#{$left}: 0
 		+s(series-plus)
 		cursor: pointer
+		+nosel
 	.series__hl, .series__hr
 		display: none 
 		position: absolute
@@ -2011,8 +2018,6 @@
 		top: 11px
 		#{$left}: 0
 		+s(series-article) 
-	&:hover
-		color: $gr 
 .series__childs
 	display: none
 	#{$padding-left}: 25px
@@ -2024,9 +2029,10 @@
 	display: none
 	position: fixed
 	top: 50%
-	left: 100px
+	#{$left}: 50%
 	height: 23px
 	margin-top: -12px
+	#{$margin-left}: -580px
 	padding: 0 10px 0 15px
 	border: 1px solid $gr
 	background: none 
@@ -2034,6 +2040,8 @@
 	color: $gr
 	font-size: 0 
 	+rotate(-90)
+	+rt(1160)
+		display: none !important
 	span, i
 		display: inline-block
 		vertical-align: middle 

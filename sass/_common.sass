@@ -40,6 +40,10 @@
 // =book
 // 	font-family: "book",arial,sans-serif 
 
+//media query
+@mixin rt($media)
+	@media only screen and (max-width: $media+px)
+		@content
 
 $font: #404343
 $gr: #38a8a2
@@ -48,6 +52,8 @@ $grl: #4fc5bf
 $bl: #81c7f3
 $bll: #9cd2f4
 $bld: #6fb1db
+
+
 
 body
 	font-size: 13px 
@@ -183,17 +189,17 @@ a
 .header__user
 	text-align: right
 	white-space: nowrap
-	span, i 
+	a
 		display: inline-block
 		vertical-align: middle
-	span
-		width: 110px
-		text-overflow: ellipsis
-		overflow: hidden
-		font-size: 12px
-	i
-		margin-left: 10px
-		+s(header-user)
+.header__user-name
+	width: 110px
+	text-overflow: ellipsis
+	overflow: hidden
+	font-size: 12px
+.header__user-out
+	margin-left: 10px
+	+s(header-user)
 .header__enter, .header__reg
 	display: inline-block
 	vertical-align: middle
@@ -576,7 +582,7 @@ a
 				background: #2c928d 
 			&.is-sub
 				.nav__sub
-					visibility: visible
+					display: block
 				> a
 					background: #FFF
 					border-radius: 3px 3px 0 0
@@ -612,6 +618,7 @@ a
 					height: 50px
 					vertical-align: middle
 .nav__sub
+	display: none
 	position: absolute
 	top: 50px
 	background: #FFF
@@ -619,7 +626,6 @@ a
 	border-radius: 3px
 	box-shadow: 8px 14px 29px rgba(0,0,0,.4)
 	overflow: hidden
-	visibility: hidden
 	z-index: 2
 .nav__sub_bg
 	width: 336px
