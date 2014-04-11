@@ -364,7 +364,7 @@ function series_scroll() {
 		if (scroll_top > el_top) {
 			el_in.addClass('is-fixed');
 			el_in.css('left', el_left);
-			el.css('height', el_height);
+			el.css('height', '61px');
 		}
 		else{
 			el_in.removeClass('is-fixed');
@@ -386,6 +386,7 @@ $(window).resize(function(){
 	series_scroll();
 });
 $(window).scroll(function(){
+	series_size();
 	series_scroll();
 	// go top
 	var scroll_top = $(window).scrollTop();
