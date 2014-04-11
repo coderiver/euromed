@@ -1836,9 +1836,22 @@
 	#{$right}: 20px
 	width: 80px
 	height: 80px
+	border-radius: 4px
+	white-space: nowrap
+	font-size: 0 
+	overflow: hidden
 	img
+		position: absolute
+		top: 0
+		left: 0
 		width: 100%
-		border-radius: 4px
+		+tr(width .2s linear)
+		&.series__pic-new
+			z-index: 2 
+			left: 100%
+			&.is-active
+				+tr(left .2s linear)
+				left: 0
 .series__head
 	+clr
 	.link-white
@@ -1884,10 +1897,11 @@
 		+s(next)
 .series__list
 	margin: flip(15px 0 0 -10px, 15px -10px 0 0)
-	padding: flip(0 20px 0 10px, 0 10px 0 20px)
+	padding: flip(0 20px 2px 10px, 0 10px 2px 20px)
 	overflow: auto
 	&::-webkit-scrollbar
 		width: 4px
+		height: 4px
 	&::-webkit-scrollbar-thumb
 		background: $gr
 		border-radius: 2px
@@ -1899,8 +1913,22 @@
 	&:first-child
 		border: none
 	&.is-active
-		a
-			color: $gr 
+		.series__article
+			margin: -1px 0
+			padding: 11px 22px
+			background: $gr
+			a
+				color: #FFF
+				span
+					border-bottom: 1px solid transparent
+				&:hover
+					text-decoration: none
+					span
+						border-color: rgba(255,255,255,.5) 
+			.select__article-ico
+				+s(series-article-h)
+			.series__hl, .series__hr
+				display: block
 		
 .series__parent
 	position: relative
@@ -1931,20 +1959,23 @@
 			background: $gr
 			a
 				color: #FFF
+				span
+					border-bottom: 1px solid transparent
 				&:hover
-					border-bottom: 1px solid rgba(255,255,255,.5) 
 					text-decoration: none
+					span
+						border-color: rgba(255,255,255,.5) 
 			.series__hl, .series__hr
 				display: block
 			.series__toggle
 				top: 12px
-				+s(series-minus-h)
-			&:hover
+				+s(series-plus-h)
+			&.is-open
 				.series__toggle
 					+s(series-minus-h)
 		.series__item
 			position: relative
-			i
+			.select__article-ico
 				&:before, &:after
 					content: ""
 					position: absolute
@@ -1973,18 +2004,10 @@
 			bottom: 0
 			width: 1px
 			background: #91CCC9
-	//&:hover
-	//	margin: -1px 0
-	//	padding: 11px 22px
-	//	background: $gr
-	//	a
-	//		color: #FFF
-	//	.series__hl, .series__hr
-	//		display: block
-	//	.series__toggle
-	//		top: 12px
-	//		+s(series-plus-h)
+		.series__toggle
+			+s(series-minus)
 	a
+		display: block
 		color: #000 
 		&:hover
 			text-decoration: underline
@@ -1995,29 +2018,32 @@
 		+s(series-plus)
 		cursor: pointer
 		+nosel
-	.series__hl, .series__hr
-		display: none 
-		position: absolute
-		top: 0
-		bottom: 0
-		width: 10px
-		background: $gr 
-	.series__hl
-		#{$left}: -10px
-		border-radius: flip(4px 0 0 4px, 0 4px 4px 0)
-	.series__hr
-		#{$right}: -10px
-		border-radius: flip(0 4px 4px 0, 4px 0 0 4px)
+.series__hl, .series__hr
+	display: none 
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 10px
+	background: $gr 
+.series__hl
+	#{$left}: -10px
+	border-radius: flip(4px 0 0 4px, 0 4px 4px 0)
+.series__hr
+	#{$right}: -10px
+	border-radius: flip(0 4px 4px 0, 4px 0 0 4px)
+
 .series__article
 	position: relative
-	display: block
 	padding: 10px 22px 
-	color: #818484
-	i
+	a
+		display: block
+		color: #818484
+	.select__article-ico
 		position: absolute
 		top: 11px
 		#{$left}: 0
 		+s(series-article) 
+			
 .series__childs
 	display: none
 	#{$padding-left}: 25px
