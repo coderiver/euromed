@@ -1908,18 +1908,25 @@
 		.series__childs
 			display: block
 		.series__parent
-			i
-				+s(series-minus)
-				&:before
-					content: ""
-					position: absolute
-					top: 13px
-					#{$left}: 6px
-					width: 1px
-					height: 200px
-					background: #91CCC9 
+			margin: -1px 0
+			padding: 11px 22px
+			background: $gr
+			&:before
+				content: ""
+				position: absolute
+				top: 24px
+				#{$left}: 6px
+				bottom: 0
+				width: 1px
+				background: #91CCC9 
+			a
+				color: #FFF
+			.series__hl, .series__hr
+				display: block
+			.series__toggle
+				+s(series-minus-h)
 			&:hover
-				i
+				.series__toggle
 					+s(series-minus-h)
 		.series__item	
 			position: relative
@@ -1942,34 +1949,40 @@
 .series__parent
 	position: relative
 	padding: 10px 22px 
-	cursor: pointer
-	i
+	a
+		color: #000 
+		&:hover
+			border-bottom: 1px solid rgba(255,255,255,.5) 
+			text-decoration: none
+	.series__toggle
 		position: absolute
 		top: 11px
 		#{$left}: 0
 		+s(series-plus)
+		cursor: pointer
 	&:hover
 		margin: -1px 0
 		padding: 11px 22px
 		background: $gr
-		span
-			border-bottom: 1px solid rgba(255,255,255,.5) 
+		a
 			color: #FFF
-		i
+		.series__hl, .series__hr
+			display: block
+		.series__toggle
 			+s(series-plus-h)
-		&:before, &:after
-			content: ""
-			position: absolute
-			top: 0
-			bottom: 0
-			width: 10px
-			background: $gr 
-		&:before
-			#{$left}: -10px
-			border-radius: flip(4px 0 0 4px, 0 4px 4px 0)
-		&:after
-			#{$right}: -10px
-			border-radius: flip(0 4px 4px 0, 4px 0 0 4px)
+	.series__hl, .series__hr
+		display: none 
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 10px
+		background: $gr 
+	.series__hl
+		#{$left}: -10px
+		border-radius: flip(4px 0 0 4px, 0 4px 4px 0)
+	.series__hr
+		#{$right}: -10px
+		border-radius: flip(0 4px 4px 0, 4px 0 0 4px)
 .series__article
 	position: relative
 	display: block
@@ -1985,3 +1998,27 @@
 .series__childs
 	#{$padding-left}: 25px
 	overflow: hidden
+
+.go-top
+	display: none
+	position: fixed
+	top: 50%
+	left: 100px
+	height: 23px
+	margin-top: -12px
+	padding: 0 10px 0 15px
+	border: 1px solid $gr
+	background: none 
+	border-radius: 4px
+	color: $gr
+	font-size: 0 
+	+rotate(-90)
+	span, i
+		display: inline-block
+		vertical-align: middle 
+		font-size: 12px
+	span
+		margin-right: 10px
+	i
+		+s(go-top)
+	 
