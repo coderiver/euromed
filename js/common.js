@@ -323,8 +323,9 @@ function series() {
 
 	link.hover(function(){
 		wrap_img.find('.series__pic-new').remove();
-		var img = $(this).attr('data-img'),
+		var img = $(this).attr('data-img');
 				item = '<img class="series__pic-new" src="'+img+'" alt=""/>';
+				if(img == undefined){item = '';}
 		if (!$(this).parent().hasClass('is-active')) {
 			if (!$(this).parent().parent().hasClass('is-active')) {
 				wrap_img.prepend(item);
