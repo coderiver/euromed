@@ -1084,6 +1084,12 @@ a.link-more:active { top: 0; box-shadow: none; }
 .series__parent.is-active .series__item .select__article-ico:before { top: 6px; right: -19px; height: 1px; width: 19px; background: #91ccc9; }
 .series__parent.is-active .series__item .select__article-ico:after { right: -19px; bottom: 6px; width: 1px; height: 2000px; background: #91ccc9; }
 
+.select__article-ico:before, .select__article-ico:after { content: ""; position: absolute; }
+.select__article-ico:before { top: 6px; right: -19px; height: 1px; width: 19px; background: #91ccc9; }
+.select__article-ico:after { right: -19px; bottom: 6px; width: 1px; height: 2000px; background: #91ccc9; }
+
+.series__list > .series__item > .series__article > a > .select__article-ico:before, .series__list > .series__item > .series__article > a > .select__article-ico:after { display: none; }
+
 .series__parent-item { position: relative; padding: 10px 22px; }
 .series__parent-item.is-open:before { content: ""; position: absolute; top: 24px; right: 6px; bottom: 0; width: 1px; background: #91ccc9; }
 .series__parent-item.is-open .series__toggle { background: url('../img/icons-saa40b179df.png') 0 -304px no-repeat; width: 13px; height: 13px; }

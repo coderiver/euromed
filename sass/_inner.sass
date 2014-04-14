@@ -1991,7 +1991,26 @@
 					width: 1px
 					height: 2000px
 					background: #91CCC9 
-					
+.select__article-ico
+	&:before, &:after
+		content: ""
+		position: absolute
+	&:before
+		top: 6px
+		#{$left}: -19px
+		height: 1px
+		width: 19px
+		background: #91CCC9
+	&:after
+		#{$left}: -19px
+		bottom: 6px
+		width: 1px
+		height: 2000px
+		background: #91CCC9 
+// fix parents
+.series__list>.series__item>.series__article>a>.select__article-ico
+	&:before,&:after
+		display: none	
 .series__parent-item
 	position: relative
 	padding: 10px 22px
