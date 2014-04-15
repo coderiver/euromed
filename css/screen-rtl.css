@@ -1093,6 +1093,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 .series__parent-item { position: relative; padding: 10px 22px; }
 .series__parent-item.is-open:before { content: ""; position: absolute; top: 24px; right: 6px; bottom: 0; width: 1px; background: #91ccc9; }
 .series__parent-item.is-open .series__toggle { background: url('../img/icons-saa40b179df.png') 0 -304px no-repeat; width: 13px; height: 13px; }
+.series__parent-item.is-open + .series__childs { display: block !important; }
 .series__parent-item a { display: block; color: black; }
 .series__parent-item a:hover { text-decoration: underline; }
 .series__parent-item .series__toggle { position: absolute; top: 11px; right: 0; background: url('../img/icons-saa40b179df.png') 0 -140px no-repeat; width: 13px; height: 13px; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
