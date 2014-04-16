@@ -1908,13 +1908,14 @@
 	&::-webkit-scrollbar-track-piece
 		background: #d6e1e1
 		border-radius: 2px
-	&>.series__parent:first-child>.series__parent-item
+	&>.series__parent:first-child>.series__parent-item, &>.series__item:first-child
 		border-top: none  
 .series__parent-item
 	border-top: 1px dotted #a3a8a8 
 .series__item.is-active
 	position: relative
 	z-index: 100 
+	margin-top: -1px 
 	&:before
 		position: absolute
 		bottom: 0px 
@@ -1924,6 +1925,15 @@
 		background: #EAF0F0
 		content: ' ' 
 		z-index: 30 
+.series__parent .series__parent .series__item
+	&:before
+		background: red
+		left: -50px  
+		width: 50px 
+.series__parent.is-active>.series__parent-item
+	border-top: none 
+	
+	
 .series__item
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
