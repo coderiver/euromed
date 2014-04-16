@@ -1055,11 +1055,12 @@ a.link-more:active { top: 0; box-shadow: none; }
 .series__list::-webkit-scrollbar { width: 4px; height: 4px; }
 .series__list::-webkit-scrollbar-thumb { background: #38a8a2; border-radius: 2px; }
 .series__list::-webkit-scrollbar-track-piece { background: #d6e1e1; border-radius: 2px; }
+.series__list > .series__parent:first-child > .series__parent-item { border-top: none; }
 
 .series__parent-item { border-top: 1px dotted #a3a8a8; }
 
-.series__item.is-active { position: relative; }
-.series__item.is-active:before { position: absolute; bottom: 0; left: -30px; width: 22px; height: 1px; background: #eaf0f0; content: " "; z-index: 100; }
+.series__item.is-active { position: relative; z-index: 100; }
+.series__item.is-active:before { position: absolute; bottom: 0px; left: -30px; width: 22px; height: 1px; background: #eaf0f0; content: " "; z-index: 30; }
 
 .series__item { border-top: 1px dotted #a3a8a8; }
 .series__item.is-active .series__article { margin: -1px 0; padding: 11px 22px; background: #38a8a2; }
@@ -1084,7 +1085,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 .series__parent.is-active > .series__parent-item .series__toggle { top: 12px; background: url('../img/icons-saa40b179df.png') 0 -1329px no-repeat; width: 13px; height: 13px; }
 .series__parent.is-active > .series__parent-item.is-open .series__toggle { background: url('../img/icons-saa40b179df.png') 0 -450px no-repeat; width: 13px; height: 13px; }
 .series__parent.is-active .series__item { position: relative; }
-.series__parent.is-active .series__item .select__article-ico:before, .series__parent.is-active .series__item .select__article-ico:after { content: ""; position: absolute; }
+.series__parent.is-active .series__item .select__article-ico:before, .series__parent.is-active .series__item .select__article-ico:after { content: ""; position: absolute; z-index: 200; }
 .series__parent.is-active .series__item .select__article-ico:before { top: 6px; left: -19px; height: 1px; width: 19px; background: #91ccc9; }
 .series__parent.is-active .series__item .select__article-ico:after { left: -19px; bottom: 6px; width: 1px; height: 2000px; background: #91ccc9; }
 

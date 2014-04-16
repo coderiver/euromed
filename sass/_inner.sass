@@ -1908,19 +1908,22 @@
 	&::-webkit-scrollbar-track-piece
 		background: #d6e1e1
 		border-radius: 2px
+	&>.series__parent:first-child>.series__parent-item
+		border-top: none  
 .series__parent-item
 	border-top: 1px dotted #a3a8a8 
 .series__item.is-active
 	position: relative
+	z-index: 100 
 	&:before
 		position: absolute
-		bottom: 0 
+		bottom: 0px 
 		left: -30px 
 		width: 22px
 		height: 1px  
 		background: #EAF0F0
 		content: ' ' 
-		z-index: 100 
+		z-index: 30 
 .series__item
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
@@ -1992,6 +1995,7 @@
 				&:before, &:after
 					content: ""
 					position: absolute
+					z-index: 200 
 				&:before
 					top: 6px
 					#{$left}: -19px
