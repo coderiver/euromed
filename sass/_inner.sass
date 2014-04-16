@@ -1908,10 +1908,23 @@
 	&::-webkit-scrollbar-track-piece
 		background: #d6e1e1
 		border-radius: 2px
+.series__parent-item
+	border-top: 1px dotted #a3a8a8 
+.series__item.is-active
+	position: relative
+	&:before
+		position: absolute
+		bottom: 0 
+		left: -30px 
+		width: 22px
+		height: 1px  
+		background: #EAF0F0
+		content: ' ' 
+		z-index: 100 
 .series__item
 	border-top: 1px dotted #a3a8a8 
 	&:first-child
-		border: none
+		//border: none
 	&.is-active
 		.series__article
 			margin: -1px 0
@@ -2071,6 +2084,8 @@
 	#{$padding-right}: 10px
 	#{$margin-right}: -10px
 	overflow: hidden
+	margin-bottom: -2px 
+	padding-bottom: 2px 
 
 .go-top
 	display: none
