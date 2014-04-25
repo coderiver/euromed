@@ -981,7 +981,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 
 .popup__in { padding: 30px; }
 
-.popup__close { position: absolute; top: 30px; right: 30px; background: url('../img/icons-saa40b179df.png') 0 -965px no-repeat; width: 11px; height: 11px; }
+.popup__close { position: absolute; top: 30px; left: 30px; background: url('../img/icons-saa40b179df.png') 0 -965px no-repeat; width: 11px; height: 11px; }
 
 .popup__footer { padding: 15px 30px; background: #eaf0f0; border-radius: 0 0 3px 3px; }
 
