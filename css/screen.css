@@ -589,6 +589,10 @@ a.link-more:active { top: 0; box-shadow: none; }
 .checkbox input:checked + span:after { top: 6px; left: 4px; background: url('../img/icons-saa40b179df.png') 0 -1045px no-repeat; width: 11px; height: 8px; }
 .checkbox span { padding: 1px 0; font-size: 13px; }
 .checkbox span:before { width: 17px; height: 17px; border: 1px solid #dfe2e2; border-radius: 3px; background-color: white; box-shadow: inset 1px 1px 7px rgba(0, 0, 0, 0.06); }
+.checkbox.is-error span:before { border-color: #fe9c9c; background-color: #fff9f9; box-shadow: 0 0 5px rgba(255, 120, 120, 0.15), inset 1px 1px 7px rgba(0, 0, 0, 0.06); }
+
+.box-error { display: inline-block; position: relative; min-width: 220px; margin-top: 10px; background: #fe9c9c; border-radius: 3px; padding: 10px; font-style: italic; color: white; line-height: 1.2; vertical-align: top; }
+.box-error:before { content: ""; position: absolute; top: -6px; left: 4px; width: 0px; height: 0px; border-style: solid; border-width: 0 6px 6px 6px; border-color: transparent transparent #fe9c9c transparent; }
 
 .comm { padding-top: 20px; border-top: 1px solid black; }
 
@@ -1117,7 +1121,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 
 .series__childs { display: none; padding-left: 25px; padding-right: 10px; margin-right: -10px; overflow: hidden; margin-bottom: -2px; padding-bottom: 2px; }
 
-.go-top { display: none; position: fixed; top: 50%; left: 50%; height: 23px; margin-top: -12px; margin-left: -580px; padding: 0 10px 0 15px; border: 1px solid #38a8a2; background: none; border-radius: 4px; color: #38a8a2; font-size: 0; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
+.go-top { display: none; position: fixed; top: 35%; left: 50%; height: 23px; margin-left: -580px; padding: 0 10px 0 15px; border: 1px solid #38a8a2; background: none; border-radius: 4px; color: #38a8a2; font-size: 0; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
 @media only screen and (max-width: 1160px) { .go-top { display: none !important; } }
 .go-top span, .go-top i { display: inline-block; vertical-align: middle; font-size: 12px; }
 .go-top span { margin-right: 10px; }
