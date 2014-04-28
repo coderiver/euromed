@@ -397,22 +397,20 @@ $(window).scroll(function(){
 			footer = $('.footer'),
 			f_height = footer.height(),
 			f_top = footer.offset().top,
-			w_height = $(window).height(),
-			go_top_height = go_top.height(),
-			//go_top_pos_top = go_top.offset().top,
-			body = $('body'),
-			h_body = body.height();
-	if (scroll_top > 200) {
+			go_top_postop = go_top.offset().top,
+			go_top_height = go_top.outerHeight(),
+			varia = 200;
+	if (scroll_top > varia) {
 		go_top.fadeIn();
 	}
 	else{
 		go_top.fadeOut();
 	};
-	if (scroll_top > (f_top - f_height)) {
-		go_top.css('bottom', f_height + 50);
+	if (scroll_top > (f_top - varia)) {
+		go_top.css({'position': 'absolute', 'bottom': f_height + 100});
 	}
 	else {
-		go_top.css('bottom', '50%');
+		go_top.css({'position': 'fixed', 'bottom': '50%'});
 	}
 });
 
