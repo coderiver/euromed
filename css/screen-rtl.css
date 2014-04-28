@@ -541,6 +541,8 @@ a.link-more:active { top: 0; box-shadow: none; }
 .field.is-error .field__el input, .field.is-error .field__el textarea { border-color: #fe9c9c; background-color: #fff9f9; box-shadow: 0 0 5px rgba(255, 120, 120, 0.15), inset 1px 1px 7px rgba(0, 0, 0, 0.06); }
 .field.is-error .checkbox span:before { border-color: #fe9c9c; background-color: #fff9f9; box-shadow: 0 0 5px rgba(255, 120, 120, 0.15), inset 1px 1px 7px rgba(0, 0, 0, 0.06); }
 
+.field_checkbox .field__message:before { right: 4px; }
+
 .field_file .field__el .btn, .field_file .field__el span { display: inline-block; vertical-align: middle; }
 .field_file .field__el .btn { margin-left: 10px; }
 .field_file .field__el span { color: #959999; }
@@ -985,9 +987,9 @@ a.link-more:active { top: 0; box-shadow: none; }
 .field__tags .select2-choices .select2-search-choice { float: left; margin: 6px 0 6px 6px; height: 25px; padding: 0 7px; line-height: 25px; background: #eaf0f0; border-radius: 3px; border: none; color: #999999; }
 .field__tags.select2-container-active .select2-choices { border-color: #2c928d; box-shadow: 0 0 5px rgba(56, 168, 162, 0.15), inset 1px 1px 7px rgba(0, 0, 0, 0.06); }
 
-.popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 100px 0; overflow: auto; z-index: 1000; }
+.popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 100px 0; background: rgba(12, 36, 34, 0.5); overflow: auto; z-index: 1000; }
 
-.popup__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(12, 36, 34, 0.5); z-index: 2; }
+.popup__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 
 .popup__container { position: relative; margin: 0 auto; border-radius: 3px; background-color: white; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); z-index: 4; }
 

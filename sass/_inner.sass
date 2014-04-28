@@ -589,6 +589,10 @@
 					border-color: #fe9c9c
 					background-color: #fff9f9
 					box-shadow: 0 0 5px rgba(255, 120, 120, 0.15), inset 1px 1px 7px rgba(0, 0, 0, 0.06)
+.field_checkbox
+	.field__message
+		&:before
+			#{$left}: 4px
 .field_file
 	.field__el
 		.btn, span
@@ -1780,6 +1784,7 @@
 	right: 0
 	bottom: 0
 	padding: 100px 0
+	background: rgba(#0c2422, .5)
 	overflow: auto 
 	z-index: 1000
 .popup__overlay
@@ -1788,8 +1793,6 @@
 	left: 0
 	right: 0
 	bottom: 0
-	background: rgba(#0c2422, .5)
-	z-index: 2 
 .popup__container
 	position: relative
 	margin: 0 auto
