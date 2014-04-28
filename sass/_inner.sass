@@ -2181,23 +2181,18 @@
 .go-top
 	display: none
 	bottom: 50%
-	height: 200px
-	#{$left}: 50%
-	#{$margin-left}: -580px
-	margin-bottom: -100px
-.go-top__btn
-	position: absolute
-	top: 50%
-	margin-top: -12px
 	height: 23px
+	#{$left}: 50%
+	#{$margin-left}: -520px
 	padding: 0 10px 0 15px
 	border: 1px solid $gr
-	background: none 
+	background: #fff 
 	border-radius: 4px
 	color: $gr
 	font-size: 0 
 	white-space: nowrap
 	+rotate(-90)
+	+transform-origin(0, 100%)
 	+rt(1160)
 		display: none !important
 	span, i
