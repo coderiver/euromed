@@ -390,13 +390,24 @@ $(window).scroll(function(){
 	series_size();
 	series_scroll();
 	// go top
-	var scroll_top = $(window).scrollTop();
+	var scroll_top = $(window).scrollTop(),
+			footer = $('.footer'),
+			f_height = footer.height(),
+			f_top = footer.offset().top,
+			w_height = $(window).height(),
+			go_top = $('.go-top');
 	if (scroll_top > 200) {
-		$('.go-top').fadeIn();
+		go_top.fadeIn();
 	}
 	else{
-		$('.go-top').fadeOut();
-	}
+		go_top.fadeOut();
+	};
+	if (scroll_top > (f_top - w_height)) {
+		var popravka = scroll_top - f_top + w_height;
+				w_height = $(window).height(),
+				height = w_height - 20 - popravka;
+		go_top.css('max-height', height);
+	};
 });
 
 //popup
