@@ -156,7 +156,33 @@
 			+s(do-ask-h)
 
 
-
+.series-articles
+	position: relative
+	padding: 10px 20px
+	border-radius: 3px
+	background: #eaf0f0 
+	&:before
+		content: ""
+		position: absolute
+		top: -16px
+		left: 20px
+		+arr(16,16,#eaf0f0,bl)
+	li
+		position: relative
+		border-top: 1px dotted #a3a8a8 
+		padding: 10px 0 10px 25px
+		&:before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 0
+			+s(series-articles)
+		&:first-child
+			border: none
+	a
+		color: #000 
+		>span
+			
 
 
 

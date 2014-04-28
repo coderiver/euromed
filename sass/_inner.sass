@@ -63,6 +63,25 @@
 		margin: 0
 	.post__details
 		padding: 14px 0 0 0 
+.post_blogs
+	.post__item
+		position: relative
+		margin-top: 10px
+		padding-top: 15px
+		padding-left: 5px
+		border-top: 1px dotted #ccc
+		&:before
+			content: ""
+			position: absolute
+			top: 17px
+			left: 2px
+			+s(post-blog-ico)
+		&:first-child
+			margin: 0
+			padding: 0 0 0 5px
+			border: none
+			&:before
+				top: 2px
 .post__item
 	margin-top: 20px 
 	+clr
@@ -85,6 +104,20 @@
 	font-weight: bold
 	text-transform: uppercase
 	color: #fff 
+.post__label-video
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 44px
+	height: 44px
+	margin: -22px 0 0 -22px 
+	background: $gr
+	border-radius: 50% 
+	i
+		position: absolute
+		top: 12px
+		left: 15px
+		+arr(20,20,#fff,r) 
 .post__details
 	#{$padding-left}: 20px
 	overflow: hidden
@@ -1036,12 +1069,19 @@
 
 .tabs
 	margin-bottom: 30px
+.tabs_small
+	.tabs__nav
+		a
+			width: 75px
+			padding: 0 10px 
 
 .tabs__nav
 	margin-bottom: 25px
 	padding: 0 5px 
 	border-bottom: 1px solid #4e4e4e 
 	font-size: 0
+	ul
+		display: table-row
 	li
 		position: relative
 		display: inline-block
@@ -2138,19 +2178,12 @@
 .go-top
 	display: none
 	position: fixed
-	top: 0
-	bottom: 0
-	min-height: 140px
+	bottom: 50%
+	height: 23px
+	padding: 0 10px 0 15px
 	#{$left}: 50%
 	#{$margin-left}: -580px
-	+tr(margin-top .2s linear)
-.go-top__btn
-	position: absolute
-	top: 50%
-	left: 0
-	height: 23px
-	margin-top: -10px
-	padding: 0 10px 0 15px
+	margin-bottom: -12px
 	border: 1px solid $gr
 	background: none 
 	border-radius: 4px
