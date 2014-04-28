@@ -351,9 +351,12 @@ a.link-more:active { top: 0; box-shadow: none; }
 .post__pic { position: relative; float: right; }
 .post__pic img { display: block; border-radius: 2px; }
 
+.post__pic_video a { display: block; background: black; }
+.post__pic_video a:hover > img { opacity: 0.5; }
+
 .post__label { position: absolute; top: 20px; right: 0; padding: 5px 8px; background: #81c7f3; border-radius: 0 3px 3px 0; font-size: 8px; font-weight: bold; text-transform: uppercase; color: white; }
 
-.post__label-video { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #38a8a2; border-radius: 50%; }
+.post__label-video { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; background: #38a8a2; border-radius: 50%; z-index: 2; }
 .post__label-video i { position: absolute; top: 12px; left: 15px; width: 0px; height: 0px; border-style: solid; border-width: 10px 0 10px 20px; border-color: transparent transparent transparent white; }
 
 .post__details { padding-right: 20px; overflow: hidden; }

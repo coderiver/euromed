@@ -93,6 +93,13 @@
 	img
 		display: block
 		border-radius: 2px
+.post__pic_video
+	a
+		display: block
+		background: #000
+		&:hover
+			>img
+				opacity: .5 
 .post__label
 	position: absolute
 	top: 20px
@@ -113,6 +120,7 @@
 	margin: -22px 0 0 -22px 
 	background: $gr
 	border-radius: 50% 
+	z-index: 2 
 	i
 		position: absolute
 		top: 12px
