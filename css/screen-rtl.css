@@ -1137,7 +1137,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 
 .series__childs { display: none; padding-right: 25px; padding-left: 10px; margin-left: -10px; overflow: hidden; margin-bottom: -2px; padding-bottom: 2px; }
 
-.go-top { display: none; right: 50%; margin-right: -580px; height: 200px; margin-bottom: -100px; }
+.go-top { display: none; bottom: 50%; height: 200px; right: 50%; margin-right: -580px; margin-bottom: -100px; }
 
 .go-top__btn { position: absolute; top: 50%; margin-top: -12px; height: 23px; padding: 0 10px 0 15px; border: 1px solid #38a8a2; background: none; border-radius: 4px; color: #38a8a2; font-size: 0; white-space: nowrap; -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
 @media only screen and (max-width: 1160px) { .go-top__btn { display: none !important; } }

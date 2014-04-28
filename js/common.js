@@ -396,22 +396,24 @@ $(window).scroll(function(){
 	var scroll_top = $(window).scrollTop(),
 			footer = $('.footer'),
 			f_height = footer.height(),
+			w_height = $(window).height(),
 			f_top = footer.offset().top,
-			go_top_postop = go_top.offset().top,
-			go_top_height = go_top.outerHeight(),
-			varia = 200;
-	if (scroll_top > varia) {
-		go_top.fadeIn();
-	}
-	else{
-		go_top.fadeOut();
+			varia = 200,
+			popravka = (w_height - varia)/2;
+	if (go_top.length) {
+		if (scroll_top > varia) {
+			go_top.fadeIn();
+		}
+		else{
+			go_top.fadeOut();
+		};
+		if ((scroll_top + varia + popravka) > f_top) {
+			go_top.css({'position': 'absolute', 'bottom': f_height + varia/2});
+		}
+		else {
+			go_top.css({'position': 'fixed', 'bottom': '50%'});
+		};
 	};
-	if (scroll_top > (f_top - varia)) {
-		go_top.css({'position': 'absolute', 'bottom': f_height + 100});
-	}
-	else {
-		go_top.css({'position': 'fixed', 'bottom': '50%'});
-	}
 });
 
 //popup
