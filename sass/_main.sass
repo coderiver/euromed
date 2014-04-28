@@ -17,6 +17,20 @@
 	a
 		&:hover
 			color: #000 
+.spec-cats_with-ico
+	li
+		position: relative
+		padding: 5px 0 5px 25px
+		&:before
+			content: ""
+			position: absolute
+			top: 7px
+			left: 0
+			+s(spec-cats)
+		&:first-child
+			padding: 0 0 5px 25px
+			&:before
+				top: 2px
 
 
 .label

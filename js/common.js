@@ -405,9 +405,15 @@ $(window).scroll(function(){
 	if (scroll_top > (f_top - w_height)) {
 		var popravka = scroll_top - f_top + w_height;
 				w_height = $(window).height(),
-				height = w_height - 20 - popravka;
+				height = w_height - popravka;
 		go_top.css('max-height', height);
 	};
+	if (scroll_top > (f_top - f_height)) {
+		go_top.css('margin-top', -140);
+	}
+	else{
+		go_top.css('margin-top', 0);
+	}
 });
 
 //popup
