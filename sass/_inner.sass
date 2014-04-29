@@ -216,7 +216,7 @@
 .content
 	font-size: 15px
 	color: #A3A3A3
-	img
+	>img
 		border-radius: 3px
 		&.is-left
 			float: flip(left, right)
@@ -2213,4 +2213,75 @@
 		#{$margin-right}: 10px
 	i
 		+s(go-top)
-	 
+
+.widget
+	margin-bottom: 30px
+.widget_twitter
+	.widget__el, .widget__content
+		display: table-cell
+		vertical-align: middle
+	.widget__el
+		img
+			display: block
+			max-width: inherit
+	.widget__content
+		padding: 10px 20px 
+.widget__head	
+	position: relative
+	padding: 1px 0 15px 28px
+	font-size: 0
+.widget__ico
+	position: absolute
+	top: 0
+	left: 0
+	img
+		display: block
+		max-width: 100%
+.widget__name
+	padding-right: 5px
+	font-size: 12px
+	color: #919191
+	font-weight: bold 
+	text-transform: uppercase
+.widget__author
+	font-size: 12px
+	color: #000 
+.widget__in
+	position: relative
+	padding: 10px
+	border: 1px solid #e5e5e5
+	border-radius: 3px
+	&:before
+		content: ""
+		position: absolute
+		top: -11px
+		left: 30px
+		+s(widget-arr)
+.widget__el
+	img
+		display: block
+		max-width: 100%
+.widget__content
+	padding: 20px 20px 10px
+.widget__content-title
+	margin-bottom: 5px
+	font-size: 18px
+	color: #000 
+.widget__content-text
+	font-size: 15px
+	color: #7f7f7f 
+	line-height: 1.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
