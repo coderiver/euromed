@@ -216,7 +216,7 @@
 .content
 	font-size: 15px
 	color: #A3A3A3
-	>img
+	>img, p > img
 		border-radius: 3px
 		&.is-left
 			float: flip(left, right)
@@ -2228,24 +2228,26 @@
 		padding: 10px 20px 
 .widget__head	
 	position: relative
-	padding: 1px 0 15px 28px
+	padding: flip(1px 0 15px 28px, 1px 28px 15px 1px)
 	font-size: 0
 .widget__ico
 	position: absolute
 	top: 0
-	left: 0
+	#{$left}: 0
 	img
 		display: block
 		max-width: 100%
 .widget__name
 	padding-right: 5px
 	font-size: 12px
-	color: #919191
 	font-weight: bold 
 	text-transform: uppercase
+	a
+		color: #919191
 .widget__author
 	font-size: 12px
-	color: #000 
+	a
+		color: #000 
 .widget__in
 	position: relative
 	padding: 10px
@@ -2266,7 +2268,8 @@
 .widget__content-title
 	margin-bottom: 5px
 	font-size: 18px
-	color: #000 
+	a
+		color: #000 
 .widget__content-text
 	font-size: 15px
 	color: #7f7f7f 
