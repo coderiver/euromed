@@ -19,7 +19,7 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 13px; font-family: Arial, sans-serif; line-height: 1.4; color: #404343; }
+body { min-width: 960px; font-size: 13px; font-family: Arial, sans-serif; line-height: 1.4; color: #404343; }
 body.with-logo-background { background: url(../img/logo-big-bg.png) no-repeat -12% 400px; }
 body.inner-page .wrap { margin: 0 auto -150px; }
 body.inner-page .wrap .wrap__push { height: 150px; clear: both; }
