@@ -169,7 +169,8 @@ function slider () {
 			  timeout: 0,
 			  prev: el_prev,
 			  next: el_next,
-			  slides: el_item
+			  slides: el_item,
+			  autoHeight: 'container'
 			});
 		});
 	};	
