@@ -258,7 +258,7 @@ function tabs() {
 		    tabs_btn.parent('li').removeClass("is-active");
 		    $(this).parent('li').addClass("is-active");
 		    tabs_item.hide();
-		    $('#'+id).fadeIn();
+		    $(id).fadeIn();
 	    	return false;
 	    };
     });
