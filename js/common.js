@@ -29,7 +29,8 @@ $.notify.addStyle('custom', {
     success: {
       'background-color': '#9ecf9c'
     }
-  }
+  },
+  css: '.notifyjs-corner { margin: 0; } .notifyjs-corner .notifyjs-container { margin: 0; } .notifyjs-corner .notifyjs-wrapper { margin: 10px; }'
 });
 
 $('.js-notify-error').on('click', function(){
