@@ -1,5 +1,77 @@
 $(document).ready(function() {
 
+//notify
+var message = $('.message');
+message.on('click', function(){
+	$(this).slideUp();
+});
+
+$.notify.addStyle('custom', {
+  html: '<div data-notify-text/>',
+  classes: {
+    base: {
+    	'width': '190px',
+      'padding': '10px 18px',
+      'border-radius': '5px',
+      'font-size': '13px',
+      'color': '#fff',
+      'line-height': '1.2'
+    },
+    error: {
+      'background-color': '#fe9c9c'
+    },
+    warning: {
+      'background-color': '#90c6c3'
+    },
+    info: {
+      'background-color': '#99c3dd'
+    },
+    success: {
+      'background-color': '#9ecf9c'
+    }
+  }
+});
+
+$('.js-notify-error').on('click', function(){
+	$.notify('Ошибка! Не заполнены обязательные поля.', {
+		style: 'custom',
+		className: 'error',
+		clickToHide: true,
+		autoHide: false,
+		globalPosition: 'bottom left'
+	});
+});
+
+$('.js-notify-warning').on('click', function(){
+	$.notify('Внимание! Внимательно проверьте адрес электронной почты.', {
+		style: 'custom',
+		className: 'warning',
+		clickToHide: true,
+		autoHide: false,
+		globalPosition: 'bottom left'
+	});
+});
+
+$('.js-notify-info').on('click', function(){
+	$.notify('Сообщение! Врач будет доступен с 10 сентября 2014 года.', {
+		style: 'custom',
+		className: 'info',
+		clickToHide: true,
+		autoHide: false,
+		globalPosition: 'bottom left'
+	});
+});
+
+$('.js-notify-success').on('click', function(){
+	$.notify('Выполнено! Учётная запись создана.', {
+		style: 'custom',
+		className: 'success',
+		clickToHide: true,
+		autoHide: false,
+		globalPosition: 'bottom left'
+	});
+});
+
 //rtl switch
 $('.js-rtl').on('click', function(){
 	var body = $('body');

@@ -9,10 +9,17 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/cycle.js"></script>
+	<script src="js/notify.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body dir="ltr">
 <button class="js-rtl" style="position: fixed; top: 0; right: 0; z-index: 99999; font-size: 40px">SWITCH RTL</button>
+
+<button class="js-notify-error" style="position: fixed; top: 0; left: 0; z-index: 99999; font-size: 20px">error</button>
+<button class="js-notify-warning" style="position: fixed; top: 30px; left: 0; z-index: 99999; font-size: 20px">warning</button>
+<button class="js-notify-info" style="position: fixed; top: 60px; left: 0; z-index: 99999; font-size: 20px">info</button>
+<button class="js-notify-success" style="position: fixed; top: 90px; left: 0; z-index: 99999; font-size: 20px">success</button>
+
 <div class="wrap">
 	<header class="header">
 		<div class="l-center">
@@ -81,6 +88,10 @@
 										<label class="checkbox"><input type="checkbox" checked=""><span>Запомнить меня</span></label>
 									</div>
 									<button class="btn btn_green">Войти на сайт</button>
+
+									<!-- message -->
+									<div class="message message_relative message_error">Ошибка!  Не заполнены обязательные поля.</div>
+
 								</div>
 							</div>
 							<div class="popup__footer">
@@ -1782,5 +1793,10 @@
 		</div>
 	</div>
 </footer>
+<!-- message -->
+<div class="message message_error">Ошибка!  Не заполнены обязательные поля.</div>
+<div class="message message_warning">Внимание!  Внимательно проверьте адрес электронной почты.</div>
+<div class="message message_info">Сообщение!  Врач будет доступен с 10 сентября 2014 года.</div>
+<div class="message message_success">Выполнено!  Учётная запись создана.</div>
 </body>
 </html>

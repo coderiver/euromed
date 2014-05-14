@@ -307,6 +307,13 @@ a.link-more:active { top: 0; box-shadow: none; }
 
 .map { margin-bottom: 40px; }
 
+.message { position: fixed; top: 200px; left: 50%; width: 940px; padding: 10px; margin-left: -470px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; text-align: center; font-size: 13px; color: white; cursor: pointer; z-index: 700; }
+.message.message_relative { position: relative; top: auto; left: auto; width: auto; margin: 0; }
+.message.message_error { background: #fe9c9c; }
+.message.message_warning { background: #90c6c3; }
+.message.message_info { background: #99c3dd; }
+.message.message_success { background: #9ecf9c; }
+
 .breadcrumbs { padding-bottom: 12px; margin-bottom: 22px; border-bottom: #e5e5e5 1px solid; font-size: 0; }
 .breadcrumbs li { display: inline; font-size: 12px; color: #a3a3a3; }
 .breadcrumbs a { color: #a3a3a3; }
