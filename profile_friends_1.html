@@ -431,15 +431,10 @@
 			<div class="l-column l-column_4">
 				
 				<div class="profile">
-					<div class="profile__pic">
-						<a href="#">
-							<img src="http:placehold.it/140x180" alt="">
-						</a>
-					</div>
 					<ul class="profile__stats">
 						<li><a href="#"><span>23</span>Профиль</a></li>
 						<li><a href="#"><span>123</span>Фотографии</a></li>
-						<li><a href="#"><span>3434</span>Друзья</a></li>
+						<li><a href="#"><span class="is-new">+4</span><span>3434</span>Друзья</a></li>
 						<li><a href="#"><span class="is-active">12</span>Сообщения</a></li>
 						<li><a href="#"><span>234</span>Блоги</a></li>
 						<li><a class="is-active" href="#"><span>28</span>Мои записи</a></li>
@@ -447,160 +442,32 @@
 					<div class="profile__link-edit">
 						<a class="link-white" href="#">Редактировать</a>
 					</div>
+					<div class="profile__btns">
+						<button class="btn btn_green">Новая запись</button>
+					</div>
 				</div>
 
 			</div>
 			<div class="l-column l-column_5">
 
-				<div class="profile">
-					<div class="profile__info">
-						<div class="rating">
-							<img src="img/star-a.png" alt="">
-							<img src="img/star-a.png" alt="">
-							<img src="img/star-a.png" alt="">
-							<img src="img/star-a.png" alt="">
-							<img src="img/star.png" alt="">
-						</div>
-						<div class="title-bigger">Сергей Тютык</div>
-						<div class="profile__profession">
-							<a href="#">Терапевт, врач ультразвуковой диагностики</a>
-						</div>
-					</div>
+				<div class="friends">
+					
 				</div>
 
-				<div class="new">
-					<div class="title">Новая запись</div>
-					<div class="new__form">
-						<label class="field">
-							<span class="field__label">Тема</span>
-							<span class="field__el">
-								<input type="text" placeholder="Пластическая хирургия в Украине: особенности">
-							</span>
-						</label>
-						<label class="field">
-							<span class="field__label">Системное название</span>
-							<span class="field__el">
-								<input type="text" placeholder="plasticheskaya-hirurhia-v-ukraine-osobennosti">
-							</span>
-						</label>
-						<div class="new__category">
-							<div class="field">
-								<span class="field__label">Категории</span>
-								<div class="select js-select">
-									<div class="select__head">Выберите категорию</div>
-									<div class="select__list">
-										<ul>
-											<li><a href="#">Психологические проблемы</a></li>
-											<li><a href="#">Болезни уха, горла, носа</a></li>
-											<li><a href="#">Детское здоровье</a></li>
-											<li><a href="#">Стоматология</a></li>
-											<li><a href="#">Болезни печени и желчных путей</a></li>
-											<li><a href="#">Женское здоровье</a></li>
-											<li><a href="#">Здоровье всей семьи</a></li>
-										</ul>
-										<ul>
-											<li><a href="#">Психологические проблемы</a></li>
-											<li><a href="#">Болезни уха, горла, носа</a></li>
-											<li><a href="#">Детское здоровье</a></li>
-											<li><a href="#">Стоматология</a></li>
-											<li><a href="#">Болезни печени и желчных путей</a></li>
-											<li><a href="#">Женское здоровье</a></li>
-											<li><a href="#">Здоровье всей семьи</a></li>
-										</ul>
-									</div>
-									<input class="select__value" type="hidden">
-								</div>
-							</div>
-							<div class="fieldset">
-								<label class="radio"><input type="radio" name="category"><span>Только для врачей</span></label>
-								<label class="radio"><input type="radio" name="category"><span>Только друзьям</span></label>
-								<label class="radio"><input type="radio" name="category" checked=""><span>Всем</span></label>
-							</div>
-						</div>
-						<div class="field field_file">
-							<span class="field__label">Медиа файлы</span>
-							<span class="field__el">
-								<button class="btn btn_blue">файл</button>
-								<span>Файл не выбран...</span>
-							</span>
-						</div>
-						<ul class="new__photos">
-							<li>
-								<img src="http://placehold.it/170x140" alt="">
-								<button class="btn-edit"><i></i></button>
-								<button class="btn-remove"><i></i></button>
-							</li>
-							<li>
-								<img src="http://placehold.it/170x140" alt="">
-								<button class="btn-edit"><i></i></button>
-								<button class="btn-remove"><i></i></button>
-							</li>
-							<li>
-								<img src="http://placehold.it/170x140" alt="">
-								<button class="btn-edit"><i></i></button>
-								<button class="btn-remove"><i></i></button>
-							</li>
-							<li>
-								<img src="http://placehold.it/170x140" alt="">
-								<button class="btn-edit"><i></i></button>
-								<button class="btn-remove"><i></i></button>
-							</li>
-							<li>
-								<img src="http://placehold.it/170x140" alt="">
-								<button class="btn-edit"><i></i></button>
-								<button class="btn-remove"><i></i></button>
-							</li>
-							<li class="new__photos-add">
-								<button class="btn-add-file js-popup-btn" data-popup="popup_photo"><i></i><span>Добавить еще файл</span></button>
-							</li>
-						</ul>
-							
-						<div class="field">
-							<div class="field__label">Запись</div>
-							<div class="field__el">
-								<div class="editor">
-									<img src="img/editor.jpg" style="display: block">
-								</div>
-							</div>
-						</div>
-						
-						<label class="field">
-							<span class="field__label">SEO заголовоак (lite)</span>
-							<span class="field__el">
-								<input type="text" placeholder="Пластическая хирургия">
-							</span>
-						</label>
-						<label class="field">
-							<span class="field__label">SEO заголовоак (description)</span>
-							<span class="field__el">
-								<input type="text" placeholder="Хирургия">
-							</span>
-						</label>
-						<label class="field">
-							<span class="field__label">SEO ключевые слова (keywords)</span>
-							<span class="field__el">
-								<input type="text" placeholder="">
-							</span>
-						</label>
+				<div class="title-wrap">
+					<div class="title"><a href="#">Мои друзья</a></div>
+				</div>
 
-						<div class="field">
-							<div class="field__label">Теги</div>
-							<div class="field__tags js-select2-tags">
-								
-							</div>
-						</div>
-
-						<label class="field" style="width: 220px">
-							<span class="field__label">Дата публикации</span>
-							<span class="field__el">
-								<input type="text" placeholder="25 марта 2014 / 15:30:22">
-							</span>
-						</label>
-						<div class="new__btns">
-							<button class="btn btn_blue">Сохранить запись</button>
-							<button class="btn btn_green">опубликовать запись</button>
-						</div>
-					</div>
+				<div class="pagination">
+					<a class="pagination__prev is-disabled" href="#"><i></i><span>Назад</span></a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a class="is-active" href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">...</a>
+					<a href="#">150</a>
+					<a class="pagination__next" href="#"><span>Далее</span><i></i></a>
 				</div>
 
 			</div>

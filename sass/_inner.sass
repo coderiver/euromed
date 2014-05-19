@@ -82,6 +82,15 @@
 			border: none
 			&:before
 				top: 2px
+.post_edit
+	.post__category
+		+clr
+		a
+			float: flip(left, right)
+			margin-top: 3px
+		.link-white
+			float: flip(right, left)
+			margin: 0
 .post__item
 	margin-top: 20px 
 	+clr
@@ -1636,6 +1645,10 @@
 		color: #BED1D0 
 		&.is-active
 			color: $gr 
+		&.is-new
+			background: $gr
+			color: #FFF
+			border-radius: 2px  
 	a
 		display: block
 		overflow: hidden
@@ -1646,6 +1659,9 @@
 	margin-bottom: 20px
 	border-bottom: 1px solid #000 
 	+clr
+	.profile__pic
+		float: left
+		margin-right: 20px 
 	.rating
 		float: flip(right, left)
 		margin-left: 20px
@@ -1654,8 +1670,32 @@
 		margin-bottom: 3px
 .profile__profession
 	clear: both
-
-
+.profile__btns
+	padding-top: 5px
+	.btn
+		margin-bottom: 10px
+.profile__info-in
+	float: right
+	width: 570px 
+.profile__info-head
+	margin-bottom: 10px
+	+clr
+.profile__details
+	width: 100%
+	tr
+		&:first-child
+			td
+				border: none
+	td
+		padding: 5px 20px 5px 0 
+		border-top: 1px dotted #b2b2b2 
+		color: #131414
+		&:first-child
+			color: #a6a6a6 
+.profile__link-edit
+	margin-bottom: 45px 
+	.link-white
+		float: none
 
 
 
@@ -2276,7 +2316,37 @@
 	line-height: 1.5
 
 
-
+.blog-user
+	float: left
+	margin: 0 25px 15px 0
+.blog-user__img
+	float: left
+	margin-right: 20px
+	img
+		display: block
+		border-radius: 2px
+.blog-user__data
+	position: relative
+	float: left
+	width: 155px
+	min-height: 100px
+	padding-right: 20px
+	border-right: #E5E5E5 1px solid 
+	line-height: 1.2
+	&:after
+		content: ""
+		position: absolute
+		top: 10px
+		right: -6px
+		+s(blog-user-arr)
+.blog-user__name
+	padding: 5px 0
+	font-size: 15px
+	color: #000 
+	font-weight: bold
+.blog-user__position
+	font-style: italic
+	font-size: 13px
 
 
 
