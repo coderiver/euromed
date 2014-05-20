@@ -1072,7 +1072,7 @@ a.link-more:active { top: 0; box-shadow: none; }
 .series.is-hide .series__list { display: none; }
 
 .series_fixed .series__in { width: 620px; }
-.series_fixed .series__in.is-fixed { position: fixed; top: 0; z-index: 1000; }
+.series_fixed .series__in.is-fixed { position: fixed; top: 0; z-index: 500; }
 .series_fixed .series__in.is-fixed .series__pic { top: 10px; left: 10px; width: 40px; height: 40px; }
 
 .series__in { position: relative; padding: 20px; border-radius: 2px; background: #eaf0f0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

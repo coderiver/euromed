@@ -9,6 +9,7 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/cycle.js"></script>
+	<script src="js/notify.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body class="inner-page" dir="ltr">
@@ -56,10 +57,158 @@
 			</div>
 			<ul class="header__login">
 				<li class="header__reg">
-					<a href="#">Регистрация</a>
+					<a class="js-popup-btn" href="#" data-popup="popup_reg">Регистрация</a>
+					<!-- popup -->
+					<div class="popup popup_login js-popup-el">
+						<div class="popup__container">
+							<div class="popup__in">
+								<button class="popup__close"></button>
+								<div class="title">Вход на сайт</div>
+								<div class="login">
+									<label class="field">
+										<span class="field__label">Логин или email</span>
+										<span class="field__el">
+											<input type="text">
+										</span>
+									</label>
+									<label class="field">
+										<span class="field__label">Пароль</span>
+										<span class="field__el">
+											<input type="text">
+										</span>
+									</label>
+									<div class="login__pass">
+										<a class="js-popup-btn" href="#" data-popup="popup_password">Забыли пароль?</a>
+										<label class="checkbox"><input type="checkbox" checked=""><span>Запомнить меня</span></label>
+									</div>
+									<button class="btn btn_green">Войти на сайт</button>
+
+									<!-- message -->
+									<div class="message message_relative message_error">Ошибка!  Не заполнены обязательные поля.</div>
+
+								</div>
+							</div>
+							<div class="popup__footer">
+								<div class="login">
+									<div class="login__social">
+										<div class="social">
+											<ul class="social__list">
+												<li><a class="social__fb" href="#"><i></i></a></li>
+												<li><a class="social__vk" href="#"><i></i></a></li>
+												<li><a class="social__gp" href="#"><i></i></a></li>
+											</ul>
+										</div>
+										<div class="login__social-title">Войти через аккаунт</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__overlay"></div>
+					</div>
+					<!-- popup -->
+					<div class="popup popup_password js-popup-el">
+						<div class="popup__container">
+							<div class="popup__in">
+								<button class="popup__close"></button>
+								<div class="title">Напомнить пароль</div>
+								<div class="password">
+									<label class="field">
+										<span class="field__label">Логин или email</span>
+										<span class="field__el">
+											<input type="text">
+										</span>
+									</label>
+									<button class="btn btn_green">Напомнить пароль</button>
+									<div class="password__text">Вам на почту будет высланно письмо с новым паролем и инструкциями</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__overlay"></div>
+					</div>
 				</li>
 				<li class="header__enter">
-					<a href="#"><span>Вход</span><i></i></a>
+					<a class="js-popup-btn" href="#" data-popup="popup_login"><span>Вход</span><i></i></a>
+					<!-- popup -->
+					<div class="popup popup_reg js-popup-el">
+						<div class="popup__container">
+							<div class="popup__in">
+								<button class="popup__close"></button>
+								<div class="title">Регистрация на сайте</div>
+								<div class="reg">
+									<div class="reg__column">
+										<label class="field">
+											<span class="field__label">Имя и фамилия</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__label">Email</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__label">Пароль</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<button class="btn btn_green">Зарегистрироваться</button>
+									</div>
+									<div class="reg__column">
+										<label class="field">
+											<span class="field__label">Пол</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__label">Дата рождения</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__label">Местоположение</span>
+											<span class="field__el">
+												<input type="text">
+											</span>
+										</label>
+										<div class="reg__social">
+											<div class="reg__social-title">Зарегистрироваться с помощью</div>
+											<div class="social">
+												<ul class="social__list">
+													<li><a class="social__fb" href="#"><i></i></a></li>
+													<li><a class="social__vk" href="#"><i></i></a></li>
+													<li><a class="social__gp" href="#"><i></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup__footer">
+								<div class="reg">
+									<div class="reg__terms">
+										<!-- field -->
+										<div class="field field_checkbox is-error">
+											<!-- checkbox -->
+											<label class="checkbox">
+												<input type="checkbox">
+												<span>Регистрируясь я принимаю <a href="#">условия использования</a></span>
+											</label>
+											<!-- field error -->
+											<span class="field__error">
+												<span class="field__message">Введите свое имя полностью (ФИО)</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__overlay"></div>
+					</div>
 				</li>
 			</ul>
 			<div class="social">
@@ -75,9 +224,17 @@
 				<div class="lang__list">
 					<div class="lang__list-current"><i class="lang__ru"></i><span>Русский</span></div>
 					<ul class="lang__list-in">
-						<li class="is-active"><a href="#"><i class="lang__ru"></i><span>Русский</span></a></li>
-						<li><a href="#"><i class="lang__eu"></i><span>English</span></a></li>
-						<li><a href="#"><i class="lang__de"></i><span>Deutsch</span></a></li>
+						<li><a href="#"><i class="lang__en"></i><span>Не ну очень длинный язык</span></a></li>
+						<li><a href="#"><i class="lang__en"></i><span>English</span></a></li>
+						<li><a href="#"><i class="lang__es"></i><span>Испания</span></a></li>
+						<li><a href="#"><i class="lang__de"></i><span>Германия</span></a></li>
+						<li><a href="#"><i class="lang__fr"></i><span>Франция</span></a></li>
+						<li><a href="#"><i class="lang__it"></i><span>Италия</span></a></li>
+						<li><a href="#"><i class="lang__lt"></i><span>Литва</span></a></li>
+						<li><a href="#"><i class="lang__uk"></i><span>Украина</span></a></li>
+						<li class="is-active"><a href="#"><i class="lang__ru"></i><span>Россия</span></a></li>
+						<li><a href="#"><i class="lang__lv"></i><span>Латвия</span></a></li>
+						<li><a href="#"><i class="lang__il"></i><span>Израиль</span></a></li>
 					</ul>
 				</div>
 			</div>
