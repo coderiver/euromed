@@ -347,6 +347,18 @@ if (select2_tags.length) {
 		tags: true
 	});
 };
+var select2_search = $('.js-select2-search');
+if (select2_search.length) {
+	function format(state) {
+	  var originalOption = state.element;
+	  return "<img src=" + state.id.toLowerCase() + "' alt='" + $(originalOption).data('foo') + "' />" + state.text;
+	}
+	select2_search.select2({
+		formatResult: format,
+		formatSelection: format,
+		escapeMarkup: function(m) { return m; }
+	});
+};
 
 //
 var el = $('.js-series'),
@@ -490,16 +502,61 @@ go_top.on('click', function(){
 	$('html, body').animate({scrollTop: 0}, 500);
 	return false;
 })
-	
+
+// profile fixed sidebar
+function profile_aside() {
+	var el = $('.l-layout_profile');
+	if (el.length) {
+		var column = el.find('.l-column_4'),
+				profile = column.find('.profile'),
+				scroll_top = $(window).scrollTop(),
+				el_top = el.offset().top,
+				footer = $('.footer'),
+				profile_height = profile.outerHeight(),
+				f_height = footer.height(),
+				w_height = $(window).height(),
+				f_top = footer.offset().top;
+		if (scroll_top > el_top) {
+			column.addClass('is-fixed');
+			if ((scroll_top + profile_height) > f_top) {
+				column.removeClass('is-fixed');
+				column.addClass('is-bottom');
+			}
+			else {
+				column.addClass('is-fixed');
+				column.removeClass('is-bottom');
+			};
+		}
+		else {
+			column.removeClass('is-fixed');
+		};
+	};
+}
+
+// messages
+function messages_wrap() {
+	var el = $('.messages_bg'),
+			el_head_height = el.find('.messages__head').outerHeight(),
+			el_correspondence = el.find('.messages__correspondence'),
+			el_wrire_height = el.find('.messages__write').outerHeight(),
+			w_height = $(window).height();
+	el.css({'min-height': w_height});
+	el_correspondence.css({'height': w_height - el_head_height - el_wrire_height});
+}	
+messages_wrap();
+
 $(window).resize(function(){
 	series_size();
 	series_scroll();
+	messages_wrap();
 });
 
 $(window).scroll(function(){
 	series_size();
 	series_scroll();
 	btn_go_top();
+	profile_aside();
+	messages_wrap();
 });
 
 //popup

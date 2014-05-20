@@ -35,4 +35,23 @@
 	width: 140px 
 .l-column_5
 	width: 780px 
-
+.l-layout_profile
+	margin-bottom: 70px
+	.l-column_4
+		position: absolute
+		top: 0
+		#{$left}: 0
+		bottom: -70px
+		&.is-fixed
+			position: fixed
+			top: 0
+			left: 50%
+			bottom: auto
+			width: 140px
+			#{$margin-left}: -470px 
+		&.is-bottom
+			position: absolute
+			top: auto
+			bottom: -70px
+	.l-column_5
+		float: flip(right, left)

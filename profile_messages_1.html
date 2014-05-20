@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/select2.css" >
 	<link id="main-css-file" rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
@@ -451,148 +452,119 @@
 			<div class="l-column l-column_5">
 
 				<div class="title-wrap">
-					<div class="title"><a href="#">Мои друзья</a></div>
+					<div class="title">Мои сообщения</div>
 				</div>
 
-				<div class="search-form search-form_mb2">
+				<div class="search-form search-form_mb2 search-form_messages">
+					<button class="btn btn_small btn_green js-popup-btn" data-popup="popup_message"><i class="btn__ico"></i></button>
 					<div class="search-form__in">
 						<div class="field">
 							<div class="field__el">
-								<input type="text" placeholder="Поиск по друзьям">
+								<input type="text" placeholder="Поиск по сообщениям">
 							</div>
 						</div>
 						<button><i></i></button>
 					</div>
 				</div>
 
-
-				<div class="request">
-					<div class="request__item">
-						<div class="request__friend">
-							<div class="request__friend-ava">
-								<a href="#"><img src="http://placehold.it/50x50" alt=""></a>
+				<div class="messages">
+					<div class="messages__list">
+						<div class="messages__item is-active">
+							<div class="messages__user">
+								<div class="messages__user-ava">
+									<a href="#">
+										<img src="http://placehold.it/50x50" alt="">
+									</a>
+								</div>
+								<div class="messages__user-data">
+									<div class="messages__user-name"><a href="#">Сергей Никитин</a></div>
+									<div class="messages__user-date">20 июля, 2013</div>
+									<div class="messages__user-time">07:38</div>
+								</div>
 							</div>
-							<div class="request__friend-data">
-								<div class="request__friend-name"><a href="#">Александр Пажин</a></div>
-								<div class="request__status">Хочет дружить с вами!</div>
+							<button class="messages__remove"><i></i></button>
+							<div class="messages__new">+3</div>
+							<div class="messages__text">
+								<div class="messages__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eius soluta officiis ratione voluptatibus voluptates consequuntur corrupti delectus.</div>
 							</div>
 						</div>
-						<div class="request__btns">
-							<button class="btn btn_small btn_green">Добавить в друзья</button>
-							<button class="btn btn_small btn_blue">Отклонить запрос</button>
+						<div class="messages__item messages__item_answer is-active">
+							<div class="messages__user">
+								<div class="messages__user-ava">
+									<a href="#">
+										<img src="http://placehold.it/50x50" alt="">
+									</a>
+								</div>
+								<div class="messages__user-data">
+									<div class="messages__user-name"><a href="#">Сергей Никитин</a></div>
+									<div class="messages__user-date">20 июля, 2013</div>
+									<div class="messages__user-time">07:38</div>
+								</div>
+							</div>
+							<button class="messages__remove"><i></i></button>
+							<div class="messages__new">+3</div>
+							<div class="messages__text">
+								<div class="messages__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+							</div>
+						</div>
+						<div class="messages__item messages__item_answer">
+							<div class="messages__user">
+								<div class="messages__user-ava">
+									<a href="#">
+										<img src="http://placehold.it/50x50" alt="">
+									</a>
+								</div>
+								<div class="messages__user-data">
+									<div class="messages__user-name"><a href="#">Сергей Никитин</a></div>
+									<div class="messages__user-date">20 июля, 2013</div>
+									<div class="messages__user-time">07:38</div>
+								</div>
+							</div>
+							<button class="messages__remove"><i></i></button>
+							<div class="messages__text">
+								<div class="messages__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+							</div>
+						</div>
+						<div class="messages__item">
+							<div class="messages__user">
+								<div class="messages__user-ava">
+									<a href="#">
+										<img src="http://placehold.it/50x50" alt="">
+									</a>
+								</div>
+								<div class="messages__user-data">
+									<div class="messages__user-name"><a href="#">Сергей Никитин</a></div>
+									<div class="messages__user-date">20 июля, 2013</div>
+									<div class="messages__user-time">07:38</div>
+								</div>
+							</div>
+							<button class="messages__remove"><i></i></button>
+							<div class="messages__text">
+								<div class="messages__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+							</div>
+						</div>
+						<div class="messages__item">
+							<div class="messages__user">
+								<div class="messages__user-ava">
+									<a href="#">
+										<img src="http://placehold.it/50x50" alt="">
+									</a>
+								</div>
+								<div class="messages__user-data">
+									<div class="messages__user-name"><a href="#">Сергей Никитин</a></div>
+									<div class="messages__user-date">20 июля, 2013</div>
+									<div class="messages__user-time">07:38</div>
+								</div>
+							</div>
+							<button class="messages__remove"><i></i></button>
+							<div class="messages__text">
+								<div class="messages__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-
-				<div class="friends">
-					<div class="friends__list">
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-						<div class="friends__item">
-							<div class="friends__ava">
-								<img src="http://placehold.it/100x100" alt="">
-								<div class="friends__action">
-									<button><i class="friends__action-mail"></i></button>
-									<button><i class="friends__action-remove"></i></button>
-								</div>
-							</div>
-							<div class="friends__info">
-								<div class="friends__name"><a href="#">Александр Лисовский</a></div>
-								<div class="friends__position">Терапевт, врач ультразвуковой диагностики</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-
-				<div class="pagination">
+				<div class="pagination pagination_no-border">
 					<a class="pagination__prev is-disabled" href="#"><i></i><span>Назад</span></a>
 					<a href="#">1</a>
 					<a href="#">2</a>
@@ -649,23 +621,33 @@
 </footer>
 
 <!-- popup -->
-<div class="popup popup_photo js-popup-el">
+<div class="popup popup_message js-popup-el">
 	<div class="popup__container">
 		<div class="popup__in">
 			<button class="popup__close"></button>
-			<div class="title">Добавить файл</div>
-			<div class="add-file">
-				<label class="field field_reset">
-					<span class="field__label">Имя и фамилия</span>
-					<span class="field__el">
-						<input type="text" placeholder="file://Мой Компьютер/Мои фотографии/12/sport_11.jpg">
-						<button class="btn-reset"></button>
-					</span>
-				</label>
-				<div class="add-file__photo">
-					<img src="http://placehold.it/500x330" alt="">
+			<div class="title">Написать сообщение</div>
+			<div class="messages">
+				<div class="messages__friends">
+					<div class="field">
+						<div class="field__label"></div>
+						<select class="js-select2-search">
+							<option value="http://placehold.it/30x30" data-foo="Vladimir Puto">Vladimir Puto</option>
+							<option value="http://placehold.it/30x30" data-foo="Vladimir Puto1">Vladimir Puto1</option>
+							<option value="http://placehold.it/30x30" data-foo="Vladimir Puto2">Vladimir Puto2</option>
+							<option value="http://placehold.it/30x30" data-foo="Vladimir Puto3">Vladimir Puto3</option>
+							<option value="http://placehold.it/30x30" data-foo="Vladimir Puto4">Vladimir Puto4</option>
+						</select>
+					</div>
 				</div>
-				<button class="btn btn_green">Добавить</button>
+				<div class="messages__write messages__write_popup">
+					<div class="messages__write-form">
+						<img src="img/messages-write-small.png" alt="">
+					</div>
+					<div class="messages__write-btns">
+						<button class="btn btn_green">Ответить</button>
+						<button class="btn btn_blue">Прикрепить файл</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

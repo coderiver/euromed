@@ -89,8 +89,14 @@
 			float: flip(left, right)
 			margin-top: 3px
 		.link-white
+			display: none
 			float: flip(right, left)
 			margin: 0
+	.post__item
+		&:hover
+			.post__category
+				.link-white
+					display: block
 .post__item
 	margin-top: 20px 
 	+clr
@@ -1024,6 +1030,9 @@
 			float: flip(right, left)
 			i
 				+s(flip(pagin-next, pagin-prev))
+.pagination_no-border
+	margin-top: 0
+	border: none
 
 
 
@@ -1626,7 +1635,9 @@
 
 
 .profile
-	margin-bottom: 30px
+	padding-bottom: 30px
+.profile__aside
+	padding-bottom: 20px
 .profile__pic
 	margin-bottom: 15px 
 	img
@@ -1642,9 +1653,12 @@
 	span
 		float: flip(right, left)
 		#{$margin-left}: 5px
+		margin-top: 1px
+		padding-top: 1px
 		color: #BED1D0 
+		font-size: 11px
 		&.is-active
-			padding: 0 3px
+			padding: 1px 3px 0
 			background: $gr
 			color: #FFF
 			border-radius: 2px  
@@ -1653,6 +1667,7 @@
 		overflow: hidden
 		&.is-active
 			color: #344746 
+			text-decoration: none
 .profile__info
 	padding-bottom: 20px
 	margin-bottom: 20px
@@ -1669,10 +1684,14 @@
 		margin-bottom: 3px
 .profile__profession
 	clear: both
+	color: $gr 
 .profile__btns
 	padding-top: 5px
 	.btn
-		margin-bottom: 10px
+		width: 100%
+		margin-top: 10px
+		&:first-child
+			margin: 0
 .profile__info-in
 	float: flip(right, left)
 	width: 570px 
@@ -1788,43 +1807,6 @@
 		vertical-align: top
 
 
-.field__tags
-	width: 100%
-	.select2-choices
-		width: 100%
-		border: 1px solid #dfe2e2
-		border-radius: 3px
-		background: #fff
-		box-shadow: inset 1px 1px 7px rgba(0,0,0,.06)
-		font-size: 12px
-		+box
-		.select2-search-field
-			.select2-input
-				height: 37px
-				padding: 0 10px
-				margin: 0
-				font-size: 12px
-				color: #000 
-				+box
-		.select2-search-choice
-			float: left
-			margin: 6px 0 6px 6px
-			height: 25px
-			padding: 0 7px
-			line-height: 25px 
-			background: #eaf0f0
-			border-radius: 3px
-			border: none 
-			color: #999 
-	&.select2-container-active
-		.select2-choices
-			border-color: $grd
-			box-shadow: 0 0 5px rgba(56,168,162,.15), inset 1px 1px 7px rgba(0,0,0,.06)
-
-
-
-
-
 .popup
 	display: none
 	position: fixed
@@ -1866,7 +1848,9 @@
 .popup_reg, .popup_photo
 	.popup__container
 		width: 560px 
-
+.popup_message
+	.popup__container
+		width: 680px
 
 
 .login
@@ -2051,11 +2035,6 @@
 		background: #EAF0F0
 		content: ' ' 
 		z-index: 30 
-.series__parent .series__parent .series__item
-	// &:before
-	// 	background: red
-	// 	left: -50px  
-	// 	width: 50px 
 .series__parent.is-active>.series__parent-item
 	border-top: none 
 	
@@ -2349,31 +2328,6 @@
 	font-size: 13px
 
 
-.friends__search	
-	margin-bottom: 30px
-	padding: 10px
-	background: #EAF0F0
-	border-radius: 4px 
-	+clr
-	& + .request
-		margin-top: -28px
-.friends__search-in
-	position: relative
-	.field
-		margin: 0
-	.field__el
-		input
-			height: 30px
-			padding: flip(0 30px 0 10px, 0 10px 0 30px)
-	button
-		position: absolute
-		top: 0
-		#{$right}: 0
-		padding: 6px 7px
-		background: none
-		i
-			display: block
-			+s(friends-search)
 .friends__list
 	margin-bottom: 5px
 	font-size: 0 
@@ -2388,6 +2342,9 @@
 	width: 50%
 	margin-bottom: 25px
 	vertical-align: top
+	&:hover
+		.friends__action
+			display: block
 .friends__ava, .friends__info
 	display: inline-block
 	vertical-align: middle
@@ -2397,9 +2354,6 @@
 	#{$margin-right}: 20px
 	img
 		border-radius: 2px
-	&:hover
-		.friends__action
-			display: block
 .friends__action
 	display: none
 	position: absolute
@@ -2443,7 +2397,6 @@
 	line-height: 1.2
 
 
-
 .request
 	margin-bottom: 30px 
 .request__item
@@ -2481,20 +2434,189 @@
 		#{$margin-left}: 10px 
 
 
+.search-form
+	margin-bottom: 30px
+	padding: 10px
+	background: #EAF0F0
+	border-radius: 4px 
+	+clr
+.search-form_messages
+	.search-form__in
+		float: left
+		width: 685px 
+	.btn
+		float: right
+		width: 65px
+		font-size: 0
+	.btn__ico
+		display: inline-block
+		vertical-align: middle
+		+s(messages-mail)
+.search-form_mb2
+	margin-bottom: 2px
+.search-form__in
+	position: relative
+	.field
+		margin: 0
+	.field__el
+		input
+			height: 30px
+			padding: flip(0 30px 0 10px, 0 10px 0 30px)
+	button
+		position: absolute
+		top: 0
+		#{$right}: 0
+		padding: 6px 7px
+		background: none
+		i
+			display: block
+			+s(friends-search)
 
 
+.messages__item
+	position: relative
+	padding: 20px 50px 20px 20px
+	margin-bottom: 2px
+	border-radius: 4px
+	background: #F4F7F7 
+	+clr
+	&:hover
+		.messages__remove
+			display: block
+	&.is-active
+		background: #ddeae7 
+		.messages__text-in
+			&:before
+				+s(messages-arr-a)
+.messages__item_answer
+	.messages__text-in
+		#{$padding-left}: 30px
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			+s(messages-arr)
+.messages__user
+	float: flip(left, right)
+	#{$margin-right}: 20px
+.messages__user-ava
+	float: flip(left, right)
+	#{$margin-right}: 10px
+	img
+		display: block
+		border-radius: 2px
+.messages__user-data
+	float: flip(left, right)
+	width: 110px
+	line-height: 1.2
+.messages__user-name
+	padding: 2px 0
+	a
+		color: #000 
+.messages__user-date, .messages__user-time
+	font-size: 11px
+	font-style: italic
+	color: #999 
+.messages__remove
+	display: none
+	position: absolute
+	top: 20px
+	#{$right}: 10px 
+	padding: 6px 10px
+	background: none 
+	font-size: 0
+	i
+		display: block
+		+s(messages-remove)
+.messages__new
+	float: flip(right, left)
+	#{$margin-left}: 50px
+	background: $gr
+	border-radius: 2px
+	padding: 2px 5px 1px
+	color: #fff 
+.messages__text
+	overflow: hidden
+	line-height: 1.2
+	color: #808080
+	&:before
+		content: ""
+		display: inline-block
+		width: 0
+		height: 50px
+		vertical-align: middle
+.messages__text-in
+	position: relative
+	display: inline-block
+	width: 90%
+	vertical-align: middle
+	+box
+.messages_bg
+	border: 1px solid #e9ebeb
+	background: #eaf0f0 
+	border-radius: 4px
+	+box
+.messages__head
+	padding: 15px 20px
+	+clr
+	.link-white
+		float: flip(right, left)
+.messages__back
+	float: flip(left, right)
+	&:hover
+		span
+			text-decoration: underline
+	i, span
+		display: inline-block
+		vertical-align: middle
+	i
+		#{$margin-right}: 10px
+		+s(messages-back)
+.messages__correspondence	
+	position: relative
+	background: #FFF
+	.messages__list	
+		position: absolute
+		top: 20px
+		#{$left}: 20px
+		#{$right}: 13px
+		bottom: 20px
+		#{$padding-right}: 15px
+	.messages__item
+		padding: 20px 0
+		background: #FFF 
+		border-top: 1px dotted #ccc 
+		&:first-child
+			padding: 0 0 20px 
+			border: none
+		&:last-child
+			padding: 20px 0 0 0
+.messages__write
+	padding: 15px 20px 20px
+.messages__write_popup
+	padding: 0
+.messages__write-title
+	margin-bottom: 5px
+.messages__write-form
+	margin-bottom: 20px
+.messages__write-btns
+	font-size: 0 
+	.btn
+		#{$margin-right}: 10px
+		
 
-
-
-
-
-
-
-
-
-
-
-
+.scroll
+	overflow: auto
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+	&::-webkit-scrollbar-thumb
+		background: $gr
+		border-radius: 2px
+	&::-webkit-scrollbar-track-piece
+		background: #d6e1e1
+		border-radius: 2px
 
 
 
